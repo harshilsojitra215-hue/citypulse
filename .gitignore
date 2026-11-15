@@ -1,0 +1,28 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# caches and local data
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+*.duckdb
+*.parquet
+*.pkl
+live/data/
+live/bridge/
+_run/
+node_modules/
+.next/
+.venv/
+
+# engine private data and weights (not published)
+engine/app_data/
+engine/models/*/
+
+# the city's export (not ours to publish)
+materials/

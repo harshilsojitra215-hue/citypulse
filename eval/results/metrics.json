@@ -1,0 +1,1528 @@
+{
+ "generated": "2026-11-14T20:09:06",
+ "bootstrap_B": 2000,
+ "labellers_ai": [
+  "haiku",
+  "sonnet_a",
+  "sonnet_b"
+ ],
+ "labellers_human": [],
+ "adjudicated": false,
+ "extra_models": [],
+ "note": "pilot sample is stratified (70 HN, 50 Bonn, 40 Paris, 40 IPAI, 40 hard negatives): shares are within-sample, not population shares",
+ "ai_vs_ai": {
+  "haiku__sonnet_a": {
+   "n": 240,
+   "project": {
+    "value": 0.896774193548387,
+    "lo": 0.8518725822808885,
+    "hi": 0.9383440884255554,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "relevant": {
+    "value": 0.8918918918918918,
+    "lo": 0.8270475287255972,
+    "hi": 0.9473726395557532,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_all": {
+    "value": 0.7299686570762677,
+    "lo": 0.6592497097274329,
+    "hi": 0.7970479645356542,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_relevant": {
+    "value": 0.6287543970415803,
+    "lo": 0.4989617727877116,
+    "hi": 0.74163586771135,
+    "n": 147,
+    "B_valid": 2000
+   },
+   "voice": {
+    "value": 0.7155478935459542,
+    "lo": 0.644066947325102,
+    "hi": 0.7848515545731118,
+    "n": 240,
+    "B_valid": 2000
+   }
+  },
+  "haiku__sonnet_b": {
+   "n": 240,
+   "project": {
+    "value": 0.9433476394849786,
+    "lo": 0.9071000175268992,
+    "hi": 0.9740674684784909,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "relevant": {
+    "value": 0.9263351749539595,
+    "lo": 0.8691129991374913,
+    "hi": 0.9727514073640279,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_all": {
+    "value": 0.7687304264032763,
+    "lo": 0.6978712531133194,
+    "hi": 0.834778885456798,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_relevant": {
+    "value": 0.6989176779271892,
+    "lo": 0.5862060454814292,
+    "hi": 0.7956980870636616,
+    "n": 153,
+    "B_valid": 2000
+   },
+   "voice": {
+    "value": 0.6659614742233604,
+    "lo": 0.5888307897711553,
+    "hi": 0.7434014133658073,
+    "n": 240,
+    "B_valid": 2000
+   }
+  },
+  "sonnet_a__sonnet_b": {
+   "n": 240,
+   "project": {
+    "value": 0.9172271081220901,
+    "lo": 0.8747190172694378,
+    "hi": 0.9538434129355361,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "relevant": {
+    "value": 0.909502262443439,
+    "lo": 0.8518469872174579,
+    "hi": 0.9620253164556961,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_all": {
+    "value": 0.813170337907969,
+    "lo": 0.7429847225919313,
+    "hi": 0.8768711435038221,
+    "n": 240,
+    "B_valid": 2000
+   },
+   "stance_relevant": {
+    "value": 0.8009658857377724,
+    "lo": 0.6891608864010884,
+    "hi": 0.8986414243304622,
+    "n": 149,
+    "B_valid": 2000
+   },
+   "voice": {
+    "value": 0.8187837602369751,
+    "lo": 0.7521184974009392,
+    "hi": 0.879116742081448,
+    "n": 240,
+    "B_valid": 2000
+   }
+  },
+  "krippendorff_alpha": {
+   "project": {
+    "value": 0.9192293167488085,
+    "lo": 0.8833917869924018,
+    "hi": 0.9493890328360308,
+    "n": 240,
+    "B_valid": 1000
+   },
+   "stance": {
+    "value": 0.7691171433464634,
+    "lo": 0.7106379337711509,
+    "hi": 0.821473428159607,
+    "n": 240,
+    "B_valid": 1000
+   },
+   "voice": {
+    "value": 0.7318048155769554,
+    "lo": 0.6752406228189356,
+    "hi": 0.7925315043218478,
+    "n": 240,
+    "B_valid": 1000
+   }
+  }
+ },
+ "leave_one_out": {
+  "haiku": {
+   "n": 224,
+   "project_accuracy": {
+    "value": 0.96875,
+    "lo": 0.9463169642857142,
+    "hi": 0.9910714285714286,
+    "n": 224,
+    "B_valid": 2000
+   },
+   "project_kappa": {
+    "value": 0.9612667358332099,
+    "lo": 0.9315023201035004,
+    "hi": 0.9888019942997415,
+    "n": 224,
+    "B_valid": 2000
+   },
+   "relevance": {
+    "tp": 144,
+    "fp": 2,
+    "fn": 2,
+    "tn": 76,
+    "precision": 0.9863013698630136,
+    "recall": 0.9863013698630136,
+    "f1": 0.9863013698630136
+   },
+   "relevance_precision": {
+    "value": 0.9863013698630136,
+    "lo": 0.965511254789272,
+    "hi": 1.0,
+    "n": 224,
+    "B_valid": 2000
+   },
+   "relevance_recall": {
+    "value": 0.9863013698630136,
+    "lo": 0.9652717074592074,
+    "hi": 1.0,
+    "n": 224,
+    "B_valid": 2000
+   },
+   "stance_n": 134,
+   "stance_accuracy": {
+    "value": 0.8656716417910447,
+    "lo": 0.8059701492537313,
+    "hi": 0.9253731343283582,
+    "n": 134,
+    "B_valid": 2000
+   },
+   "stance_kappa": {
+    "value": 0.7253473012981096,
+    "lo": 0.6054627774480996,
+    "hi": 0.8387581747500444,
+    "n": 134,
+    "B_valid": 2000
+   },
+   "stance_macro_f1": {
+    "value": 0.7842417272204506,
+    "lo": 0.6818089821536201,
+    "hi": 0.8903300933228762,
+    "n": 134,
+    "B_valid": 2000
+   },
+   "stance_per_class": {
+    "support": {
+     "precision": 0.5666666666666667,
+     "recall": 1.0,
+     "f1": 0.7234042553191489,
+     "support": 17
+    },
+    "oppose": {
+     "precision": 1.0,
+     "recall": 0.9230769230769231,
+     "f1": 0.9600000000000001,
+     "support": 13
+    },
+    "neutral_informative": {
+     "precision": 1.0,
+     "recall": 0.8316831683168316,
+     "f1": 0.9081081081081082,
+     "support": 101
+    },
+    "other": {
+     "precision": 0.375,
+     "recall": 1.0,
+     "f1": 0.5454545454545454,
+     "support": 3
+    }
+   },
+   "stance_confusion": {
+    "rows_reference": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "cols_prediction": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "matrix": [
+     [
+      17,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      12,
+      0,
+      1
+     ],
+     [
+      13,
+      0,
+      84,
+      4
+     ],
+     [
+      0,
+      0,
+      0,
+      3
+     ]
+    ]
+   },
+   "opinion_bearing_n": 30,
+   "opinion_bearing_exact": {
+    "value": 0.9666666666666667,
+    "lo": 0.8332960900859082,
+    "hi": 0.9940914096183874,
+    "n": 30,
+    "k": 29
+   },
+   "opinion_flipped": 0,
+   "voice_kappa": {
+    "value": 0.748631915318554,
+    "lo": 0.6705829353523588,
+    "hi": 0.81946083003194,
+    "n": 203,
+    "B_valid": 2000
+   }
+  },
+  "sonnet_a": {
+   "n": 229,
+   "project_accuracy": {
+    "value": 0.9475982532751092,
+    "lo": 0.9170305676855895,
+    "hi": 0.9737991266375546,
+    "n": 229,
+    "B_valid": 2000
+   },
+   "project_kappa": {
+    "value": 0.9352177090454749,
+    "lo": 0.8968201644182016,
+    "hi": 0.9676546431073811,
+    "n": 229,
+    "B_valid": 2000
+   },
+   "relevance": {
+    "tp": 145,
+    "fp": 1,
+    "fn": 6,
+    "tn": 77,
+    "precision": 0.9931506849315068,
+    "recall": 0.9602649006622517,
+    "f1": 0.9764309764309764
+   },
+   "relevance_precision": {
+    "value": 0.9931506849315068,
+    "lo": 0.9785675745118191,
+    "hi": 1.0,
+    "n": 229,
+    "B_valid": 2000
+   },
+   "relevance_recall": {
+    "value": 0.9602649006622517,
+    "lo": 0.9240506329113924,
+    "hi": 0.9869281045751634,
+    "n": 229,
+    "B_valid": 2000
+   },
+   "stance_n": 127,
+   "stance_accuracy": {
+    "value": 0.905511811023622,
+    "lo": 0.8503937007874016,
+    "hi": 0.952755905511811,
+    "n": 127,
+    "B_valid": 2000
+   },
+   "stance_kappa": {
+    "value": 0.7995528081020649,
+    "lo": 0.6844344756183154,
+    "hi": 0.899830809275911,
+    "n": 127,
+    "B_valid": 2000
+   },
+   "stance_macro_f1": {
+    "value": 0.8421936864633495,
+    "lo": 0.7359100522516316,
+    "hi": 0.9398751531862743,
+    "n": 127,
+    "B_valid": 2000
+   },
+   "stance_per_class": {
+    "support": {
+     "precision": 0.9444444444444444,
+     "recall": 0.7083333333333334,
+     "f1": 0.8095238095238096,
+     "support": 24
+    },
+    "oppose": {
+     "precision": 0.9230769230769231,
+     "recall": 1.0,
+     "f1": 0.9600000000000001,
+     "support": 12
+    },
+    "neutral_informative": {
+     "precision": 0.9222222222222223,
+     "recall": 0.9431818181818182,
+     "f1": 0.9325842696629215,
+     "support": 88
+    },
+    "other": {
+     "precision": 0.5,
+     "recall": 1.0,
+     "f1": 0.6666666666666666,
+     "support": 3
+    }
+   },
+   "stance_confusion": {
+    "rows_reference": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "cols_prediction": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "matrix": [
+     [
+      17,
+      0,
+      7,
+      0
+     ],
+     [
+      0,
+      12,
+      0,
+      0
+     ],
+     [
+      1,
+      1,
+      83,
+      3
+     ],
+     [
+      0,
+      0,
+      0,
+      3
+     ]
+    ]
+   },
+   "opinion_bearing_n": 36,
+   "opinion_bearing_exact": {
+    "value": 0.8055555555555556,
+    "lo": 0.6497195700482261,
+    "hi": 0.9024690458107127,
+    "n": 36,
+    "k": 29
+   },
+   "opinion_flipped": 0,
+   "voice_kappa": {
+    "value": 0.9296168025918894,
+    "lo": 0.874733796477802,
+    "hi": 0.9793225509023951,
+    "n": 180,
+    "B_valid": 2000
+   }
+  },
+  "sonnet_b": {
+   "n": 220,
+   "project_accuracy": {
+    "value": 0.9863636363636363,
+    "lo": 0.9681818181818181,
+    "hi": 1.0,
+    "n": 220,
+    "B_valid": 2000
+   },
+   "project_kappa": {
+    "value": 0.9831184775936157,
+    "lo": 0.9606389524843268,
+    "hi": 1.0,
+    "n": 220,
+    "B_valid": 2000
+   },
+   "relevance": {
+    "tp": 142,
+    "fp": 3,
+    "fn": 0,
+    "tn": 75,
+    "precision": 0.9793103448275862,
+    "recall": 1.0,
+    "f1": 0.9895470383275261
+   },
+   "relevance_precision": {
+    "value": 0.9793103448275862,
+    "lo": 0.9530121984400507,
+    "hi": 1.0,
+    "n": 220,
+    "B_valid": 2000
+   },
+   "relevance_recall": {
+    "value": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n": 220,
+    "B_valid": 2000
+   },
+   "stance_n": 115,
+   "stance_accuracy": {
+    "value": 0.991304347826087,
+    "lo": 0.9739130434782609,
+    "hi": 1.0,
+    "n": 115,
+    "B_valid": 2000
+   },
+   "stance_kappa": {
+    "value": 0.9807046979865773,
+    "lo": 0.9322078004059899,
+    "hi": 1.0,
+    "n": 115,
+    "B_valid": 2000
+   },
+   "stance_macro_f1": {
+    "value": 0.9913419913419914,
+    "lo": 0.9682070458113836,
+    "hi": 1.0,
+    "n": 115,
+    "B_valid": 2000
+   },
+   "stance_per_class": {
+    "support": {
+     "precision": 1.0,
+     "recall": 0.9444444444444444,
+     "f1": 0.9714285714285714,
+     "support": 18
+    },
+    "oppose": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 12
+    },
+    "neutral_informative": {
+     "precision": 0.9879518072289156,
+     "recall": 1.0,
+     "f1": 0.993939393939394,
+     "support": 82
+    },
+    "other": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 3
+    }
+   },
+   "stance_confusion": {
+    "rows_reference": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "cols_prediction": [
+     "support",
+     "oppose",
+     "neutral_informative",
+     "other"
+    ],
+    "matrix": [
+     [
+      17,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      12,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      82,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      3
+     ]
+    ]
+   },
+   "opinion_bearing_n": 30,
+   "opinion_bearing_exact": {
+    "value": 0.9666666666666667,
+    "lo": 0.8332960900859082,
+    "hi": 0.9940914096183874,
+    "n": 30,
+    "k": 29
+   },
+   "opinion_flipped": 0,
+   "voice_kappa": {
+    "value": 0.9089550523048628,
+    "lo": 0.8487368526768867,
+    "hi": 0.9607145431481127,
+    "n": 176,
+    "B_valid": 2000
+   }
+  }
+ },
+ "keyword_vs_consensus": {
+  "n": 239,
+  "project_accuracy": {
+   "value": 0.7280334728033473,
+   "lo": 0.6694560669456067,
+   "hi": 0.7824267782426778,
+   "n": 239,
+   "B_valid": 2000
+  },
+  "project_kappa": {
+   "value": 0.6634240402114568,
+   "lo": 0.5933437252342859,
+   "hi": 0.7278906190728729,
+   "n": 239,
+   "B_valid": 2000
+  },
+  "relevance": {
+   "tp": 152,
+   "fp": 40,
+   "fn": 3,
+   "tn": 44,
+   "precision": 0.7916666666666666,
+   "recall": 0.9806451612903225,
+   "f1": 0.8760806916426512
+  },
+  "relevance_precision": {
+   "value": 0.7916666666666666,
+   "lo": 0.7343666888297873,
+   "hi": 0.85,
+   "n": 239,
+   "B_valid": 2000
+  },
+  "relevance_recall": {
+   "value": 0.9806451612903225,
+   "lo": 0.9559748427672956,
+   "hi": 1.0,
+   "n": 239,
+   "B_valid": 2000
+  }
+ },
+ "vendor_vs_consensus": {
+  "match": {
+   "value": 0.36220472440944884,
+   "lo": 0.2837954420708089,
+   "hi": 0.4487052475770787,
+   "n": 127,
+   "k": 46
+  },
+  "unscored": 23,
+  "relevant_n": 150,
+  "positive_but_neutral": 62
+ },
+ "consensus_stance": {
+  "bonn_cablecar": {
+   "n": 26,
+   "counts": {
+    "neutral_informative": 15,
+    "oppose": 3,
+    "support": 8
+   },
+   "support": {
+    "value": 0.3076923076923077,
+    "lo": 0.16501315595463767,
+    "hi": 0.4998825832219837,
+    "n": 26,
+    "k": 8
+   },
+   "oppose": {
+    "value": 0.11538461538461539,
+    "lo": 0.04003244623610615,
+    "hi": 0.2897590321171364,
+    "n": 26,
+    "k": 3
+   }
+  },
+  "heilbronn_cablecar": {
+   "n": 62,
+   "counts": {
+    "other": 1,
+    "neutral_informative": 43,
+    "oppose": 9,
+    "support": 9
+   },
+   "support": {
+    "value": 0.14516129032258066,
+    "lo": 0.07829411405317006,
+    "hi": 0.25343393711554596,
+    "n": 62,
+    "k": 9
+   },
+   "oppose": {
+    "value": 0.14516129032258066,
+    "lo": 0.07829411405317006,
+    "hi": 0.25343393711554596,
+    "n": 62,
+    "k": 9
+   }
+  },
+  "ipai": {
+   "n": 27,
+   "counts": {
+    "neutral_informative": 22,
+    "oppose": 1,
+    "support": 3,
+    "other": 1
+   },
+   "support": {
+    "value": 0.1111111111111111,
+    "lo": 0.038520348283098374,
+    "hi": 0.2805780081827982,
+    "n": 27,
+    "k": 3
+   },
+   "oppose": {
+    "value": 0.037037037037037035,
+    "lo": 0.006568145980785103,
+    "hi": 0.18283465933575843,
+    "n": 27,
+    "k": 1
+   }
+  },
+  "paris_c1": {
+   "n": 35,
+   "counts": {
+    "other": 1,
+    "neutral_informative": 28,
+    "support": 6
+   },
+   "support": {
+    "value": 0.17142857142857143,
+    "lo": 0.08102640053701589,
+    "hi": 0.3268228229904496,
+    "n": 35,
+    "k": 6
+   },
+   "oppose": {
+    "value": 0.0,
+    "lo": 6.938893903907228e-18,
+    "hi": 0.09890099232440402,
+    "n": 35,
+    "k": 0
+   }
+  },
+  "heilbronn_citizen_voice": {
+   "n": 12,
+   "counts": {
+    "other": 1,
+    "oppose": 8,
+    "neutral_informative": 1,
+    "support": 2
+   }
+  }
+ },
+ "vote_calibration_ai_proxy": {
+  "project": {
+   "ece": 0.031249999999999993,
+   "levels": [
+    {
+     "conf": 0.5,
+     "n": 47,
+     "accuracy": 0.5106382978723404
+    },
+    {
+     "conf": 1.0,
+     "n": 673,
+     "accuracy": 0.9673105497771174
+    }
+   ]
+  },
+  "stance": {
+   "ece": 0.07419354838709674,
+   "levels": [
+    {
+     "conf": 0.5,
+     "n": 79,
+     "accuracy": 0.5316455696202531
+    },
+    {
+     "conf": 1.0,
+     "n": 386,
+     "accuracy": 0.917098445595855
+    }
+   ]
+  }
+ },
+ "abstention_ai": {
+  "project": {
+   "n": 240,
+   "unanimous": 217,
+   "coverage": {
+    "value": 0.9041666666666667,
+    "lo": 0.8603080239740112,
+    "hi": 0.9352908907398955,
+    "n": 240,
+    "k": 217
+   }
+  },
+  "stance": {
+   "n": 155,
+   "unanimous": 118,
+   "coverage": {
+    "value": 0.7612903225806451,
+    "lo": 0.688376411529281,
+    "hi": 0.8215660216451439,
+    "n": 155,
+    "k": 118
+   }
+  }
+ },
+ "prevalence_proxy": {
+  "first_split": {
+   "n_gold": 77,
+   "n_unlabelled": 78,
+   "truth": {
+    "support": 0.11538461538461539,
+    "oppose": 0.08974358974358974,
+    "neutral_informative": 0.7307692307692307,
+    "other": 0.0641025641025641
+   },
+   "cc": {
+    "support": 0.23076923076923078,
+    "oppose": 0.07692307692307693,
+    "neutral_informative": 0.6538461538461539,
+    "other": 0.038461538461538464
+   },
+   "acc": {
+    "support": {
+     "value": 0.0,
+     "lo": 0.0,
+     "hi": 0.15724593377166035
+    },
+    "oppose": {
+     "value": 0.08297451040421897,
+     "lo": 0.001024764927334508,
+     "hi": 0.15360928254132253
+    },
+    "neutral_informative": {
+     "value": 0.917025489595781,
+     "lo": 0.7514369209000762,
+     "hi": 0.9929511057355075
+    },
+    "other": {
+     "value": 0.0,
+     "lo": 0.0,
+     "hi": 0.0689278053409831
+    }
+   },
+   "ppi": {
+    "support": {
+     "value": 0.06193806193806195,
+     "lo": 0.0,
+     "hi": 0.19822959747603563,
+     "se": 0.06953649772345596
+    },
+    "oppose": {
+     "value": 0.07692307692307693,
+     "lo": 0.007241885642922594,
+     "hi": 0.14660426820323125,
+     "se": 0.03555162820416038
+    },
+    "neutral_informative": {
+     "value": 0.8486513486513487,
+     "lo": 0.7053563360008677,
+     "hi": 0.9919463613018298,
+     "se": 0.07310970033187807
+    },
+    "other": {
+     "value": 0.012487512487512488,
+     "lo": 0.0,
+     "hi": 0.07909692275448779,
+     "se": 0.03398439299335475
+    }
+   },
+   "cond_M": 1.7861433188427671
+  },
+  "mean_abs_error": {
+   "cc": 0.0733974358974359,
+   "acc": 0.05856219625662739,
+   "ppi": 0.0395038295038295
+  },
+  "ppi_interval_coverage": 0.975,
+  "splits": 200
+ },
+ "human": {},
+ "regression": {
+  "haiku": {
+   "summary": {
+    "R1_ski_lift_irrelevant": {
+     "pass": 9,
+     "fail": 1,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R2_council_report_neutral": {
+     "pass": 5,
+     "fail": 1,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R3_accident_elsewhere_not_hn": {
+     "pass": 3,
+     "fail": 0,
+     "missing": 2,
+     "n/a": 0
+    },
+    "R5_ipai_without_cablecar": {
+     "pass": 8,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R4_syndicated_count_once": {
+     "pass": 4,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    }
+   },
+   "fails": [
+    {
+     "case_id": "R1_ski_lift_irrelevant:P161",
+     "rule": "R1_ski_lift_irrelevant",
+     "status": "fail",
+     "reason": "project=other_cablecar, expected one of ['irrelevant']"
+    },
+    {
+     "case_id": "R2_council_report_neutral:P183",
+     "rule": "R2_council_report_neutral",
+     "status": "fail",
+     "reason": "stance=support, expected one of ['neutral_informative']"
+    }
+   ]
+  },
+  "sonnet_a": {
+   "summary": {
+    "R1_ski_lift_irrelevant": {
+     "pass": 10,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R2_council_report_neutral": {
+     "pass": 6,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R3_accident_elsewhere_not_hn": {
+     "pass": 3,
+     "fail": 0,
+     "missing": 2,
+     "n/a": 0
+    },
+    "R5_ipai_without_cablecar": {
+     "pass": 7,
+     "fail": 1,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R4_syndicated_count_once": {
+     "pass": 4,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    }
+   },
+   "fails": [
+    {
+     "case_id": "R5_ipai_without_cablecar:P049",
+     "rule": "R5_ipai_without_cablecar",
+     "status": "fail",
+     "reason": "project=heilbronn_cablecar, must not be ['heilbronn_cablecar']"
+    }
+   ]
+  },
+  "sonnet_b": {
+   "summary": {
+    "R1_ski_lift_irrelevant": {
+     "pass": 10,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R2_council_report_neutral": {
+     "pass": 6,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R3_accident_elsewhere_not_hn": {
+     "pass": 3,
+     "fail": 0,
+     "missing": 2,
+     "n/a": 0
+    },
+    "R5_ipai_without_cablecar": {
+     "pass": 8,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R4_syndicated_count_once": {
+     "pass": 4,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    }
+   },
+   "fails": []
+  },
+  "ai_majority_3": {
+   "summary": {
+    "R1_ski_lift_irrelevant": {
+     "pass": 10,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R2_council_report_neutral": {
+     "pass": 6,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R3_accident_elsewhere_not_hn": {
+     "pass": 3,
+     "fail": 0,
+     "missing": 2,
+     "n/a": 0
+    },
+    "R5_ipai_without_cablecar": {
+     "pass": 8,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R4_syndicated_count_once": {
+     "pass": 4,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    }
+   },
+   "fails": []
+  },
+  "keyword_baseline": {
+   "summary": {
+    "R1_ski_lift_irrelevant": {
+     "pass": 9,
+     "fail": 1,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R2_council_report_neutral": {
+     "pass": 0,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 6
+    },
+    "R3_accident_elsewhere_not_hn": {
+     "pass": 3,
+     "fail": 0,
+     "missing": 2,
+     "n/a": 0
+    },
+    "R5_ipai_without_cablecar": {
+     "pass": 8,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 0
+    },
+    "R4_syndicated_count_once": {
+     "pass": 2,
+     "fail": 0,
+     "missing": 0,
+     "n/a": 2
+    }
+   },
+   "fails": [
+    {
+     "case_id": "R1_ski_lift_irrelevant:P063",
+     "rule": "R1_ski_lift_irrelevant",
+     "status": "fail",
+     "reason": "project=heilbronn_cablecar, expected one of ['irrelevant']"
+    }
+   ]
+  },
+  "reference_dedup": [
+   {
+    "case_id": "R4_syndicated_count_once:P021+P224",
+    "expected": "same",
+    "clusters": [
+     0,
+     0
+    ],
+    "status": "pass"
+   },
+   {
+    "case_id": "R4_syndicated_count_once:P096+P116+P150",
+    "expected": "same",
+    "clusters": [
+     0,
+     0,
+     0
+    ],
+    "status": "pass"
+   },
+   {
+    "case_id": "R4_syndicated_count_once:P149+P183",
+    "expected": "different",
+    "clusters": [
+     0,
+     1
+    ],
+    "status": "pass"
+   },
+   {
+    "case_id": "R4_syndicated_count_once:P018+P096",
+    "expected": "different",
+    "clusters": [
+     0,
+     1
+    ],
+    "status": "pass"
+   }
+  ]
+ },
+ "sample_size": [
+  {
+   "n": 10,
+   "p=0.5": {
+    "normal_half_width": 0.31,
+    "wilson": [
+     0.237,
+     0.763
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.248,
+    "wilson": [
+     0.49,
+     0.943
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.186,
+    "wilson": [
+     0.596,
+     0.982
+    ]
+   }
+  },
+  {
+   "n": 22,
+   "p=0.5": {
+    "normal_half_width": 0.209,
+    "wilson": [
+     0.307,
+     0.693
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.167,
+    "wilson": [
+     0.615,
+     0.927
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.125,
+    "wilson": [
+     0.722,
+     0.975
+    ]
+   }
+  },
+  {
+   "n": 30,
+   "p=0.5": {
+    "normal_half_width": 0.179,
+    "wilson": [
+     0.332,
+     0.668
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.143,
+    "wilson": [
+     0.627,
+     0.905
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.107,
+    "wilson": [
+     0.744,
+     0.965
+    ]
+   }
+  },
+  {
+   "n": 60,
+   "p=0.5": {
+    "normal_half_width": 0.127,
+    "wilson": [
+     0.377,
+     0.623
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.101,
+    "wilson": [
+     0.682,
+     0.882
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.076,
+    "wilson": [
+     0.799,
+     0.953
+    ]
+   }
+  },
+  {
+   "n": 100,
+   "p=0.5": {
+    "normal_half_width": 0.098,
+    "wilson": [
+     0.404,
+     0.596
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.078,
+    "wilson": [
+     0.711,
+     0.867
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.059,
+    "wilson": [
+     0.826,
+     0.945
+    ]
+   }
+  },
+  {
+   "n": 166,
+   "p=0.5": {
+    "normal_half_width": 0.076,
+    "wilson": [
+     0.425,
+     0.575
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.061,
+    "wilson": [
+     0.734,
+     0.855
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.046,
+    "wilson": [
+     0.842,
+     0.935
+    ]
+   }
+  },
+  {
+   "n": 300,
+   "p=0.5": {
+    "normal_half_width": 0.057,
+    "wilson": [
+     0.444,
+     0.556
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.045,
+    "wilson": [
+     0.751,
+     0.841
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.034,
+    "wilson": [
+     0.861,
+     0.929
+    ]
+   }
+  },
+  {
+   "n": 1000,
+   "p=0.5": {
+    "normal_half_width": 0.031,
+    "wilson": [
+     0.469,
+     0.531
+    ]
+   },
+   "p=0.8": {
+    "normal_half_width": 0.025,
+    "wilson": [
+     0.774,
+     0.824
+    ]
+   },
+   "p=0.9": {
+    "normal_half_width": 0.019,
+    "wilson": [
+     0.88,
+     0.917
+    ]
+   }
+  }
+ ],
+ "status": "pending_human_labels",
+ "n_gold": 0,
+ "stance": {
+  "reference": "AI vs AI, pairwise kappa on posts both call relevant (no human labels yet)",
+  "kappa_range": [
+   0.6287543970415803,
+   0.8009658857377724
+  ],
+  "agreement": null,
+  "kappa": null
+ },
+ "relevance": {
+  "reference": "3-AI consensus (no human labels yet)",
+  "keyword_precision": 0.7916666666666666,
+  "keyword_recall": 0.9806451612903225,
+  "precision": null,
+  "recall": null
+ },
+ "by_project": {
+  "bonn_cablecar": {
+   "n": 26,
+   "counts": {
+    "neutral_informative": 15,
+    "oppose": 3,
+    "support": 8
+   }
+  },
+  "heilbronn_cablecar": {
+   "n": 62,
+   "counts": {
+    "other": 1,
+    "neutral_informative": 43,
+    "oppose": 9,
+    "support": 9
+   }
+  },
+  "ipai": {
+   "n": 27,
+   "counts": {
+    "neutral_informative": 22,
+    "oppose": 1,
+    "support": 3,
+    "other": 1
+   }
+  },
+  "paris_c1": {
+   "n": 35,
+   "counts": {
+    "other": 1,
+    "neutral_informative": 28,
+    "support": 6
+   }
+  },
+  "heilbronn_citizen_voice": {
+   "n": 12,
+   "counts": {
+    "other": 1,
+    "oppose": 8,
+    "neutral_informative": 1,
+    "support": 2
+   }
+  }
+ },
+ "metrics_rows": [
+  {
+   "metric_id": "agreement.ai_ai.haiku__sonnet_a.stance_relevant",
+   "project": null,
+   "voice": null,
+   "name": "Stance kappa haiku__sonnet_a (AI vs AI)",
+   "value": 0.6287543970415803,
+   "ci_low": 0.4989617727877116,
+   "ci_high": 0.74163586771135,
+   "n": 147,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.haiku__sonnet_a.project",
+   "project": null,
+   "voice": null,
+   "name": "Project kappa haiku__sonnet_a (AI vs AI)",
+   "value": 0.896774193548387,
+   "ci_low": 0.8518725822808885,
+   "ci_high": 0.9383440884255554,
+   "n": 240,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.haiku__sonnet_b.stance_relevant",
+   "project": null,
+   "voice": null,
+   "name": "Stance kappa haiku__sonnet_b (AI vs AI)",
+   "value": 0.6989176779271892,
+   "ci_low": 0.5862060454814292,
+   "ci_high": 0.7956980870636616,
+   "n": 153,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.haiku__sonnet_b.project",
+   "project": null,
+   "voice": null,
+   "name": "Project kappa haiku__sonnet_b (AI vs AI)",
+   "value": 0.9433476394849786,
+   "ci_low": 0.9071000175268992,
+   "ci_high": 0.9740674684784909,
+   "n": 240,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.sonnet_a__sonnet_b.stance_relevant",
+   "project": null,
+   "voice": null,
+   "name": "Stance kappa sonnet_a__sonnet_b (AI vs AI)",
+   "value": 0.8009658857377724,
+   "ci_low": 0.6891608864010884,
+   "ci_high": 0.8986414243304622,
+   "n": 149,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.sonnet_a__sonnet_b.project",
+   "project": null,
+   "voice": null,
+   "name": "Project kappa sonnet_a__sonnet_b (AI vs AI)",
+   "value": 0.9172271081220901,
+   "ci_low": 0.8747190172694378,
+   "ci_high": 0.9538434129355361,
+   "n": 240,
+   "method": "kappa",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.alpha.project",
+   "project": null,
+   "voice": null,
+   "name": "Krippendorff alpha project, 3 AI labellers",
+   "value": 0.9192293167488085,
+   "ci_low": 0.8833917869924018,
+   "ci_high": 0.9493890328360308,
+   "n": 240,
+   "method": "bootstrap",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.alpha.stance",
+   "project": null,
+   "voice": null,
+   "name": "Krippendorff alpha stance, 3 AI labellers",
+   "value": 0.7691171433464634,
+   "ci_low": 0.7106379337711509,
+   "ci_high": 0.821473428159607,
+   "n": 240,
+   "method": "bootstrap",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "agreement.ai_ai.alpha.voice",
+   "project": null,
+   "voice": null,
+   "name": "Krippendorff alpha voice, 3 AI labellers",
+   "value": 0.7318048155769554,
+   "ci_low": 0.6752406228189356,
+   "ci_high": 0.7925315043218478,
+   "n": 240,
+   "method": "bootstrap",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "baseline.keyword.precision",
+   "project": null,
+   "voice": null,
+   "name": "Keyword relevance precision vs 3-AI consensus",
+   "value": 0.7916666666666666,
+   "ci_low": 0.7343666888297873,
+   "ci_high": 0.85,
+   "n": 239,
+   "method": "bootstrap",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "baseline.keyword.recall",
+   "project": null,
+   "voice": null,
+   "name": "Keyword relevance recall vs 3-AI consensus",
+   "value": 0.9806451612903225,
+   "ci_low": 0.9559748427672956,
+   "ci_high": 1.0,
+   "n": 239,
+   "method": "bootstrap",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  },
+  {
+   "metric_id": "vendor.match_stance",
+   "project": null,
+   "voice": null,
+   "name": "Vendor sentiment read as stance, match with consensus",
+   "value": 0.36220472440944884,
+   "ci_low": 0.2837954420708089,
+   "ci_high": 0.4487052475770787,
+   "n": 127,
+   "method": "wilson",
+   "source_run_ids": "pilot_haiku;pilot_sonnet_a;pilot_sonnet_b",
+   "computed_at": "2026-11-14T20:09:06"
+  }
+ ]
+}

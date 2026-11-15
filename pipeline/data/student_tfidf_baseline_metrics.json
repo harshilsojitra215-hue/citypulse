@@ -1,0 +1,7 @@
+{
+ "n_train": 4075,
+ "cv_folds": 5,
+ "project_accuracy": 0.952638036809816,
+ "relevance_accuracy": 0.9636809815950921,
+ "note": "Cross-validated on the pilot vote (AI labels), not on human gold. Agreement with the teacher, not accuracy."
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CityPulse · Heilbronn cable car debate</title>
+<meta name="description" content="A calm, evidence-first monitor of the public debate on Heilbronn's planned urban cable car.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ask.css">
+</head>
+<body>
+<div class="scene" aria-hidden="true"><div class="scene-in"><img class="scene-photo" id="scenePhoto" src="photo/heilbronn_kiliansturm_2015_11.jpg" alt=""><svg id="scene" xmlns="http://www.w3.org/2000/svg"></svg></div></div>
+<p class="photo-credit">Photo: Heilbronn from the Kilianskirche tower, <a href="https://commons.wikimedia.org/wiki/File:Heilbronn-Kiliansturmblick2015-11.JPG" target="_blank" rel="noopener">Peter Schmelzle</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Cable car drawn in to illustrate the plan.</p>
+
+<header class="top">
+  <a class="brand" href="#home" aria-label="CityPulse, home"><span class="mark" aria-hidden="true"><i></i></span>CityPulse</a>
+  <nav class="tabs3" aria-label="Four reports">
+    <a href="#history"><span class="n">01</span>History</a>
+    <a href="#since"><span class="n">02</span>So far</a>
+    <a href="#today"><span class="n">03</span>Today</a>
+    <a href="#review"><span class="n">04</span><span class="t-lg">Human review</span><span class="t-sm">Review</span></a>
+  </nav>
+  <div class="top-r"><button class="ask-pill" id="askOpen" type="button" aria-label="Ask CityPulse a question" title="Ask CityPulse ( / )"><span class="ask-ic" aria-hidden="true"></span>Ask</button>
+  <button class="icon" id="howLink" type="button" aria-label="How it works" title="How it works">i</button></div>
+</header>
+
+<main>
+  <section class="view home" id="home" data-view="home" aria-labelledby="home-h"></section>
+  <section class="view sheet" id="history" data-view="history" aria-labelledby="history-h"></section>
+  <section class="view sheet" id="since" data-view="since" aria-labelledby="since-h"></section>
+  <section class="view sheet" id="today" data-view="today" aria-labelledby="today-h"></section>
+  <section class="view sheet" id="review" data-view="review" aria-labelledby="review-h"></section>
+</main>
+
+<div class="drawer-wrap" id="drawerWrap" hidden>
+  <div class="drawer-veil" data-close></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-h" tabindex="-1"></aside>
+</div>
+
+<script src="data/config.js"></script>
+<script src="data/facts.js"></script>
+<script src="data/live.js"></script>
+<script src="data/history.js"></script>
+<script src="data/engine.js"></script>
+<script src="scenephoto.js"></script>
+<script src="adapter.js"></script>
+<script src="app.js"></script>
+<script src="ask.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>

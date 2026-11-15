@@ -1,0 +1,24 @@
+[18:49:11] ingest: reading FSI_Heilbronn_Medienbeiträge (1).json (210 MB)
+[18:50:11] ingest: posts=39,361 first=2024-10-19 23:34:44+00:00 last=2026-10-27 12:29:23+00:00 paywall_stubs=223 no_vendor_sentiment=6,797 (59s)
+[18:50:11] live: 'Seilbahn Heilbronn': 1 items
+[18:50:13] live: 'IPAI Heilbronn': 11 items
+[18:50:14] live: 'Seilbahn Bonn Venusberg': 0 items
+[18:50:15] live: 'Câble C1 téléphérique': 7 items
+[18:50:24] live: 19 unique items, 11 published after 2026-10-27 added as origin=live
+[18:51:17] candidates: 3,394 candidates of 39,372 posts; by hint: {'ipai': 1461, 'other_cablecar': 658, 'bonn_cablecar': 559, 'paris_c1': 520, 'heilbronn_cablecar': 196} (53s)
+[18:52:09] dedup: 39,372 posts -> 32,941 stories; 2,491 clusters with copies hold 8,922 posts; largest 126 (51s)
+[18:52:11] labels: 5 runs, 5,906 labels, 0 human labels, final=3,428 by source {'wide_net': 1601, 'rules_curated': 1587, 'vote': 240}, abstain among voted=5; 39 labelled posts are outside the rule net (kept)
+[18:52:26] student: student_tfidf_baseline: {'n_train': 240, 'cv_folds': 5, 'project_accuracy': 0.8041666666666667, 'relevance_accuracy': 0.8625, 'note': 'Cross-validated on the pilot vote (AI labels), not on human gold. Agreement with the teacher, not accuracy.'} ; predicted 3,394 candidates: {'irrelevant': 972, 'paris_c1': 951, 'ipai': 828, 'heilbronn_cablecar': 302, 'other_cablecar': 227, 'bonn_cablecar': 114}
+[18:52:27] labels: 5 runs, 5,901 labels, 0 human labels, final=3,428 by source {'wide_net': 1601, 'rules_curated': 1587, 'vote': 240}, abstain among voted=5; 34 labelled posts are outside the rule net (kept)
+[18:52:27] calibrate: student T=0.50, ECE 0.213 -> 0.080 (n=240, vs AI labels)
+[18:52:27] measure: 160 metrics. Heilbronn (all voices): support=0.15 [0.08,0.25] n=62; oppose=0.15 [0.08,0.25] n=62; neutral_informative=0.69 [0.57,0.79] n=62; mixed=0.00 [0.00,0.06] n=62; unclear=0.02 [0.00,0.09] n=62
+[18:52:29] faq: 155 Heilbronn posts checked; concern matches {'hn_cost': 32, 'hn_traffic_relief': 20, 'hn_comparable': 18, 'hn_masts': 9, 'hn_ticket': 4, 'hn_frequency': 2, 'hn_environment': 2, 'hn_privacy': 2, 'hn_why_not_tram': 2, 'hn_capacity': 1, 'hn_noise': 1, 'hn_travel_time': 1, 'hn_status': 1, 'hn_accessible': 1}; figure_differs 1
+[18:52:30] events: heilbronn_cablecar: 5 peak weeks, 3 linked to 6 documented events; random dates link 0.43 on average, placebo p=0.000
+[18:52:30] events: paris_c1: 7 peak weeks, 3 linked to 2 documented events; random dates link 0.12 on average, placebo p=0.000
+[18:52:30] events: events with a dataset post: 8/9
+[18:52:32] export: C:\Users\Harshil\Desktop\win\pipeline\data\export\data.json: 1,743 posts, 11 live items, status=llm_vote, 2.4 MB
+done in 201s -> data/export/data.json
+
+real	3m26.098s
+user	0m0.031s
+sys	0m0.015s

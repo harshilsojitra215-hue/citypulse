@@ -1,0 +1,37 @@
+# data derived from the challenge dataset, uploads and model weights never go to git
+app_data/
+runs/
+lab/
+*.zip
+SHA256SUMS.txt
+models/*
+!models/MODEL_CARD.md
+!models/checksums.txt
+*.parquet
+*.npy
+*.safetensors
+*.bin
+*.joblib
+# secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_*
+# python / node
+.venv
+__pycache__/
+*.pyc
+.pytest_cache/
+web/node_modules/
+web/.next/
+web/out/
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.log
+# private SSH helpers (not part of the product)
+pipeline/hssh.sh
+pipeline/hamburg_mssproxy.py

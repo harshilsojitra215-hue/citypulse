@@ -1,0 +1,90 @@
+{"pid":"E001","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"Schon die Vision einer Seilbahn ist eine Bereicherung für Heilbronn"}
+{"pid":"E002","project":"bonn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Entlastung Venusberg mit der Seilbahn, das sorgt primär für weniger KFZ"}
+{"pid":"E003","project":"bonn_cablecar","stance":"mixed","arguments":["cost","process_participation"],"voice":"citizen","evidence":"Die Idee ist gut, aber die Kosten sind viel zu hoch."}
+{"pid":"E004","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Die Stadtwerke Bonn melden nun die nächste Etappe. Im Jahr 2028 soll sie fertig sein."}
+{"pid":"E005","project":"heilbronn_cablecar","stance":"mixed","arguments":["cost"],"voice":"news_institutional","evidence":"Die Idee ist gut, aber die Kosten sind viel zu hoch."}
+{"pid":"E006","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Câble C1 : à quand l'inauguration du premier téléphérique d'Île-de-France ?"}
+{"pid":"E007","project":"heilbronn_cablecar","stance":"support","arguments":["climate_environment"],"voice":"news_institutional","evidence":"In Heilbronn geht man nun den richtigen Schritt in Richtung Zukunft."}
+{"pid":"E008","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility","ipai_who_benefits"],"voice":"news_institutional","evidence":"Heilbronner Luftnummer: Künftig über Dächer schweben statt Bahnfahren?"}
+{"pid":"E009","project":"bonn_cablecar","stance":"neutral_informative","arguments":["cost"],"voice":"news_institutional","evidence":"Die Pläne für die Bonner Seilbahn kommen gut voran, aber letztendlich geht es noch ums Geld"}
+{"pid":"E010","project":"paris_c1","stance":"mixed","arguments":["cost","tourism_image"],"voice":"news_institutional","evidence":"L'idée est bonne, mais le coût est beaucoup trop élevé."}
+{"pid":"E011","project":"bonn_cablecar","stance":"oppose","arguments":["cost","traffic_mobility"],"voice":"politician_official","evidence":"Damit wird die Seilbahn unwirtschaftlich."}
+{"pid":"E012","project":"irrelevant","stance":"unclear","arguments":[],"voice":"news_institutional","evidence":""}
+{"pid":"E013","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Heilbronn plant Gondeln zum Ipai - doch wie realistisch ist das?"}
+{"pid":"E014","project":"ipai","stance":"support","arguments":["ipai_who_benefits"],"voice":"citizen","evidence":"Das wird absolut mega. Kanns kaum erwarten."}
+{"pid":"E015","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Wir brauchen die Seilbahn in Heilbronn jetzt, nicht erst in zehn Jahren!"}
+{"pid":"E016","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Verlängerung der Seilbahn Heilbronn bis nach Bad Friedrichshall"}
+{"pid":"E017","project":"heilbronn_cablecar","stance":"oppose","arguments":["cost","tourism_image","traffic_mobility"],"voice":"news_institutional","evidence":"Nach Kürzungen beim Stadtbahn-Verkehr: Für Prestigeprojekt Heilbronner Seilbahn fließt das Geld"}
+{"pid":"E018","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Ich bin klar gegen die Seilbahn in Heilbronn."}
+{"pid":"E019","project":"bonn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"unclear","evidence":"Ein Projekt, das nicht zerredet werden soll."}
+{"pid":"E020","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"relie désormais en 25 minutes Créteil et Villeneuve-Saint-Georges"}
+{"pid":"E021","project":"bonn_cablecar","stance":"neutral_informative","arguments":["cost"],"voice":"news_institutional","evidence":"Eine Absichtserklärung zum Bau der Seilbahn wurde ebenfalls bereits unterzeichnet."}
+{"pid":"E022","project":"ipai","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Kanzler Merz beim Spatenstich für ein neues KI-Zentrum in Heilbronn."}
+{"pid":"E023","project":"ipai","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"IPAI-Campus: Warum Heilbronn einen Stadtteil für KI baut"}
+{"pid":"E024","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"a été officiellement inauguré ce samedi matin"}
+{"pid":"E025","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Ich bin klar für die Seilbahn in Heilbronn."}
+{"pid":"E026","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"a annoncé l’inauguration du câble C1 le 13 décembre 2025"}
+{"pid":"E027","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Wo sollen eigentlich die Autos parken, wenn die Seilbahn in Heilbronn fertig ist?"}
+{"pid":"E028","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"Seilbahn für Heilbronn: Das Projekt beflügelt die Phantasie"}
+{"pid":"E029","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Heilbronn bringt eine urbane Seilbahn in die Detailplanung"}
+{"pid":"E030","project":"bonn_cablecar","stance":"oppose","arguments":["cost","traffic_mobility"],"voice":"politician_official","evidence":"Wir sagen \"NEIN\" zur Seilbahn!"}
+{"pid":"E031","project":"bonn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"unclear","evidence":"Ein Projekt, das nicht zerredet werden soll."}
+{"pid":"E032","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"hat am Donnerstag mit großer Mehrheit beschlossen, die Planung der Seilbahn fortzusetzen"}
+{"pid":"E033","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Das ist wieder so ein Sinnlosprojekt"}
+{"pid":"E034","project":"paris_c1","stance":"support","arguments":["traffic_mobility","cost"],"voice":"citizen","evidence":"cette solution est plutôt une évidence pour un tel site"}
+{"pid":"E035","project":"ipai","stance":"support","arguments":["cost","ipai_who_benefits"],"voice":"citizen","evidence":"Alles hauptsächlich finanziert durch private Mittel."}
+{"pid":"E036","project":"paris_c1","stance":"support","arguments":["tourism_image","traffic_mobility"],"voice":"news_institutional","evidence":"le plus long d'Europe et rencontre déjà un grand succès"}
+{"pid":"E037","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Dem Gemeinderat liegt eine Machbarkeitsstudie des Stuttgarter Büros Drees & Sommer vor"}
+{"pid":"E038","project":"ipai","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Die ersten Gebäude sollen Ende 2027 bezugsfertig errichtet sein."}
+{"pid":"E039","project":"heilbronn_cablecar","stance":"oppose","arguments":["cost"],"voice":"citizen","evidence":"sollte die Stadt das Projekt beenden und das Geld lieber in Ärzte und Schulen stecken"}
+{"pid":"E040","project":"bonn_cablecar","stance":"neutral_informative","arguments":["cost"],"voice":"news_institutional","evidence":"Eine Absichtserklärung wurde bereits unterzeichnet"}
+{"pid":"E041","project":"irrelevant","stance":"unclear","arguments":[],"voice":"citizen","evidence":""}
+{"pid":"E042","project":"bonn_cablecar","stance":"oppose","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Ich bin klar gegen die Seilbahn in Bonn."}
+{"pid":"E043","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"Schon die Vision einer Seilbahn ist eine Bereicherung für Heilbronn"}
+{"pid":"E044","project":"paris_c1","stance":"support","arguments":[],"voice":"citizen","evidence":"Il faut le garder et en construire d'autres."}
+{"pid":"E045","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"passe la barre du million de voyageurs"}
+{"pid":"E046","project":"ipai","stance":"neutral_informative","arguments":["traffic_mobility"],"voice":"news_institutional","evidence":"Mit Schnellbus, Rad, Stadt- oder Seilbahn zum KI-Innovationspark IPAI"}
+{"pid":"E047","project":"paris_c1","stance":"support","arguments":["traffic_mobility"],"voice":"news_institutional","evidence":"rencontre un vrai succès"}
+{"pid":"E048","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"unclear","evidence":"könnte wichtige Impulse für den Nahverkehr setzen"}
+{"pid":"E049","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Ich schlage hiermit vor, die Strecke bis Bad Friedrichshall Hbf zu verlängern."}
+{"pid":"E050","project":"bonn_cablecar","stance":"support","arguments":["climate_environment","traffic_mobility"],"voice":"politician_official","evidence":"Mit der Seilbahn über den Rhein auf den Venusberg"}
+{"pid":"E051","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Das ist wieder so ein Sinnlosprojekt"}
+{"pid":"E052","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility","ipai_who_benefits","cost"],"voice":"citizen","evidence":"Heilbronner Luftnummer: Künftig über Dächer schweben statt Bahnfahren?"}
+{"pid":"E053","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Bonn sagt Ja zur Seilbahn-Idee"}
+{"pid":"E054","project":"paris_c1","stance":"support","arguments":["traffic_mobility"],"voice":"news_institutional","evidence":"en apportant des réponses concrètes aux contraintes foncières"}
+{"pid":"E055","project":"paris_c1","stance":"support","arguments":["traffic_mobility","tourism_image"],"voice":"citizen","evidence":"un voyage de 4,5km assez féerique, avec des vues splendides"}
+{"pid":"E056","project":"bonn_cablecar","stance":"oppose","arguments":["cost"],"voice":"politician_official","evidence":"Dieses Projekt wird immer teurer."}
+{"pid":"E057","project":"bonn_cablecar","stance":"oppose","arguments":["cost","traffic_mobility"],"voice":"politician_official","evidence":"Wir sagen \"NEIN\" zur Seilbahn!"}
+{"pid":"E058","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Die Stadt Bonn will eine urbane Seilbahn in ihr öffentliches # Nahverkehrsnetz integrieren."}
+{"pid":"E059","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":["process_participation"],"voice":"politician_official","evidence":"Das Projekt Seilbahn schreitet voran."}
+{"pid":"E060","project":"bonn_cablecar","stance":"oppose","arguments":[],"voice":"citizen","evidence":"Stoppt endlich die Seilbahn in Bonn!"}
+{"pid":"E061","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Eine Seilbahn durch die Stadt: Grünes Licht für konkrete Vorplanung"}
+{"pid":"E062","project":"bonn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"In Bonn arbeitet man am Verkehrsmittel der Zukunft."}
+{"pid":"E063","project":"heilbronn_cablecar","stance":"oppose","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Das ist wieder so ein Sinnlosprojekt"}
+{"pid":"E064","project":"irrelevant","stance":"unclear","arguments":[],"voice":"news_institutional","evidence":""}
+{"pid":"E065","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"Seilbahn für Heilbronn: Das Projekt beflügelt die Phantasie"}
+{"pid":"E066","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"unclear","evidence":"könnte wichtige Impulse für den Nahverkehr setzen"}
+{"pid":"E067","project":"paris_c1","stance":"neutral_informative","arguments":["safety_technology"],"voice":"news_institutional","evidence":"Le Câble C1 est interrompu plusieurs heures ce jeudi 15 janvier 2026."}
+{"pid":"E068","project":"bonn_cablecar","stance":"support","arguments":["climate_environment","traffic_mobility"],"voice":"unclear","evidence":"Bonn kommt in Bewegung – mit der Seilbahn in die Zukunft!"}
+{"pid":"E069","project":"paris_c1","stance":"support","arguments":["traffic_mobility"],"voice":"news_institutional","evidence":"rencontre un vrai succès"}
+{"pid":"E070","project":"paris_c1","stance":"support","arguments":["traffic_mobility","cost"],"voice":"citizen","evidence":"cette solution est plutôt une évidence pour un tel site"}
+{"pid":"E071","project":"heilbronn_cablecar","stance":"oppose","arguments":["tourism_image"],"voice":"citizen","evidence":"muss sich halt noch ein Denkmal setzen bevor er abdankt"}
+{"pid":"E072","project":"irrelevant","stance":"unclear","arguments":[],"voice":"news_institutional","evidence":""}
+{"pid":"E073","project":"heilbronn_cablecar","stance":"oppose","arguments":["cost"],"voice":"unclear","evidence":"157 Millionen Euro für eine Seilbahn aber ein Krankenhaus soll sterben?"}
+{"pid":"E074","project":"heilbronn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Ich schlage hiermit vor, die Strecke bis Bad Friedrichshall Hbf zu verlängern."}
+{"pid":"E075","project":"bonn_cablecar","stance":"mixed","arguments":["cost","climate_environment","traffic_mobility"],"voice":"politician_official","evidence":"Die Idee ist gut, aber die Kosten sind viel zu hoch."}
+{"pid":"E076","project":"bonn_cablecar","stance":"oppose","arguments":["cost"],"voice":"citizen","evidence":"Die Seilbahn in Bonn ist keinen Euro wert"}
+{"pid":"E077","project":"bonn_cablecar","stance":"support","arguments":["cost","traffic_mobility"],"voice":"citizen","evidence":"Die Seilbahn in Bonn ist jeden Euro wert, ein echter Gewinn für alle Pendler."}
+{"pid":"E078","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"citizen","evidence":"Baut endlich die Seilbahn in Heilbronn!"}
+{"pid":"E079","project":"heilbronn_cablecar","stance":"support","arguments":[],"voice":"news_institutional","evidence":"In Heilbronn arbeitet man am Verkehrsmittel der Zukunft."}
+{"pid":"E080","project":"paris_c1","stance":"neutral_informative","arguments":["noise_privacy_overflight"],"voice":"news_institutional","evidence":"La région dit étudier la question."}
+{"pid":"E081","project":"heilbronn_cablecar","stance":"mixed","arguments":["climate_environment","cost"],"voice":"news_institutional","evidence":"Die Idee ist gut, aber die Kosten sind viel zu hoch."}
+{"pid":"E082","project":"heilbronn_cablecar","stance":"neutral_informative","arguments":["cost"],"voice":"news_institutional","evidence":"Die Fraktion im Rat fordert den Stopp der Seilbahn in Heilbronn."}
+{"pid":"E083","project":"bonn_cablecar","stance":"support","arguments":[],"voice":"citizen","evidence":"Alles voller Nimbys hier."}
+{"pid":"E084","project":"paris_c1","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Le Câble C1 est la seule bonne nouvelle depuis des années"}
+{"pid":"E085","project":"bonn_cablecar","stance":"support","arguments":["traffic_mobility"],"voice":"citizen","evidence":"Entlastung Venusberg mit der Seilbahn"}
+{"pid":"E086","project":"paris_c1","stance":"oppose","arguments":["cost"],"voice":"citizen","evidence":"il faudrait arrêter ce genre de projet"}
+{"pid":"E087","project":"paris_c1","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"sera mis en service le 13 décembre, a annoncé mardi la présidente de région"}
+{"pid":"E088","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Die Trasse der Seilbahn von Beuel-Ramersdorf über den Rhein hinauf zum UKB wurde nahezu finalisiert."}
+{"pid":"E089","project":"bonn_cablecar","stance":"neutral_informative","arguments":[],"voice":"news_institutional","evidence":"Drees & Sommer aus Stuttgart hat die Programmsteuerung übernommen."}
+{"pid":"E090","project":"paris_c1","stance":"neutral_informative","arguments":["safety_technology"],"voice":"news_institutional","evidence":"le Câble C1 est-il en mesure de fonctionner"}

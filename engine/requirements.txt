@@ -1,0 +1,19 @@
+# application
+fastapi>=0.115
+uvicorn[standard]>=0.30
+duckdb>=1.1
+python-multipart>=0.0.9
+pandas>=2.2
+pyarrow>=16
+numpy>=2.0
+scipy>=1.13
+scikit-learn>=1.5
+# matcher inference (CPU, Apple MPS or CUDA)
+torch>=2.3
+transformers>=4.48
+sentencepiece
+safetensors
+# tests
+pytest>=8
+httpx>=0.27
+# research pipeline only (argument map, benchmark): umap-learn, hdbscan, joblib, bertopic

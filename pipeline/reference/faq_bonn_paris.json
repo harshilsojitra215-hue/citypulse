@@ -1,0 +1,621 @@
+{
+ "meta": {
+  "what": "Official facts and FAQ for the comparison projects Bonn and Paris Câble C1, collected 14 Nov 2026 by a research agent of this session. Every entry was fetched (no snippet-only facts). Used for comparison and the taxonomy, never for stance.",
+  "notes": [
+   "Paris: iledefrance-mobilites.fr returned HTTP 403 to automated fetches; the same IDFM pages were read on the official mirror tzen4.iledefrance-mobilites.fr. Operator is Transdev.",
+   "Paris outage Nov 2026: PRESS only (service cut since evening of 5 Nov 2026, cavity near a pylon, no restart date as of 11 Nov). No official IDFM release found.",
+   "Heilbronn FAQ states Câble C1 = 4.3 km and 5 stations; IDFM states 4.5 km. The city page differs from the official Paris figure.",
+   "Bonn: in planning, not approved, not stopped; opening planned 2032; project subject to budget reservation (bonn.de, 24 Mar 2026). Cost about 155 million EUR net (2026 prices), up from about 66 million (2019 prices).",
+   "Disagreements: Paris travel time 18 min (IDFM) vs about 20 min (Transdev); cabin interval under 30 s vs 22 to 27 s; fares changed in 2026 and one IDFM page contradicts itself."
+  ],
+  "date_seen": "2026-11-14"
+ },
+ "items": [
+  {
+   "project": "bonn_cablecar",
+   "question": "Was kostet die Seilbahn und wer bezahlt sie? (Neuer Sachstand zur Bonner Seilbahn)",
+   "question_en": "What does the cable car cost and who pays for it?",
+   "answer_summary": "Total investment is estimated at about 155 million euros net, higher than earlier estimates because of current technical standards, stricter building and noise requirements and more detailed ground findings. Most of it is to be covered by subsidies, mainly under the GVFG; the city's own share is about 17.6 million euros. Annual costs are about 5.2 million euros (3.9 million operation and maintenance, 1.3 million capital service on the city share), fare revenue not included.",
+   "figures": {
+    "investment_net": "ca. 155 Mio. Euro netto",
+    "city_share": "ca. 17,6 Mio. Euro",
+    "annual_costs": "ca. 5,2 Mio. Euro",
+    "operation_maintenance_per_year": "ca. 3,9 Mio. Euro",
+    "capital_service_per_year": "ca. 1,3 Mio. Euro"
+   },
+   "topic": "cost",
+   "source_url": "https://www.bonn.de/pressemitteilungen/maerz-2026/neuer-sachstand-zur-bonner-seilbahn.php",
+   "source_kind": "OFFICIAL_PRESS_RELEASE",
+   "page_date": "2026-03-24",
+   "verified": "FETCHED",
+   "faq_id": "bonn_01",
+   "argument_code": "cost",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Was ist eine Standardisierte Bewertung und wo kann man die Ergebnisse einsehen?",
+   "question_en": "What is a standardized assessment and where can the results be viewed?",
+   "answer_summary": "The standardized assessment tests whether the project is economically worthwhile for society and is a precondition for federal and state funding under the GVFG; a benefit-cost index of at least 1.0 is required. The 2022 assessment gave 1.6 on about 66 million euros net (2019 price basis) with a 30 % risk surcharge; the 2026 indicative calculation gives about 1.79 on about 155 million euros net (2026 basis) with a 20 % surcharge. The 2026 value is only a tendency; the final report comes with the funding application after planning approval.",
+   "figures": {
+    "funding_threshold_NKI": "1,0",
+    "NKI_2022": "1,6",
+    "investment_2022_basis": "ca. 66 Mio. Euro netto (Preisstand 2019)",
+    "risk_surcharge_2022": "30 %",
+    "NKI_2026_tendency": "ca. 1,79",
+    "investment_2026_basis": "ca. 155 Mio. Euro netto (Preisstand 2026)",
+    "risk_surcharge_2026": "20 %"
+   },
+   "topic": "cost",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_02",
+   "argument_code": "cost",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wie hat sich die Planung seit der Machbarkeitsstudie 2017 verändert?",
+   "question_en": "How has the planning changed since the 2017 feasibility study?",
+   "answer_summary": "The route is now about 3.8 km long with five stations and 22 support towers. Stations (UKB, Loki-Schmidt-Platz, UN-Campus, Rheinaue, Schießbergweg) were relocated or optimised and the line is split into two independently operable loops with two cabin depots. Detailed design will be done by the general contractor (Totalunternehmer).",
+   "figures": {
+    "length": "ca. 3,8 km",
+    "stations": "5",
+    "towers": "22"
+   },
+   "topic": "other",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_03",
+   "argument_code": "other",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wie läuft das Genehmigungsverfahren für die Seilbahn ab – und warum wird der Seilbahnhersteller schon vor dem Planfeststellungsverfahren ausgewählt?",
+   "question_en": "How does the approval procedure work, and why is the manufacturer chosen before the planning approval procedure?",
+   "answer_summary": "Cable car designs are manufacturer-specific, so the manufacturer is chosen early through the general contractor tender and co-develops the approval documents. Sequence: preliminary planning (done), political decision and contractor award (planned end of 2027), approval planning, then the Planfeststellung from mid-2028 by the Bezirksregierung Köln. The applicant and future operator is Stadtwerke Bonn Verkehrs-GmbH.",
+   "figures": {
+    "contractor_award": "Ende 2027 (geplant)",
+    "planfeststellung_start": "ab Mitte 2028",
+    "approval_authority": "Bezirksregierung Köln"
+   },
+   "topic": "process_participation",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_04",
+   "argument_code": "process_participation",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wie lange dauert der Bau der Seilbahn – und wann geht sie in Betrieb?",
+   "question_en": "How long will construction take, and when will the cable car open?",
+   "answer_summary": "Construction is planned to start from 2030 after approval and detailed design. Pure build and installation time is estimated at 1.5 to 2 years, followed by commissioning, trial operation and acceptance. Passenger service is currently planned for 2032.",
+   "figures": {
+    "construction_start": "ab 2030",
+    "build_time": "1,5 bis 2 Jahre",
+    "opening": "2032"
+   },
+   "topic": "process_participation",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_05",
+   "argument_code": "process_participation",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wie viele Fahrgäste werden erwartet und wie oft fahren die Kabinen? (Neuer Sachstand zur Bonner Seilbahn)",
+   "question_en": "How many passengers are expected and how often do cabins run?",
+   "answer_summary": "Up to 15,000 passengers per day are expected: 9,150 newly generated trips (for example people switching from cars) and 6,000 trips by existing public transport users. 95 barrier-free cabins would depart every 20 to 40 seconds and can take bicycles, strollers and wheelchairs. Some Venusberg bus lines could be reduced, to be examined in the new Nahverkehrsplan.",
+   "figures": {
+    "passengers_per_day": "bis zu 15.000",
+    "new_trips_per_day": "9.150",
+    "existing_pt_trips_per_day": "6.000",
+    "cabins": "95",
+    "headway": "20 bis 40 Sekunden"
+   },
+   "topic": "traffic_mobility",
+   "source_url": "https://www.bonn.de/pressemitteilungen/maerz-2026/neuer-sachstand-zur-bonner-seilbahn.php",
+   "source_kind": "OFFICIAL_PRESS_RELEASE",
+   "page_date": "2026-03-24",
+   "verified": "FETCHED",
+   "faq_id": "bonn_06",
+   "argument_code": "traffic_mobility",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Warum eine Seilbahn für Bonn? (Seilbahn-Hauptseite)",
+   "question_en": "Why a cable car for Bonn?",
+   "answer_summary": "The city calls it a flagship public transport project, mainly to relieve the roads up to the university hospital on the Venusberg and to link the right bank with the Bundesviertel without new tunnels or bridges. Nearly 15,000 daily passengers are expected and about 12 to 12.4 million car-kilometres per year could be avoided; total public transport travel time on the full route would be roughly halved (no minutes given). Regular tickets (including Deutschlandticket-type subscriptions, job and student tickets) would apply.",
+   "figures": {
+    "passengers_per_day": "knapp 15.000",
+    "car_km_avoided_per_year": "ca. 12 bis 12,4 Mio. Pkw-km",
+    "travel_time": "Reisezeit im ÖPNV halbiert (keine Minutenangabe)"
+   },
+   "topic": "climate_environment",
+   "source_url": "https://www.bonn.de/seilbahn",
+   "source_kind": "OFFICIAL_PAGE",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_07",
+   "argument_code": "climate_environment",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wie wird der Lärmschutz gewährleistet?",
+   "question_en": "How is noise protection ensured?",
+   "answer_summary": "Operating noise is assessed under the TA Lärm (federal Immissionsschutzgesetz). A 2025 feasibility study found noise protection achievable, and a preliminary noise study on the final route is underway. Minimum noise requirements will be binding in the tender, the manufacturer must prove compliance, and measurements follow commissioning. No decibel values are given.",
+   "figures": {},
+   "topic": "noise_privacy_overflight",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_08",
+   "argument_code": "noise_privacy_overflight",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Werden private Gebäude von der Seilbahn überflogen?",
+   "question_en": "Will private buildings be overflown by the cable car?",
+   "answer_summary": "Private residential buildings are not overflown. Between Loki-Schmidt-Platz and UN-Campus the route crosses edge areas of a few private residential plots, but the buildings themselves are outside the overflight zone. The route corridor is about 14.55 to 16.75 m wide depending on the span.",
+   "figures": {
+    "corridor_width": "ca. 14,55 bis 16,75 m"
+   },
+   "topic": "noise_privacy_overflight",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zum-trassenverlauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_09",
+   "argument_code": "noise_privacy_overflight",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Wo stehen die Stützen nach aktuellem Planungsstand, wie hoch sind sie – und wo sind Niederhalterstützen vorgesehen?",
+   "question_en": "Where are the towers, how tall are they, and where are hold-down towers planned?",
+   "answer_summary": "The number of towers fell from 26 to 22. No towers are planned on private residential land; they stand on public land or mostly on commercial land. Maximum tower height is about 45 m, and hold-down towers stand directly in front of station openings.",
+   "figures": {
+    "towers": "22 (vorher 26)",
+    "max_tower_height": "ca. 45 m"
+   },
+   "topic": "cityscape_design",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zum-trassenverlauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_10",
+   "argument_code": "cityscape_design",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Darf eine Seilbahn über das Gelände einer Grundschule wie der Erich-Kästner-Schule geführt werden?",
+   "question_en": "May a cable car pass over a primary school site such as the Erich-Kästner-Schule?",
+   "answer_summary": "In principle yes. Modern cable cars are relatively quiet, no tower is planned on the school grounds, and the TA Lärm applies to schools too. A feasibility study confirmed it is feasible; a preliminary noise study is running and control measurements are planned after opening.",
+   "figures": {},
+   "topic": "noise_privacy_overflight",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zum-trassenverlauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_11",
+   "argument_code": "noise_privacy_overflight",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Muss für die Seilbahn der Wald am Venusberghang weichen?",
+   "question_en": "Does the forest on the Venusberg slope have to be cleared?",
+   "answer_summary": "No. The line runs above the tree tops with no cleared corridor; trees are felled only at tower sites in the forest. Towers stand on micro-piles and steel parts are mounted by helicopter, with access via existing forest paths. Compensation is set in the landscape management plan.",
+   "figures": {},
+   "topic": "climate_environment",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zum-trassenverlauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_12",
+   "argument_code": "climate_environment",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Warum wurde ein aerodynamisches Gutachten am Post Tower erstellt – und was ist das Ergebnis?",
+   "question_en": "Why was a wind study done at the Post Tower, and what is the result?",
+   "answer_summary": "The study assessed wind-related operating limits, including effects of a new high-rise west of the Post Tower. The warning threshold is reached or exceeded only about 18 hours per year; with 17 planned operating hours per day that means roughly 13 lost operating hours per year. A meteorological study for the whole route is being updated.",
+   "figures": {
+    "hours_above_wind_threshold_per_year": "ca. 18 Stunden",
+    "planned_operating_hours_per_day": "17",
+    "lost_operating_hours_per_year": "ca. 13"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zur-planung-und-deren-ablauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_13",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Ist die Seilbahn angesichts der Haushaltslage gesichert? (Neuer Sachstand zur Bonner Seilbahn / Seilbahn-Hauptseite)",
+   "question_en": "Is the project secure given the city's budget situation?",
+   "answer_summary": "No final building decision exists. The March 2026 release says the city will decide on construction only after the Planfeststellung and on the basis of all facts, and that given the precarious budget it must be checked whether the cable car fits an approvable budget (task review, 2027/28 budget draft, medium-term financial plan). The main project page states that, like all major city projects, it is currently 'unter Vorbehalt' (subject to reservation).",
+   "figures": {},
+   "topic": "process_participation",
+   "source_url": "https://www.bonn.de/pressemitteilungen/maerz-2026/neuer-sachstand-zur-bonner-seilbahn.php",
+   "source_kind": "OFFICIAL_PRESS_RELEASE",
+   "page_date": "2026-03-24",
+   "verified": "FETCHED",
+   "faq_id": "bonn_14",
+   "argument_code": "process_participation",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Bürgerdialog zur Seilbahn",
+   "question_en": "How are citizens involved?",
+   "answer_summary": "Formats include dialogue events, a residents' forum, a youth event, a travelling exhibition of 11 posters and an info market. An info market in April 2022 drew about 3,000 visitors and an open exchange in April 2024 over 300; a residents' forum in Dottendorf took place on 13 June 2026. The next public dialogue event is planned for autumn 2026 with no date announced on the page.",
+   "figures": {
+    "infomarkt_2022_visitors": "ca. 3.000",
+    "exchange_april_2024_attendees": "über 300",
+    "exhibition_posters": "11",
+    "residents_forum": "13. Juni 2026"
+   },
+   "topic": "process_participation",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/buergerdialog-zur-seilbahn.php",
+   "source_kind": "OFFICIAL_PAGE",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_15",
+   "argument_code": "process_participation",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "bonn_cablecar",
+   "question": "Welche touristischen Ziele liegen neben der Rheinaue entlang der Trasse?",
+   "question_en": "Which tourist destinations besides the Rheinaue lie along the route?",
+   "answer_summary": "The city says the ride itself is a tourist highlight. On the Venusberg there are a wildlife enclosure, geocaching, a barefoot path, viewpoints, an event venue and a riding stable, and the 'Haus der Natur' would benefit; the right-bank Rheinaue with the Bonner Bogen would also be easy to reach.",
+   "figures": {},
+   "topic": "tourism_image",
+   "source_url": "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/zum-trassenverlauf-.php",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "bonn_16",
+   "argument_code": "tourism_image",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Combien a coûté ce projet ?",
+   "question_en": "How much did the project cost?",
+   "answer_summary": "The Câble C1 project cost 138 million euros including the cabins. Infrastructure (cable car and interchange hubs) was funded 21 % by the State and the EU, 49 % by the Île-de-France Region and 30 % by the Val-de-Marne Department; operation and maintenance and the cabins are funded 100 % by Île-de-France Mobilités.",
+   "figures": {
+    "total_cost": "138 M€ incluant les cabines",
+    "infra_state_EU": "21 %",
+    "infra_region": "49 %",
+    "infra_department": "30 %",
+    "operation_IDFM": "100 %"
+   },
+   "topic": "cost",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/combien-coutera-ce-projet-",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-17",
+   "verified": "FETCHED",
+   "faq_id": "paris_01",
+   "argument_code": "cost",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Quelle est la fréquence du Câble C1 ? Combien de passagers sont attendus par heure ?",
+   "question_en": "How frequent is the Câble C1, and how many passengers are expected per hour?",
+   "answer_summary": "Cabins pass at intervals of under 30 seconds. About 11,000 passengers per day are expected at opening, rising to about 12,000 by 2030, with about 1,100 passengers in the morning peak in the Villeneuve-Saint-Georges to Créteil direction. Service runs 5:30 to 23:30 on weekdays and until 00:30 at weekends.",
+   "figures": {
+    "headway": "< 30 secondes",
+    "passengers_per_day_opening": "env. 11 000",
+    "passengers_per_day_2030": "env. 12 000",
+    "morning_peak_passengers": "env. 1 100 (sens Villeneuve-Saint-Georges vers Créteil)",
+    "hours_weekday": "5h30 - 23h30",
+    "hours_weekend": "jusqu'à 0h30"
+   },
+   "topic": "traffic_mobility",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/quelle-sera-la-frequence-du-cable-c1--combien-de-passagers",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-18",
+   "verified": "FETCHED",
+   "faq_id": "paris_02",
+   "argument_code": "traffic_mobility",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Quel est le temps de parcours entre Villa Nova et le métro 8 Pointe du Lac à Créteil ?",
+   "question_en": "What is the travel time between Villa Nova and Metro 8 Pointe du Lac in Créteil?",
+   "answer_summary": "The trip takes about 18 minutes at peak times. The page compares this favourably with today's car or bus journey (roughly half the time, as summarised from the page).",
+   "figures": {
+    "travel_time_peak": "env. 18 minutes"
+   },
+   "topic": "traffic_mobility",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/quel-sera-le-temps-de-parcours-entre-bois-matar-et",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-18",
+   "verified": "FETCHED",
+   "faq_id": "paris_03",
+   "argument_code": "traffic_mobility",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Combien coûte un trajet entre le Câble C1 et le Métro 8 ?",
+   "question_en": "How much does a trip between the Câble C1 and Metro 8 cost?",
+   "answer_summary": "Navigo pass holders (day, weekly, monthly, annual) travel at no extra cost. Occasional riders pay the surface-mode fare: with single tickets, a 2.50 € Métro-Train-RER ticket plus a 2 € Bus-Tram-Câble ticket, 4.50 € per trip; with Passe Navigo Liberté+, 1.99 € in total for cable car plus metro, if the second boarding is within 1 h 30.",
+   "figures": {
+    "metro_ticket": "2,50 €",
+    "bus_tram_cable_ticket": "2 €",
+    "single_tickets_total": "4,50 €",
+    "navigo_liberte_plus_total": "1,99 €",
+    "transfer_window": "1 h 30"
+   },
+   "topic": "cost",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/si-vous-avez-un-forfait-navigo-jour-hebdomadaire-m",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2026-02-19",
+   "verified": "FETCHED",
+   "faq_id": "paris_04",
+   "argument_code": "cost",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Câble C1 : comment voyager ?",
+   "question_en": "How to travel on the Câble C1?",
+   "answer_summary": "Imagine R and monthly or annual Navigo passes include the trip. This page gives a Bus-Tram ticket at 2.05 € and Navigo Liberté+ at 2.04 € for a combined metro plus cable trip, but elsewhere on the same page also states 2 € and 1.60 €; it is internally inconsistent. Children under 4 travel free, 4 to 10 half price; a cabin passes at most every 30 seconds and the line is described as 100 % accessible.",
+   "figures": {
+    "bus_tram_ticket": "2,05 € (ailleurs sur la page: 2 €)",
+    "navigo_liberte_plus_combined": "2,04 € (ailleurs sur la page: 1,60 €)",
+    "max_headway": "30 secondes"
+   },
+   "topic": "cost",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/services-de-mobilite/telepherique-cable-c1/cable-c1-comment-voyager",
+   "source_kind": "OFFICIAL_PAGE",
+   "page_date": "2026-09-11",
+   "verified": "FETCHED",
+   "faq_id": "paris_05",
+   "argument_code": "cost",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Câble C1 – Créteil - Villeneuve-Saint-Georges (page projet)",
+   "question_en": "What is the Câble C1 (route, stations, timeline)?",
+   "answer_summary": "The first cable car in Île-de-France, opened 13 December 2025, links Villeneuve-Saint-Georges, Limeil-Brévannes and Valenton to Metro 8 at Créteil - Pointe du Lac. It is 4.5 km long with 5 stations spaced 500 to 1,800 m apart, crosses 4 municipalities, has 10-seat cabins and is 100 % accessible, with 11,000 passengers per day expected at opening. Timeline: public inquiry and DUP 2019, contract award 2021, construction 2023-2024, tests May-December 2025, finishing works around stations in 2026.",
+   "figures": {
+    "opening": "13 décembre 2025",
+    "length": "4,5 km",
+    "stations": "5",
+    "station_spacing": "500 à 1 800 m",
+    "municipalities": "4",
+    "seats_per_cabin": "10",
+    "passengers_per_day_opening": "11 000"
+   },
+   "topic": "other",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/en/le-reseau/projets/cablec1",
+   "source_kind": "OFFICIAL_PAGE",
+   "page_date": null,
+   "verified": "FETCHED",
+   "faq_id": "paris_06",
+   "argument_code": "other",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Câble C1, Île-de-France's first cable car (Transdev reference page)",
+   "question_en": "What does the operator say about the line?",
+   "answer_summary": "Transdev operates the line; operations are 100 % financed by IDFM and design, construction and maintenance are by a Doppelmayr France / Spie Batignolles / France Travaux / Egis Rail / Atelier Schall consortium. The page states 4.5 km, five accessible stations, 105 cabins, cabin intervals of 22 to 27 seconds, about 20 minutes end to end at peak and up to 11,000 passengers per day. Infrastructure financing: 49 % Region, 30 % Val-de-Marne, 21 % State.",
+   "figures": {
+    "cabins": "105",
+    "cabin_interval": "22 to 27 seconds",
+    "travel_time_peak": "about 20 minutes",
+    "passengers_per_day": "up to 11,000",
+    "length": "4.5 km"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://www.transdev.com/en/reference/cable-c1-ile-de-frances-first-cable-car",
+   "source_kind": "OFFICIAL_PAGE",
+   "page_date": "2026-11-05",
+   "verified": "FETCHED",
+   "faq_id": "paris_07",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Qu’est-il prévu lors des périodes de maintenance du Câble C1 ?",
+   "question_en": "What happens during Câble C1 maintenance periods?",
+   "answer_summary": "Like all cable cars, the C1 needs an annual maintenance period of 10 consecutive days. Replacement buses run during that time and riders are told schedules and routes in advance.",
+   "figures": {
+    "annual_maintenance": "10 jours consécutifs"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/quest-il-prevu-lors-des-periodes-de-maintenance-du",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2024-03-22",
+   "verified": "FETCHED",
+   "faq_id": "paris_08",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Câble C1 : fermeture estivale 2026",
+   "question_en": "Câble C1 summer closure 2026",
+   "answer_summary": "The line was closed from 3 to 13 August 2026 inclusive for its annual regulatory tests. A 'Bus Relais C1' served all stations between Créteil and Villeneuve-Saint-Georges every 15 minutes from 5:30 to 0:30.",
+   "figures": {
+    "closure": "3 au 13 août 2026 inclus",
+    "replacement_bus_headway": "15 minutes",
+    "replacement_bus_hours": "5h30 - 0h30"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/actualites/locales/detail/cable-c1-fermeture-estivale-2026",
+   "source_kind": "OFFICIAL_PRESS_RELEASE",
+   "page_date": "2026-08-05",
+   "verified": "FETCHED",
+   "faq_id": "paris_09",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Quelles sont les précautions prises en cas d’intempéries ?",
+   "question_en": "What precautions are taken in bad weather?",
+   "answer_summary": "The area rarely has strong winds. From 70 km/h wind the cabins slow down; in storms above 90 km/h the cable car stops and replacement buses are always provided.",
+   "figures": {
+    "slowdown_wind": "70 km/h",
+    "stop_wind": "> 90 km/h"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/quelles-seront-les-precautions-prises-en-cas-dintemperies",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-18",
+   "verified": "FETCHED",
+   "faq_id": "paris_10",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "En cas d'incident, quel est le dispositif de secours prévu ?",
+   "question_en": "What rescue system exists in case of an incident?",
+   "answer_summary": "An automatic backup system called 'récupération intégrée' lets passengers reach the stations safely while staying inside the cabins. No evacuation time is given.",
+   "figures": {},
+   "topic": "safety_technology",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/un-systeme-de-secours-automatique-est-prevu.-ce-dispositif",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-18",
+   "verified": "FETCHED",
+   "faq_id": "paris_11",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Comment le C1 s’intègre-t-il dans son environnement ?",
+   "question_en": "How does the C1 fit into its environment?",
+   "answer_summary": "The design received HQE certification for Sustainable Infrastructures in May 2022. Clearing and tree removal are limited to what is strictly necessary and done in winter, outside bird and bat breeding periods, and ecologists inventoried sensitive sites before works. The page gives no figures on noise, overflight or privacy.",
+   "figures": {
+    "HQE_certification": "mai 2022"
+   },
+   "topic": "climate_environment",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/comment-le-c1-sintegre-t-il-dans-son-environnement",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2023-08-09",
+   "verified": "FETCHED",
+   "faq_id": "paris_12",
+   "argument_code": "climate_environment",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Quels sont les impacts du téléphérique sur les oiseaux ?",
+   "question_en": "What is the impact of the cable car on birds?",
+   "answer_summary": "Collision risk with cabins is described as very low because cabins are easy to see; specific markers make the cables easier to detect. All clearing work is scheduled outside nesting periods.",
+   "figures": {},
+   "topic": "climate_environment",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/quels-seront-les-impacts-du-telepherique-sur-les-oiseaux",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2025-12-18",
+   "verified": "FETCHED",
+   "faq_id": "paris_13",
+   "argument_code": "climate_environment",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Quand a eu lieu la concertation ?",
+   "question_en": "When did the public consultation take place?",
+   "answer_summary": "Preliminary consultation ran September to October 2016, continuous consultation from 2018, and the public inquiry from 25 March to 11 May 2019; dialogue with local authorities and associations continued during design studies. No participant numbers are given.",
+   "figures": {
+    "preliminary_consultation": "septembre-octobre 2016",
+    "continuous_consultation": "à partir de 2018",
+    "public_inquiry": "25 mars - 11 mai 2019"
+   },
+   "topic": "process_participation",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/une-premiere-phase-de-concertation-prealable-a-ete",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2023-08-09",
+   "verified": "FETCHED",
+   "faq_id": "paris_14",
+   "argument_code": "process_participation",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Pourquoi ne pas prolonger le Câble C1 jusqu’au RER D de Villeneuve-Saint-Georges ?",
+   "question_en": "Why not extend the Câble C1 to the RER D at Villeneuve-Saint-Georges?",
+   "answer_summary": "The extension was ruled out because studies found it would cause major disruption to the urban environment. Riders can reach the RER D by bus 427, which serves La Végétale and Villa Nova stations.",
+   "figures": {},
+   "topic": "traffic_mobility",
+   "source_url": "https://tzen4.iledefrance-mobilites.fr/le-reseau/projets/cablec1/questions/pourquoi-ne-pas-prolonger-le-cable-c1-jusquau-rer",
+   "source_kind": "OFFICIAL_FAQ",
+   "page_date": "2024-03-22",
+   "verified": "FETCHED",
+   "faq_id": "paris_15",
+   "argument_code": "traffic_mobility",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Câble C1 : une cavité près d’un pylône, trois stations à l’arrêt",
+   "question_en": "Câble C1: cavity near a pylon, three stations out of service",
+   "answer_summary": "PRESS. Service has been interrupted since the evening of 5 November 2026 after, according to the operator Transdev (quoted via Le Parisien), a cavity was found near a pylon during nearby works. Only Créteil Pointe du Lac to Limeil-Brévannes Plage Bleue runs; Valenton, La Végétale and Villa Nova are closed, a replacement shuttle runs, and as of 11 November no restart date had been given. The article cites IDFM traffic data but no dedicated official IDFM or Transdev press release.",
+   "figures": {
+    "outage_start": "5 novembre 2026 (soir)",
+    "closed_stations": "3 sur 5 (Valenton, La Végétale, Villa Nova)",
+    "status_on": "11 novembre 2026: toujours interrompu"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://laclepublique.fr/val-de-marne/articles/2026/2026-11-11-cable-c1-interruption-prolongee/",
+   "source_kind": "PRESS",
+   "page_date": "2026-11-11",
+   "verified": "FETCHED",
+   "faq_id": "paris_16",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  },
+  {
+   "project": "paris_c1",
+   "question": "Le Câble C1 est à l'arrêt après la découverte d'une cavité",
+   "question_en": "The Câble C1 is stopped after a cavity was discovered",
+   "answer_summary": "PRESS. Traffic between Limeil-Brévannes Plage Bleue and Villa Nova has been cut since Thursday 5 November 2026 (from 22:00) and was still interrupted on 9 November. IDFM announced the interruption on X and its website lists bus lines and a replacement shuttle without a restart time; the city of Limeil-Brévannes spoke of an infrastructure check for passenger safety.",
+   "figures": {
+    "outage_start": "jeudi 5 novembre 2026, 22h",
+    "status_on": "9 novembre 2026: toujours interrompu"
+   },
+   "topic": "safety_technology",
+   "source_url": "https://fr.qz.com/cable-c1-arret-cavite-pylone-limeil-brevannes-110926",
+   "source_kind": "PRESS",
+   "page_date": "2026-11-09",
+   "verified": "FETCHED",
+   "faq_id": "paris_17",
+   "argument_code": "safety_technology",
+   "date_seen": "2026-11-14"
+  }
+ ]
+}

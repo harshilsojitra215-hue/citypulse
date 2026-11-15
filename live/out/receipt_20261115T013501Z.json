@@ -1,0 +1,264 @@
+{
+ "schema_version": 1,
+ "collector_version": "0.3",
+ "run_id": "20261115T013501Z",
+ "published": false,
+ "status": "success",
+ "status_reason": "every attempted source answered without error",
+ "message": "SUCCESS: 3 new, 7 changed, 0 official page change(s) from 5 sources (5 clean, 0 partial, 0 failed). Nothing is published by the collector.",
+ "started_at": "2026-11-15T01:35:01+00:00",
+ "finished_at": "2026-11-15T01:37:53+00:00",
+ "seconds": 172,
+ "since": "2026-10-27T00:00:00+00:00",
+ "db": "live_radar_v2.db",
+ "projects": [
+  "heilbronn_cablecar",
+  "ipai"
+ ],
+ "sources": [
+  {
+   "source": "rss",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {
+    "feed_status": {
+     "heilbronn_de": [
+      "ok",
+      30
+     ],
+     "swr_bw": [
+      "ok",
+      72
+     ],
+     "ga_bonn": [
+      "ok",
+      8
+     ],
+     "franceinfo": [
+      "ok",
+      28
+     ],
+     "20minutes": [
+      "ok",
+      30
+     ]
+    }
+   }
+  },
+  {
+   "source": "pagewatch",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {
+    "page_status": {
+     "hn_seilbahn": [
+      "unchanged",
+      "hash c3dcfebf64, last snapshot 2026-11-14T16:29:26+00:00"
+     ]
+    }
+   }
+  },
+  {
+   "source": "exa",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 12,
+   "new": 1,
+   "updated": 4,
+   "seen_before": 7,
+   "duplicates": 0,
+   "detail": {}
+  },
+  {
+   "source": "tavily",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 39,
+   "new": 2,
+   "updated": 4,
+   "seen_before": 33,
+   "duplicates": 0,
+   "detail": {}
+  },
+  {
+   "source": "date_recovery",
+   "status": "success",
+   "projects_ok": [],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {}
+  }
+ ],
+ "totals": {
+  "sources_attempted": 5,
+  "sources_clean": 5,
+  "sources_partial": 0,
+  "sources_failed": 0,
+  "items_returned_by_adapters": 51,
+  "unique_items_seen": 48,
+  "truly_new": 3,
+  "changed_versions": 7,
+  "late_discovered_new": 0,
+  "sightings_recorded": 51,
+  "official_page_changes": 0,
+  "duplicates_flagged_not_exported": 0,
+  "already_known": 38,
+  "exported_records_in_window": 485
+ },
+ "per_project": {
+  "heilbronn_cablecar": {
+   "name": "Urban cable car Heilbronn",
+   "new": 1,
+   "updated": 2,
+   "duplicates": 0,
+   "new_title_hit": 1,
+   "new_relevance_known_by_hand": {
+    "R": 0,
+    "U": 0,
+    "N": 0
+   },
+   "new_not_judged": 1,
+   "new_radar_match": {
+    "strong": 1,
+    "weak": 0,
+    "none": 0
+   },
+   "new_date_unknown": 0,
+   "sources_returning_items": [
+    "exa",
+    "tavily"
+   ],
+   "sources_failed": []
+  },
+  "ipai": {
+   "name": "IPAI campus Heilbronn",
+   "new": 2,
+   "updated": 5,
+   "duplicates": 0,
+   "new_title_hit": 2,
+   "new_relevance_known_by_hand": {
+    "R": 0,
+    "U": 0,
+    "N": 0
+   },
+   "new_not_judged": 2,
+   "new_radar_match": {
+    "strong": 2,
+    "weak": 0,
+    "none": 0
+   },
+   "new_date_unknown": 2,
+   "sources_returning_items": [
+    "exa",
+    "tavily"
+   ],
+   "sources_failed": []
+  }
+ },
+ "sources_skipped": [],
+ "official_page_changes": [],
+ "new_items": [
+  {
+   "mention_id": "live:74eac9ca65c5",
+   "project": "heilbronn_cablecar",
+   "kind": "social_link",
+   "source": "exa",
+   "outlet": "linkedin.com",
+   "published_at": "2026-10-28T12:10:51+0000",
+   "date_known": true,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "Gunther Weipert",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:f206852b3d2b",
+   "project": "ipai",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "instagram.com",
+   "published_at": "2026-11-15T01:37:28+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "Instagram",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:c06553e1aa43",
+   "project": "ipai",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "tiktok.com",
+   "published_at": "2026-11-15T01:37:47+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "[USER] on TikTok",
+   "late_discovered": false
+  }
+ ],
+ "coverage_gaps": [
+  "NOT COVERED BY DESIGN: Instagram, Facebook, TikTok, LinkedIn, X: no legal open access (needs a vendor or research contract)",
+  "NOT COVERED BY DESIGN: Reddit: official API needs approval, not set up. Reddit and the other social platforms appear only as search-result links (title, snippet), never opened",
+  "NOT COVERED BY DESIGN: YouTube: only videos and comments the YouTube search returns for our queries (daily quota); texts older than 30 days are removed (API terms)",
+  "NOT COVERED BY DESIGN: Heilbronner Stimme and echo24: paywall or no feed; only what Exa and Tavily index (Google News is off)",
+  "NOT COVERED BY DESIGN: Citizen participation platforms (comments): no export, not collected",
+  "NOT COVERED BY DESIGN: Local radio, TV, podcasts: not collected",
+  "NOT COVERED BY DESIGN: GDELT (news index): switched off, rate limited (HTTP 429) from our network on 14 Nov, retest needed",
+  "NOT COVERED BY DESIGN: Google News RSS: switched off, robots.txt disallows /rss. Without it and GDELT, news comes only from Exa and Tavily (what they index) and five outlet RSS feeds (a few days each), so news coverage is thinner than the city's monitoring tool"
+ ],
+ "export": {
+  "mode": "discovered",
+  "records": 485,
+  "dataset_edge": "2026-10-27T12:29:00+0000"
+ },
+ "date_fields": {
+  "published_at": "the source's own date (for page changes: the time we detected the change)",
+  "modified_at": "source says it changed, when known (OParl papers)",
+  "discovered_at": "first time our collector saw it, never changes",
+  "last_seen_at (retrieved_at)": "last run that saw it again",
+  "ingested_at": "set by the pipeline when it loads the record, not by the collector"
+ },
+ "relevance_rule": "radar_match (strong, weak, none) is the radar gate: strong = a project phrase, or a cable word and a place word in the same snippet fragment, at most 100 characters apart; weak = only one of them, or both far apart; none = neither or a negative word. All items stay stored. title_hit = the headline or text names the project (specific phrase, or keyword plus place word). Manual judgments (R relevant, U unclear, N not) exist only for items judged earlier by hand (data/relevance_judgments.json); new items are listed as not judged. Pipeline stage 2 and the labels decide relevance."
+}

@@ -1,0 +1,355 @@
+{
+ "schema_version": 1,
+ "collector_version": "0.3",
+ "run_id": "20261115T082738Z",
+ "published": false,
+ "status": "success",
+ "status_reason": "every attempted source answered without error",
+ "message": "SUCCESS: 10 new, 1 changed, 0 official page change(s) from 5 sources (5 clean, 0 partial, 0 failed). Nothing is published by the collector.",
+ "started_at": "2026-11-15T08:27:38+00:00",
+ "finished_at": "2026-11-15T08:30:12+00:00",
+ "seconds": 154,
+ "since": "2026-10-27T00:00:00+00:00",
+ "db": "live_radar_v2.db",
+ "projects": [
+  "heilbronn_cablecar",
+  "ipai"
+ ],
+ "sources": [
+  {
+   "source": "rss",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {
+    "feed_status": {
+     "heilbronn_de": [
+      "ok",
+      30
+     ],
+     "swr_bw": [
+      "ok",
+      74
+     ],
+     "ga_bonn": [
+      "ok",
+      8
+     ],
+     "franceinfo": [
+      "ok",
+      30
+     ],
+     "20minutes": [
+      "ok",
+      30
+     ]
+    }
+   }
+  },
+  {
+   "source": "pagewatch",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {
+    "page_status": {
+     "hn_seilbahn": [
+      "unchanged",
+      "hash c3dcfebf64, last snapshot 2026-11-14T16:29:26+00:00"
+     ]
+    }
+   }
+  },
+  {
+   "source": "exa",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 11,
+   "new": 0,
+   "updated": 1,
+   "seen_before": 10,
+   "duplicates": 0,
+   "detail": {}
+  },
+  {
+   "source": "tavily",
+   "status": "success",
+   "projects_ok": [
+    "heilbronn_cablecar",
+    "ipai"
+   ],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 56,
+   "new": 10,
+   "updated": 1,
+   "seen_before": 45,
+   "duplicates": 0,
+   "detail": {}
+  },
+  {
+   "source": "date_recovery",
+   "status": "success",
+   "projects_ok": [],
+   "projects_failed": [],
+   "projects_skipped": [],
+   "warnings": [],
+   "items_returned": 0,
+   "new": 0,
+   "updated": 0,
+   "seen_before": 0,
+   "duplicates": 0,
+   "detail": {}
+  }
+ ],
+ "totals": {
+  "sources_attempted": 5,
+  "sources_clean": 5,
+  "sources_partial": 0,
+  "sources_failed": 0,
+  "items_returned_by_adapters": 67,
+  "unique_items_seen": 65,
+  "truly_new": 10,
+  "changed_versions": 1,
+  "late_discovered_new": 1,
+  "sightings_recorded": 67,
+  "official_page_changes": 0,
+  "duplicates_flagged_not_exported": 0,
+  "already_known": 54,
+  "exported_records_in_window": 495
+ },
+ "per_project": {
+  "heilbronn_cablecar": {
+   "name": "Urban cable car Heilbronn",
+   "new": 1,
+   "updated": 0,
+   "duplicates": 0,
+   "new_title_hit": 1,
+   "new_relevance_known_by_hand": {
+    "R": 0,
+    "U": 0,
+    "N": 0
+   },
+   "new_not_judged": 1,
+   "new_radar_match": {
+    "strong": 0,
+    "weak": 1,
+    "none": 0
+   },
+   "new_date_unknown": 1,
+   "sources_returning_items": [
+    "exa",
+    "tavily"
+   ],
+   "sources_failed": []
+  },
+  "ipai": {
+   "name": "IPAI campus Heilbronn",
+   "new": 9,
+   "updated": 1,
+   "duplicates": 0,
+   "new_title_hit": 9,
+   "new_relevance_known_by_hand": {
+    "R": 0,
+    "U": 0,
+    "N": 0
+   },
+   "new_not_judged": 9,
+   "new_radar_match": {
+    "strong": 9,
+    "weak": 0,
+    "none": 0
+   },
+   "new_date_unknown": 5,
+   "sources_returning_items": [
+    "exa",
+    "tavily"
+   ],
+   "sources_failed": []
+  }
+ },
+ "sources_skipped": [],
+ "official_page_changes": [],
+ "new_items": [
+  {
+   "mention_id": "live:763419fb9e12",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "roboticstomorrow.com",
+   "published_at": "2026-10-27T12:00:00+0000",
+   "date_known": true,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "IDS becomes an IPAI partner | RoboticsTomorrow",
+   "late_discovered": true
+  },
+  {
+   "mention_id": "live:31d79064c4ae",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "sourcesecurity.com",
+   "published_at": "2026-10-28T12:00:00+0000",
+   "date_known": true,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "IDS joins IPAI to advance AI and computer vision | Security News - SourceSecurity.com",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:b2df473f11af",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "securityinformed.com",
+   "published_at": "2026-10-28T12:00:00+0000",
+   "date_known": true,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "IDS Brings Computer Vision Expertise To IPAI | Security News - SecurityInformed.com",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:1b79a0db3887",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "hnfiz.fraunhofer.de",
+   "published_at": "2026-11-12T08:08:40+0000",
+   "date_known": true,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "Research and Innovation Center Chip AI",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:cd4b69897c1f",
+   "project": "heilbronn_cablecar",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "facebook.com",
+   "published_at": "2026-11-15T08:29:13+0000",
+   "date_known": false,
+   "radar_match": "weak",
+   "title_hit": true,
+   "title": "DÜWAG- klassisch | ier ist nun die versprochene Heckansicht eines Frankfurter L-Wagens zum Vergleich mit dem Lv-Wagen von gestern | Facebook",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:5c97c2fe7cc2",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "ipai-foundation.ai",
+   "published_at": "2026-11-15T08:29:34+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "Robo-Weeks 2026 Program – IPAI Foundation",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:dce4ebc7d00f",
+   "project": "ipai",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "linkedin.com",
+   "published_at": "2026-11-15T08:29:51+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "#sayhitoai #ai #würthgroup #würthit #würth #ipai | Dr. [USER]",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:f771c3d65aab",
+   "project": "ipai",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "linkedin.com",
+   "published_at": "2026-11-15T08:29:55+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "#ipai #veigel #appliedai #innovation #collaboration #ipaicommunity #heilbronn | IPAI",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:5f8930b0b830",
+   "project": "ipai",
+   "kind": "social_link",
+   "source": "tavily",
+   "outlet": "linkedin.com",
+   "published_at": "2026-11-15T08:29:55+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "#ai #responsibleai #aigovernance #cybersecurity #trust #innovation #ipai #heilbronn #leadership #compliance #sap #insightstoimpact | Marielle Ehrmann",
+   "late_discovered": false
+  },
+  {
+   "mention_id": "live:00c11b3b448b",
+   "project": "ipai",
+   "kind": "web",
+   "source": "tavily",
+   "outlet": "sourcesecurity.com",
+   "published_at": "2026-11-15T08:29:55+0000",
+   "date_known": false,
+   "radar_match": "strong",
+   "title_hit": true,
+   "title": "IDS joins IPAI to advance AI and computer vision | Security News",
+   "late_discovered": false
+  }
+ ],
+ "coverage_gaps": [
+  "NOT COVERED BY DESIGN: Instagram, Facebook, TikTok, LinkedIn, X: no legal open access (needs a vendor or research contract)",
+  "NOT COVERED BY DESIGN: Reddit: official API needs approval, not set up. Reddit and the other social platforms appear only as search-result links (title, snippet), never opened",
+  "NOT COVERED BY DESIGN: YouTube: only videos and comments the YouTube search returns for our queries (daily quota); texts older than 30 days are removed (API terms)",
+  "NOT COVERED BY DESIGN: Heilbronner Stimme and echo24: paywall or no feed; only what Exa and Tavily index (Google News is off)",
+  "NOT COVERED BY DESIGN: Citizen participation platforms (comments): no export, not collected",
+  "NOT COVERED BY DESIGN: Local radio, TV, podcasts: not collected",
+  "NOT COVERED BY DESIGN: GDELT (news index): switched off, rate limited (HTTP 429) from our network on 14 Nov, retest needed",
+  "NOT COVERED BY DESIGN: Google News RSS: switched off, robots.txt disallows /rss. Without it and GDELT, news comes only from Exa and Tavily (what they index) and five outlet RSS feeds (a few days each), so news coverage is thinner than the city's monitoring tool"
+ ],
+ "export": {
+  "mode": "discovered",
+  "records": 495,
+  "dataset_edge": "2026-10-27T12:29:00+0000"
+ },
+ "date_fields": {
+  "published_at": "the source's own date (for page changes: the time we detected the change)",
+  "modified_at": "source says it changed, when known (OParl papers)",
+  "discovered_at": "first time our collector saw it, never changes",
+  "last_seen_at (retrieved_at)": "last run that saw it again",
+  "ingested_at": "set by the pipeline when it loads the record, not by the collector"
+ },
+ "relevance_rule": "radar_match (strong, weak, none) is the radar gate: strong = a project phrase, or a cable word and a place word in the same snippet fragment, at most 100 characters apart; weak = only one of them, or both far apart; none = neither or a negative word. All items stay stored. title_hit = the headline or text names the project (specific phrase, or keyword plus place word). Manual judgments (R relevant, U unclear, N not) exist only for items judged earlier by hand (data/relevance_judgments.json); new items are listed as not judged. Pipeline stage 2 and the labels decide relevance."
+}

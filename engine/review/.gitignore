@@ -1,0 +1,2 @@
+# large derived file (claim texts); recreate with: python -m citypulse.review.export_training
+results/train_with_human.csv

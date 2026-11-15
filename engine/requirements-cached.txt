@@ -1,0 +1,19 @@
+# Light install for the CACHED mode only (no fine-tuned model, about 0.5 GB instead of 1.4 GB).
+# Everything historical works: overview, replay, emerging concerns, explorer, cross-city, evidence, review, briefing.
+# Live matching, "Re-run live" and scored uploads need the full requirements.txt and the model.
+
+# application
+fastapi>=0.115
+uvicorn[standard]>=0.30
+duckdb>=1.1
+python-multipart>=0.0.9
+pandas>=2.2
+pyarrow>=16
+numpy>=2.0
+scipy>=1.13
+scikit-learn>=1.5
+# matcher inference (CPU, Apple MPS or CUDA)
+# tests
+pytest>=8
+httpx>=0.27
+# research pipeline only (argument map, benchmark): umap-learn, hdbscan, joblib, bertopic

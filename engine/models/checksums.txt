@@ -1,0 +1,2 @@
+# sha256  file  (citypulse-matcher-v2, exported 2026-11-14 on the team GPU box)
+2b7c277eb458c4f59d8228fe5a363e29c6aa47e98e9bccc4477d5091f458670d  citypulse-matcher-v2/model.safetensors

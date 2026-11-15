@@ -1,0 +1,209 @@
+/* CityPulse deck v10 (15 Nov). Slide 1: real photo, full bleed (unchanged). Slides 2 to 9: warm white, deep ink, one
+   orange accent. v9's type system (two-line headline: bold, then light grey at weight 300; a light line size; a small
+   label size), and in v10 each slide carries a headline plus 2 to 4 supporting elements in columns or rows with
+   hairline dividers, no boxes, no screenshots. A small cable car in the top-right corner moves on every slide. */
+@page { size: 1280px 720px; margin: 0; }
+:root { --ink:#0f172a; --body:#334155; --muted:#64748b; --line:#e9e4dd; --bg:#fffdfa;
+        --acc:#ff5b1f; --acc2:#ff8a3d; --tint:#fff1e8; --tint2:#ffe2cf; --sky:#ffb48a;
+        --grey:#7c756e; --faint:#a39c94; --dot:#ebe5dd; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; }
+body { font-family: "Plus Jakarta Sans", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.slide { position: relative; width: 1280px; height: 720px; overflow: hidden; page-break-after: always; break-after: page; background: var(--bg); }
+.mark { position: absolute; left: 72px; top: 46px; display: flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 800; letter-spacing: .18em; z-index: 3; }
+.mark i { width: 9px; height: 9px; border-radius: 50%; background: var(--acc); }
+.corner { position: absolute; left: 0; top: 0; z-index: 1; pointer-events: none; }
+
+/* the three sizes */
+h2 { position: absolute; left: 72px; top: 112px; width: 1136px; font-size: 50px; line-height: 1.12; font-weight: 700; letter-spacing: -.032em; z-index: 2; }
+h2 .lt { font-weight: 300; color: var(--grey); letter-spacing: -.028em; }
+h2 em { font-style: normal; color: var(--acc); font-weight: 500; }
+.ll { font-size: 24px; line-height: 1.45; font-weight: 400; color: var(--grey); letter-spacing: -.01em; }
+.lab { font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
+
+/* 1 · full photo */
+.photo { position: absolute; inset: 0; background-size: cover; background-position: center 40%; }
+.shade { position: absolute; inset: 0; background: rgba(9,18,36,.58); }
+.s1 .mark { color: #fff; }
+.hero { position: absolute; left: 72px; top: 196px; width: 760px; color: #fff; z-index: 2; }
+.hero .kick { font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--sky); }
+.hero h1 { margin-top: 18px; font-size: 78px; line-height: 1.02; font-weight: 800; letter-spacing: -.045em; }
+.hero .rule { margin-top: 30px; width: 56px; height: 4px; border-radius: 2px; background: var(--acc); }
+.hero p { margin-top: 24px; font-size: 25px; line-height: 1.45; color: #e7ecf5; }
+.hero p b { color: #fff; font-weight: 800; }
+.names { position: absolute; left: 72px; top: 640px; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: #d4dbe8; z-index: 2; }
+.credit { position: absolute; right: 22px; bottom: 14px; font-size: 9.5px; color: rgba(255,255,255,.7); z-index: 2; }
+
+/* shared v10 pieces: a number at headline size, a light line, a thin arrow */
+.num { font-size: 50px; line-height: 1.05; font-weight: 700; letter-spacing: -.035em; color: var(--ink); }
+.arr { position: absolute; width: 44px; height: 1.5px; background: var(--faint); }
+.arr::after { content: ""; position: absolute; right: -1px; top: -5px; border-left: 9px solid var(--faint); border-top: 5.5px solid transparent; border-bottom: 5.5px solid transparent; }
+
+/* 2 · the noise: v9's big number, then the funnel in three steps */
+.huge { position: absolute; left: 62px; top: 236px; font-size: 200px; line-height: 1; font-weight: 700; letter-spacing: -.06em; color: var(--acc); }
+.fun2 { position: absolute; left: 72px; top: 330px; width: 1136px; display: flex; align-items: flex-start; border-top: 1px solid var(--line); padding-top: 44px; }
+.fun2 > div:not(.arr) { flex: 0 0 auto; }
+.fun2 > div:nth-child(1) { width: 300px; } .fun2 > div:nth-child(3) { width: 340px; } .fun2 > div:nth-child(5) { flex: 1; }
+.fun2 .arr { position: relative; flex: 0 0 44px; margin: 42px 48px 0 0; }
+.fun2 b { display: block; font-size: 78px; line-height: 1.05; font-weight: 700; letter-spacing: -.035em; color: var(--ink); }
+.fun2 p { margin-top: 6px; font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+.fun2 .lab { display: block; margin-top: 14px; }
+.fun2 .me b, .fun2 .me .lab { color: var(--acc); }
+
+/* 3 · the comment, the five positions, the result */
+.cmt3 { position: absolute; left: 72px; top: 284px; width: 450px; }
+.cmt3 p { margin-top: 18px; font-size: 24px; line-height: 1.38; font-weight: 500; letter-spacing: -.02em; color: var(--ink); }
+.cmt3 .tool3 { margin-top: 18px; font-size: 18px; line-height: 1.3; font-weight: 300; color: var(--grey); }
+.cmt3 .tool3 b { font-weight: 600; color: var(--ink); }
+.cmt3 u { text-decoration: none; background: linear-gradient(transparent 74%, var(--tint2) 74%); }
+.a3a { left: 556px; top: 396px; }
+.pos3 { position: absolute; left: 636px; top: 284px; width: 290px; }
+.pos3 ul { list-style: none; margin-top: 14px; }
+.pos3 li { position: relative; padding-left: 22px; font-size: 24px; line-height: 42px; font-weight: 300; color: var(--faint); letter-spacing: -.01em; }
+.pos3 li::before { content: ""; position: absolute; left: 0; top: 17px; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
+.pos3 li.on { color: var(--acc); font-weight: 700; }
+.pos3 li.on::before { background: var(--acc); }
+.a3b { left: 938px; top: 396px; }
+.res3 { position: absolute; left: 1016px; top: 284px; width: 192px; }
+.res3 .v { margin-top: 18px; font-size: 50px; line-height: 1; font-weight: 700; letter-spacing: -.045em; color: var(--acc); }
+.res3 .ll { margin-top: 14px; }
+.doubt3 { position: absolute; left: 72px; top: 570px; width: 1136px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 24px; line-height: 1.4; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+
+/* 4 · three tabs, each with its question, what it shows and one real number */
+/* slide 4 v11: three cards (v3's idea in today's palette), Today filled orange */
+.cards4 { position: absolute; left: 72px; top: 268px; width: 1136px; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 28px; }
+.cards4 .c { position: relative; height: 292px; padding: 30px 30px 26px; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 14px 34px -22px rgba(27,27,31,.28); }
+.cards4 .k { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--acc); }
+.cards4 .q { margin-top: 14px; font-size: 30px; line-height: 1.15; font-weight: 700; letter-spacing: -.025em; color: var(--ink); }
+.cards4 p { margin-top: 12px; font-size: 19px; line-height: 1.38; font-weight: 300; color: var(--grey); letter-spacing: -.005em; }
+.cards4 .n { position: absolute; left: 30px; right: 30px; bottom: 26px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; align-items: baseline; gap: 12px; }
+.cards4 .n b { font-size: 44px; line-height: 1; font-weight: 700; letter-spacing: -.035em; color: var(--ink); }
+.cards4 .n span { font-size: 17px; line-height: 1.25; font-weight: 400; color: var(--grey); }
+.cards4 .c.on { background: var(--acc); border-color: var(--acc); box-shadow: 0 18px 40px -20px rgba(255,91,31,.55); }
+.cards4 .c.on .k, .cards4 .c.on .q, .cards4 .c.on .n b { color: #fff; }
+.cards4 .c.on p, .cards4 .c.on .n span { color: rgba(255,255,255,.86); }
+.cards4 .c.on .n { border-top-color: rgba(255,255,255,.35); }
+.cols4 { position: absolute; left: 72px; top: 282px; width: 1136px; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 64px; }
+.cols4 h3 { font-size: 24px; line-height: 1.3; font-weight: 700; letter-spacing: -.01em; }
+.cols4 .q { font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+.cols4 b { display: block; margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 50px; line-height: 1.05; font-weight: 700; letter-spacing: -.035em; color: var(--ink); }
+.cols4 p { margin-top: 8px; font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+.quiet4 { position: absolute; left: 72px; top: 612px; display: flex; align-items: center; gap: 12px; font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--faint); letter-spacing: -.01em; }
+.quiet4 i { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); }
+.quiet4 b { font-weight: 600; color: var(--grey); }
+
+/* 5 · every dot is one post, then two more findings */
+.dots5 { position: absolute; left: 72px; top: 268px; overflow: visible; }
+.dots5 circle { fill: var(--dot); }
+.dots5 circle.f { fill: var(--acc); }
+.dots5 circle.a { fill: var(--ink); }
+.key5 { position: absolute; left: 72px; top: 432px; display: flex; gap: 36px; }
+.key5 span { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--grey); }
+.key5 i { width: 12px; height: 12px; border-radius: 50%; }
+.key5 i.f { background: var(--acc); } .key5 i.a { background: var(--ink); }
+.pill5 { position: absolute; right: 72px; top: 424px; display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: 999px; background: var(--tint); color: var(--acc); font-size: 12.5px; font-weight: 600; letter-spacing: .04em; }
+.pill5::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--acc); }
+/* slide 5 v11: before / with CityPulse strip around the 39% */
+.ba5 { position: absolute; left: 72px; top: 486px; width: 1136px; display: grid; grid-template-columns: 1fr 300px 1fr; column-gap: 28px; align-items: stretch; border-top: 1px solid var(--line); padding-top: 26px; }
+.ba5 .side { padding: 18px 22px; border-radius: 16px; border: 1px solid var(--line); background: #fff; }
+.ba5 .side h3 { margin-top: 6px; font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: -.02em; color: var(--ink); }
+.ba5 .side p { margin-top: 4px; font-size: 19px; line-height: 1.35; font-weight: 300; color: var(--grey); }
+.ba5 .side .lab { color: var(--grey); }
+.ba5 .side.on { background: var(--acc); border-color: var(--acc); box-shadow: 0 16px 34px -20px rgba(255,91,31,.55); }
+.ba5 .side.on .lab, .ba5 .side.on h3 { color: #fff; }
+.ba5 .side.on p { color: rgba(255,255,255,.88); }
+.ba5 .mid { text-align: center; align-self: center; }
+.ba5 .mid b { display: block; font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: var(--ink); }
+.ba5 .mid p { margin-top: 8px; font-size: 17px; line-height: 1.35; font-weight: 300; color: var(--grey); }
+.more5 { position: absolute; left: 72px; top: 492px; width: 1136px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; border-top: 1px solid var(--line); padding-top: 28px; }
+.more5 b { display: block; font-size: 50px; line-height: 1.05; font-weight: 700; letter-spacing: -.035em; color: var(--ink); }
+.more5 p { margin-top: 8px; font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+
+/* 6 · v5 layout kept (Harshil restored it); v9 moves it down 44px under the two-line headline */
+.s6 { position: absolute; left: 0; top: 44px; width: 1280px; height: 676px; }
+
+/* 7 · from conversations to clarity: four steps as rows, one real example */
+/* slide 10: Q&A backup, the pipeline in two rows of four; step 05 (our fine-tuned model) highlighted */
+.qa10 { position: absolute; right: 72px; top: 118px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--grey); }
+.pipe10 { position: absolute; left: 72px; top: 252px; width: 1136px; display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 30px; row-gap: 18px; }
+.pipe10 .p { position: relative; height: 196px; padding: 16px 18px 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 12px 26px -22px rgba(27,27,31,.3); }
+.pipe10 .p:not(:nth-child(4n))::after { content: ""; position: absolute; right: -24px; top: 50%; width: 18px; height: 1px; background: var(--faint); }
+.pipe10 .p:not(:nth-child(4n))::before { content: ""; position: absolute; right: -25px; top: calc(50% - 3px); border: 3.5px solid transparent; border-left: 6px solid var(--faint); }
+.pipe10 .k { font-size: 12px; letter-spacing: .14em; font-weight: 600; color: var(--acc); }
+.pipe10 h3 { margin-top: 6px; font-size: 19px; line-height: 1.18; font-weight: 700; letter-spacing: -.015em; color: var(--ink); }
+.pipe10 p { margin-top: 7px; font-size: 14.5px; line-height: 1.38; font-weight: 300; color: var(--grey); }
+.pipe10 .tag { position: absolute; left: 18px; right: 18px; bottom: 13px; padding: 5px 9px; border-radius: 7px; background: var(--tint2, #fff1ea); font-size: 12px; line-height: 1.3; font-weight: 600; color: var(--ink); }
+.pipe10 .p.on { background: var(--acc); border-color: var(--acc); }
+.pipe10 .p.on .k, .pipe10 .p.on h3 { color: #fff; }
+.pipe10 .p.on p { color: rgba(255,255,255,.88); }
+.pipe10 .p.on .tag { background: rgba(255,255,255,.2); color: #fff; }
+/* slide 7 v11: the team of five (Harshil's words), investigator highlighted as our own model */
+.team7 { position: absolute; left: 72px; top: 270px; width: 1136px; display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 16px; }
+.team7 .av { display: block; margin: -6px 0 4px -6px; }
+.team7 .c { position: relative; height: 330px; padding: 22px 20px 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 14px 30px -22px rgba(27,27,31,.28); }
+.team7 .k { font-size: 12.5px; letter-spacing: .14em; font-weight: 600; color: var(--acc); }
+.team7 h3 { margin-top: 10px; font-size: 22px; line-height: 1.15; font-weight: 700; letter-spacing: -.02em; color: var(--ink); }
+.team7 p { margin-top: 10px; font-size: 19px; line-height: 1.35; font-weight: 300; color: var(--grey); letter-spacing: -.005em; }
+.team7 .m { position: absolute; left: 20px; right: 20px; bottom: 16px; padding: 6px 10px; border-radius: 8px; background: var(--tint); font-size: 12.5px; line-height: 1.35; font-weight: 600; color: var(--ink); letter-spacing: .005em; }
+.team7 .c.on { background: var(--acc); border-color: var(--acc); box-shadow: 0 18px 38px -20px rgba(255,91,31,.55); }
+.team7 .c.on .k, .team7 .c.on h3, .team7 .c.on .m { color: #fff; }
+.team7 .c.on p { color: rgba(255,255,255,.88); }
+.team7 .c.on .m { background: rgba(255,255,255,.2); }
+.foot7 { position: absolute; left: 72px; top: 612px; display: flex; align-items: center; gap: 12px; font-size: 24px; line-height: 1.3; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+.foot7 i { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); }
+.foot7 b { font-weight: 600; color: var(--ink); }
+.steps7 { position: absolute; left: 72px; top: 262px; width: 1136px; border-bottom: 1px solid var(--line); }
+.steps7 > div { display: grid; grid-template-columns: 56px 220px 1fr; align-items: baseline; padding: 13px 0; border-top: 1px solid var(--line); }
+.steps7 h3 { font-size: 24px; line-height: 1.35; font-weight: 700; letter-spacing: -.01em; }
+.steps7 p small { display: block; font-size: inherit; color: var(--faint); }
+.steps7 p { font-size: 24px; line-height: 1.35; font-weight: 300; color: var(--grey); letter-spacing: -.01em; }
+.steps7 .on h3, .steps7 .on .lab { color: var(--acc); }
+.steps7 .on p { color: var(--ink); font-weight: 400; }
+.ex7 { position: absolute; left: 72px; top: 592px; width: 1136px; display: grid; grid-template-columns: 276px 1fr; align-items: baseline; }
+.ex7 p { font-size: 24px; line-height: 1.35; font-weight: 500; color: var(--ink); letter-spacing: -.01em; }
+.chain7 { margin-top: 14px; display: flex; align-items: center; gap: 14px; }
+.chain7 span { font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
+.chain7 span.on { color: var(--acc); }
+.chain7 i { width: 18px; height: 1.5px; background: var(--line); }
+
+/* 6 · today */
+.big3 { position: absolute; left: 60px; top: 176px; font-size: 320px; font-weight: 800; letter-spacing: -.07em; line-height: 1; color: var(--acc); }
+.t6 { position: absolute; left: 330px; top: 268px; width: 380px; }
+.t6 h4 { font-size: 30px; font-weight: 800; letter-spacing: -.025em; line-height: 1.15; }
+.t6 p { margin-top: 14px; font-size: 18px; line-height: 1.5; color: var(--body); }
+.others { position: absolute; left: 790px; top: 262px; width: 418px; display: flex; flex-direction: column; gap: 14px; }
+.big3.two { font-size: 250px; top: 214px; }
+.t6.two { left: 420px; width: 320px; }
+.others.five { top: 250px; gap: 12px; }
+.others.five > div { padding: 11px 22px; }
+.others .me { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc) inset; }
+.others .me span, .others .me b { color: var(--acc); }
+.others > div { display: flex; align-items: baseline; justify-content: space-between; padding: 14px 22px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.others span { font-size: 17px; font-weight: 700; color: var(--body); }
+.others b { font-size: 34px; font-weight: 800; letter-spacing: -.03em; }
+
+
+/* 9 · your turn (unchanged) */
+.ask { position: absolute; left: 72px; top: 170px; width: 700px; }
+.ask .kick { font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--acc); }
+.ask h1 { margin-top: 16px; font-size: 64px; line-height: 1.03; font-weight: 800; letter-spacing: -.045em; }
+.ask .how { margin-top: 24px; font-size: 22px; line-height: 1.5; color: var(--body); }
+.ask .how b { color: var(--ink); }
+.reuse { position: absolute; left: 72px; top: 548px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 999px; background: var(--tint); font-size: 18px; font-weight: 800; color: var(--ink); }
+.reuse i { width: 9px; height: 9px; border-radius: 50%; background: var(--acc); }
+.qrbox { position: absolute; left: 860px; top: 170px; width: 348px; height: 348px; background: #fff; border-radius: 26px; box-shadow: 0 24px 50px rgba(255,91,31,.18); border: 2px solid var(--acc); display: flex; align-items: center; justify-content: center; }
+.qrbox svg { width: 300px; height: 300px; }
+.qrbox.empty { color: var(--muted); font-size: 13px; line-height: 1.6; text-align: center; box-shadow: none; border: 2px dashed var(--sky); }
+/* v10: the real survey QR, square, in a hairline frame, a short label under it */
+.qrimg { position: absolute; left: 892px; top: 176px; width: 316px; height: 316px; padding: 27px; background: #fff; border: 1px solid var(--line); border-radius: 22px; }
+.qrimg img { display: block; width: 260px; height: 260px; image-rendering: pixelated; }
+.qrlab { position: absolute; left: 892px; top: 510px; width: 316px; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--muted); letter-spacing: .02em; }
+
+/* 8 · live demo link (Harshil, 15 Nov) */
+.demo { position: absolute; left: 72px; top: 190px; width: 1000px; }
+.demo .kick { font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--acc); }
+.demo h1 { margin-top: 16px; font-size: 64px; line-height: 1.04; font-weight: 800; letter-spacing: -.045em; }
+.demo h1 em { font-style: normal; color: var(--acc); }
+.demo .go { display: inline-flex; align-items: center; gap: 14px; margin-top: 44px; padding: 18px 30px; border-radius: 999px; background: var(--acc); color: #fff; font-size: 22px; font-weight: 800; text-decoration: none; box-shadow: 0 18px 40px rgba(255,91,31,.22); }
+.demo .go span { font-size: 24px; }
+.demo .url { margin-top: 16px; font-family: "JetBrains Mono", monospace; font-size: 15px; color: var(--muted); }

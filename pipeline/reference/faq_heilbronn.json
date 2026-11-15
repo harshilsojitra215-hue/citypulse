@@ -1,0 +1,484 @@
+{
+ "meta": {
+  "what": "Official facts and FAQ of the City of Heilbronn on the planned urban cable car. Used to name the argument taxonomy and for claim matching. NOT used to decide stance.",
+  "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+  "page_title": "Stadt Heilbronn: Seilbahn",
+  "date_seen": "2026-11-14",
+  "how_seen": "Page fetched on 14 Nov 2026 by this session; stripped text kept in pipeline/reference/heilbronn_seilbahn_page_2026-11-14.txt. The page shows no publication date. Its newest dated facts are the council decision of 27 Jul 2026 and a station graphic file named 2026-07-27.",
+  "page_has_faq": true,
+  "faq_heading": "Häufig gestellte Fragen rund um die geplante Seilbahn",
+  "inconsistency_on_page": "Length is given three ways on the same page: 'etwa 5 Kilometer' (route section), '4,7 km' (FAQ stations answer), 'knapp 5 km' (FAQ construction answer). Figure matching accepts 4.7 to 5.0 km as consistent.",
+  "matching_note": "concern_patterns are lower-case regular expressions run on the snippet. A hit means the post raises the concern; it does not mean the post is for or against. Patterns are editable by the city.",
+  "valid_from_note": "valid_from = first date the dataset shows this official figure in public (event ledger in knowledge/KNOWLEDGE_STADT_HEILBRONN.md). Posts before that date are never flagged as 'figure differs': an earlier estimate is not a wrong claim."
+ },
+ "official_figures": [
+  {
+   "figure_id": "cost_invest",
+   "label": "Investment cost estimate",
+   "value": 157,
+   "unit": "Mio EUR",
+   "note": "First estimate from the feasibility study, price level 2026, to be validated in planning",
+   "accept_min": 157,
+   "accept_max": 157,
+   "regex": "(\\d{2,4}(?:[.,]\\d+)?)\\s*(?:mio\\.?|millionen|million)\\s*(?:€|euro|eur)?",
+   "context": "seilbahn|gondel|kosten|invest",
+   "valid_from": "2026-07-22"
+  },
+  {
+   "figure_id": "funding_share",
+   "label": "Public funding share (state and federal)",
+   "value": 90,
+   "unit": "percent, up to",
+   "accept_min": 0,
+   "accept_max": 90,
+   "regex": "(\\d{2})\\s*(?:%|prozent)",
+   "context": "förder|zuschuss|bund|land",
+   "valid_from": "2026-07-08"
+  },
+  {
+   "figure_id": "length_km",
+   "label": "Route length",
+   "value": 4.7,
+   "unit": "km",
+   "note": "Also 'etwa 5' and 'knapp 5' km on the same page",
+   "accept_min": 4.7,
+   "accept_max": 5.0,
+   "regex": "(\\d(?:[.,]\\d)?)\\s*(?:km|kilometer)",
+   "context": "seilbahn|gondel|strecke|trasse",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "stations",
+   "label": "Number of stations",
+   "value": 6,
+   "unit": "stations",
+   "note": "'mindestens sechs', possibly more",
+   "accept_min": 6,
+   "accept_max": 8,
+   "regex": "(\\d|sechs|fünf|sieben|acht|vier)\\s*(?:stationen|haltestellen|halte)",
+   "context": "seilbahn|gondel",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "travel_time_min",
+   "label": "Travel time city centre to IPAI",
+   "value": 15,
+   "unit": "minutes",
+   "accept_min": 15,
+   "accept_max": 15,
+   "regex": "(\\d{1,2})\\s*(?:min\\b|minuten)",
+   "context": "seilbahn|gondel|fahrzeit|ipai",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "capacity_pphpd",
+   "label": "Capacity per hour and direction",
+   "value": 1500,
+   "unit": "passengers",
+   "accept_min": 1500,
+   "accept_max": 1500,
+   "regex": "(\\d[.\\d]{2,5})\\s*(?:personen|fahrgäste|passagiere)\\s*(?:pro|je|in der)\\s*(?:stunde|h)",
+   "context": "seilbahn|gondel",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "cabin_size",
+   "label": "Persons per cabin",
+   "value": 10,
+   "unit": "persons",
+   "accept_min": 10,
+   "accept_max": 10,
+   "regex": "(\\d{1,2})\\s*(?:personen|plätze|fahrgäste)\\s*(?:pro|je)\\s*(?:gondel|kabine)",
+   "context": "gondel|kabine",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "mast_height_m",
+   "label": "Maximum mast height",
+   "value": 55,
+   "unit": "m",
+   "accept_min": 0,
+   "accept_max": 55,
+   "regex": "(\\d{2,3})\\s*(?:m\\b|meter)\\s*(?:hoch|hohe|höhe)?",
+   "context": "mast|stütz|pfeiler|turm",
+   "valid_from": "2026-07-27"
+  },
+  {
+   "figure_id": "start_operation",
+   "label": "Realistic start of operation",
+   "value": "early 2030s",
+   "unit": "period",
+   "regex": "(20[23]\\d)",
+   "context": "inbetrieb|in betrieb|eröffn|fertig|betriebsstart|fahren ab",
+   "valid_from": "2026-07-04"
+  }
+ ],
+ "items": [
+  {
+   "faq_id": "hn_why",
+   "project": "heilbronn_cablecar",
+   "question": "Warum plant Heilbronn eine urbane Seilbahn?",
+   "question_en": "Why is Heilbronn planning an urban cable car?",
+   "answer_summary": "To connect the Bildungscampus, Zukunftspark Wohlgelegen and the IPAI campus with the city centre quickly, sustainably and reliably; the city calls it part of public services for several new city districts.",
+   "topic": "Purpose and who it serves",
+   "argument_code": "ipai_who_benefits",
+   "concern_patterns": [
+    "nur für (den |das )?(ipai|ki-park|campus|schwarz)",
+    "wer braucht",
+    "wofür (braucht|brauchen)",
+    "für wen",
+    "lidl-bahn|schwarz-bahn|ki-bahn",
+    "(nutzt|bringt) (das|die) (den )?bürger"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_ticket",
+   "project": "heilbronn_cablecar",
+   "question": "Ist die Seilbahn in den öffentlichen Personennahverkehr (ÖPNV) integriert?",
+   "question_en": "Is the cable car part of public transport?",
+   "answer_summary": "Yes. It is public transport and normal tickets, subscriptions and the Deutschlandticket are valid.",
+   "topic": "Tickets and integration",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "ticket",
+    "fahrpreis",
+    "was kostet (eine|die) fahrt",
+    "deutschlandticket",
+    "touristenattraktion|touristenbahn"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_route",
+   "project": "heilbronn_cablecar",
+   "question": "Welche Stationen befährt die Seilbahn?",
+   "question_en": "Which stations will it serve?",
+   "answer_summary": "Six stations on 4.7 km: Neckarturm / Kurt-Schumacher-Platz near the main station, Bildungscampus West, Zukunftspark Wohlgelegen, Neckargartacher Brücke, Neckarau / Alte Molkerei, IPAI campus. More stations and an extension to Böllinger Höfe are possible later.",
+   "topic": "Route and stations",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "welche stationen",
+    "wo (hält|halten)",
+    "streckenführung|trassenführung",
+    "warum nicht (zum|bis zum|über)"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_why_not_tram",
+   "project": "heilbronn_cablecar",
+   "question": "Warum wurde eine Seilbahn und keine Straßenbahn oder neue Busverbindung ausgewählt?",
+   "question_en": "Why a cable car and not a tram or a new bus line?",
+   "answer_summary": "A study compared many transport systems on cost, coverage, travel time, frequency, staff and energy. The cable car came out as space-saving, efficient and relatively quick to build; S-Bahn extension was very costly and slow, and buses are slower and get stuck in traffic.",
+   "topic": "Alternatives (tram, bus, rail)",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "stadtbahn statt",
+    "straßenbahn statt|strassenbahn statt",
+    "warum nicht (die |eine )?(stadtbahn|straßenbahn|strassenbahn|bus|s-bahn)",
+    "lieber (eine |die )?(stadtbahn|straßenbahn|busse?|s-bahn)",
+    "(bus|busse) (würde|würden|reicht|reichen)",
+    "statt seilbahn"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_travel_time",
+   "project": "heilbronn_cablecar",
+   "question": "Wie lange dauert eine Fahrt?",
+   "question_en": "How long does a ride take?",
+   "answer_summary": "15 minutes from the city centre over all stations to the IPAI campus.",
+   "topic": "Travel time",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "wie lange (dauert|braucht)",
+    "fahrzeit",
+    "zu langsam|langsamer als"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_frequency",
+   "project": "heilbronn_cablecar",
+   "question": "Wie oft fahren die Gondeln?",
+   "question_en": "How often do cabins come?",
+   "answer_summary": "A cabin enters each station about every 20 to 30 seconds, so there is almost no waiting; capacity can be adjusted by rope speed and number of cabins.",
+   "topic": "Frequency and waiting",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "wartezeit",
+    "wie oft",
+    "takt"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_capacity",
+   "project": "heilbronn_cablecar",
+   "question": "Wie viele Menschen können pro Stunde transportiert werden? / Wie viele Personen passen in eine Gondel?",
+   "question_en": "How many people per hour, and per cabin?",
+   "answer_summary": "Up to 1,500 passengers per hour and direction; up to 10 persons per cabin.",
+   "topic": "Capacity",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "kapazität",
+    "wie viele (menschen|personen|fahrgäste)",
+    "zu wenig (platz|kapazität)",
+    "pendler(ströme)? (schaffen|bewältigen)"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_accessible",
+   "project": "heilbronn_cablecar",
+   "question": "Ist die Seilbahn barrierefrei?",
+   "question_en": "Is it accessible?",
+   "answer_summary": "Yes; planned for people with reduced mobility, prams, wheelchairs and bicycles.",
+   "topic": "Accessibility and bikes",
+   "argument_code": "other",
+   "concern_patterns": [
+    "barrierefrei",
+    "rollstuhl",
+    "kinderwagen",
+    "fahrrad(mitnahme)?"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_masts",
+   "project": "heilbronn_cablecar",
+   "question": "Wie hoch werden die Stützpfeiler der Seilbahn?",
+   "question_en": "How tall will the masts be?",
+   "answer_summary": "Depends on the site; at the current planning stage no mast is higher than 55 metres.",
+   "topic": "Masts and cityscape",
+   "argument_code": "cityscape_design",
+   "concern_patterns": [
+    "\\bmast(en)?\\b",
+    "stütz(en|pfeiler)",
+    "stadtbild",
+    "verschandel",
+    "hässlich",
+    "\\btürme\\b"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_wind",
+   "project": "heilbronn_cablecar",
+   "question": "Was passiert bei starkem Wind oder Unwettern?",
+   "question_en": "What happens in strong wind or storms?",
+   "answer_summary": "Modern cable cars are built for different weather; in extreme weather, limits or stops can be needed for safety.",
+   "topic": "Weather",
+   "argument_code": "safety_technology",
+   "concern_patterns": [
+    "\\bwind(e|es|böen)?\\b",
+    "\\bsturm",
+    "unwetter",
+    "gewitter",
+    "bei (schnee|eis)\\b"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_safety",
+   "project": "heilbronn_cablecar",
+   "question": "Wie wird die Sicherheit der Fahrgäste während der Fahrt und in den Gondeln gewährleistet? / Wie können Fahrgäste im Störungsfall die Gondeln verlassen?",
+   "question_en": "How are passengers kept safe, and how are they evacuated in a breakdown?",
+   "answer_summary": "Cabins have passenger information, intercoms, emergency buttons and video; a control centre watches all cabins and can stop the system. Every cable car has emergency and rescue plans with fire and rescue services.",
+   "topic": "Safety and rescue",
+   "argument_code": "safety_technology",
+   "concern_patterns": [
+    "sicherheit",
+    "\\bunfall|\\bunglück",
+    "absturz",
+    "evakuier",
+    "rettung",
+    "stecken ?(bleiben|geblieben)",
+    "\\bpanne\\b|betriebsstörung|\\bausfall\\b|betriebsausfall",
+    "vandalismus|belästigung"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_privacy",
+   "project": "heilbronn_cablecar",
+   "question": "Können Fahrgäste in private Gärten oder Wohnungen schauen?",
+   "question_en": "Can passengers look into private gardens or homes?",
+   "answer_summary": "Privacy is a planning aspect; the route crosses no housing and keeps enough horizontal distance from homes. The project page also says cabins will only pass over public and commercial land.",
+   "topic": "Privacy and overflight",
+   "argument_code": "noise_privacy_overflight",
+   "concern_patterns": [
+    "privatsphäre",
+    "einblick|reinschauen|reingucken|in (die )?gärten|in (die )?wohnungen",
+    "über (unsere |die )?(häuser|wohnungen|gärten|wohngebiet)",
+    "überfl(ug|iegen)",
+    "anwohner"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_environment",
+   "project": "heilbronn_cablecar",
+   "question": "Ist die Seilbahn umweltfreundlich?",
+   "question_en": "Is it environmentally friendly?",
+   "answer_summary": "Yes per the city: energy efficient electric transport, no local CO2, particulate or NOx emissions, small land use and little sealed ground compared with road or rail.",
+   "topic": "Climate and environment",
+   "argument_code": "climate_environment",
+   "concern_patterns": [
+    "\\bklima",
+    "co2|co₂",
+    "\\bumwelt",
+    "energieverbrauch",
+    "\\bbäume\\b|grünfläche|versiegel"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_noise",
+   "project": "heilbronn_cablecar",
+   "question": "Wie laut ist eine Seilbahn?",
+   "question_en": "How loud is a cable car?",
+   "answer_summary": "Modern urban cable cars count as very quiet; noise is mainly at stations and below road or rail traffic.",
+   "topic": "Noise",
+   "argument_code": "noise_privacy_overflight",
+   "concern_patterns": [
+    "lärm",
+    "\\blaut(er|e|en)?\\b",
+    "geräusch",
+    "brummen|surren"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_timeline",
+   "project": "heilbronn_cablecar",
+   "question": "Wie lange dauert der Bau und wann geht die Seilbahn in Betrieb?",
+   "question_en": "How long is construction and when will it open?",
+   "answer_summary": "Construction itself about 1 to 1.5 years, but planning and approval (Planfeststellung) for a route of almost 5 km are complex. Realistic start of operation: early years of the next decade (early 2030s).",
+   "topic": "Timeline and approval",
+   "argument_code": "process_participation",
+   "concern_patterns": [
+    "wann (kommt|fährt|geht|wird)",
+    "bauzeit",
+    "planfeststellung",
+    "genehmigung",
+    "dauert (das|es) (noch )?(so )?lange",
+    "jahrzehnt"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_traffic_relief",
+   "project": "heilbronn_cablecar",
+   "question": "Welche Vorteile hat die Seilbahn für den Verkehr in Heilbronn?",
+   "question_en": "What does it do for traffic in Heilbronn?",
+   "answer_summary": "Moves traffic to the '+1 level' above ground and relieves congested inner-city roads and the Neckartalstraße at rush hour; the city is also checking large park-and-ride sites near the motorway.",
+   "topic": "Traffic relief and parking",
+   "argument_code": "traffic_mobility",
+   "concern_patterns": [
+    "\\bstaus?\\b",
+    "entlast",
+    "neckartalstra",
+    "parkpl(atz|ätze)",
+    "\\bparken\\b",
+    "park ?(and|&) ?ride",
+    "pendler",
+    "\\bautos?\\b"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_comparable",
+   "project": "heilbronn_cablecar",
+   "question": "Gibt es vergleichbare Projekte in Europa?",
+   "question_en": "Are there comparable projects in Europe?",
+   "answer_summary": "Urban cable cars exist in London, Ankara, Lisbon and Toulouse; Paris opened Câble C1 in Dec 2025 (city states 4.3 km, 5 stations). With completion Heilbronn's would be the longest urban cable car in Europe.",
+   "topic": "Comparable projects and image",
+   "argument_code": "tourism_image",
+   "concern_patterns": [
+    "paris|câble c1|cable c1",
+    "london|toulouse|ankara|lissabon",
+    "längste",
+    "vorreiter|leuchtturm|prestige"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_cost",
+   "project": "heilbronn_cablecar",
+   "question": "Was kostet der Bau der Seilbahn und wie berechnen sich die Einnahmen im Betrieb?",
+   "question_en": "What does it cost to build, and how is operation financed?",
+   "answer_summary": "First estimate from the feasibility study: 157 million EUR investment at 2026 price level, still to be validated in planning. Up to 90 percent is to be funded by the state and federal government. Running costs (staff, energy, maintenance) are set against fare revenue from the HNV tariff and a share of Deutschlandticket revenue.",
+   "topic": "Cost and funding",
+   "argument_code": "cost",
+   "concern_patterns": [
+    "\\bkosten\\b|baukosten|betriebskosten|folgekosten",
+    "millionen|\\bmio\\b",
+    "steuergeld|steuerzahler",
+    "\\bteuer",
+    "geldverschwendung|verschwendung",
+    "haushalt|defizit|schulden",
+    "förder(ung|mittel)",
+    "wer zahlt"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_FAQ"
+  },
+  {
+   "faq_id": "hn_status",
+   "project": "heilbronn_cablecar",
+   "question": "Projektstatus (project section, not in the FAQ list)",
+   "question_en": "Where does the project stand, and will citizens be involved?",
+   "answer_summary": "Technical feasibility study finished in Q2 2026 and confirms feasibility and a positive economic benefit. Council decided preliminary planning and hiring external planners on 27 Jul 2026. Detailed planning and expert reports for the approval process come next. From Q4 2026 citizens are to be informed through suitable dialogue formats.",
+   "topic": "Status and participation",
+   "argument_code": "process_participation",
+   "concern_patterns": [
+    "bürgerbeteiligung|beteiligung",
+    "bürgerentscheid|bürgerbegehren",
+    "transparen",
+    "hinter verschlossenen",
+    "über (die )?köpfe",
+    "informationsveranstaltung|bürgerdialog"
+   ],
+   "source_url": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html",
+   "date_seen": "2026-11-14",
+   "source_kind": "OFFICIAL_PAGE"
+  }
+ ]
+}

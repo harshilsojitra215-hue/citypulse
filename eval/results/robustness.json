@@ -1,0 +1,1653 @@
+{
+ "n_items": 179,
+ "runs": {
+  "haiku": 179,
+  "sonnet_a": 179,
+  "sonnet_b": 179
+ },
+ "by_model": {
+  "haiku": {
+   "E1_project_swap": {
+    "n": 19,
+    "pass": {
+     "value": 0.6842105263157895,
+     "lo": 0.46010407675327475,
+     "hi": 0.8463562091220773,
+     "n": 19,
+     "k": 13
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "fails": [
+     {
+      "pid": "E021",
+      "seed": "P015",
+      "why": "project: got other_cablecar, expected bonn_cablecar"
+     },
+     {
+      "pid": "E040",
+      "seed": "P096",
+      "why": "project: got other_cablecar, expected bonn_cablecar"
+     },
+     {
+      "pid": "E117",
+      "seed": "P150",
+      "why": "project: got heilbronn_cablecar, expected bonn_cablecar"
+     },
+     {
+      "pid": "E137",
+      "seed": "P102",
+      "why": "project: got heilbronn_cablecar, expected bonn_cablecar"
+     },
+     {
+      "pid": "E148",
+      "seed": "P131",
+      "why": "project: got heilbronn_cablecar, expected bonn_cablecar"
+     },
+     {
+      "pid": "E155",
+      "seed": "P116",
+      "why": "project: got heilbronn_cablecar, expected bonn_cablecar"
+     }
+    ]
+   },
+   "E2_quoted_in_report": {
+    "n": 29,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8830302015002593,
+     "hi": 1.0,
+     "n": 29,
+     "k": 29
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8830302015002593,
+     "hi": 1.0,
+     "n": 29,
+     "k": 29
+    },
+    "fails": []
+   },
+   "E3_cost_but": {
+    "n": 17,
+    "pass": {
+     "value": 0.9411764705882353,
+     "lo": 0.7301796936242461,
+     "hi": 0.9895395990150025,
+     "n": 17,
+     "k": 16
+    },
+    "stance_pass": {
+     "value": 0.9411764705882353,
+     "lo": 0.7301796936242461,
+     "hi": 0.9895395990150025,
+     "n": 17,
+     "k": 16
+    },
+    "fails": [
+     {
+      "pid": "E164",
+      "seed": "P170",
+      "why": "stance: got support, expected mixed"
+     }
+    ]
+   },
+   "E4_tone_caps": {
+    "n": 29,
+    "pass": {
+     "value": 0.896551724137931,
+     "lo": 0.736149189092262,
+     "hi": 0.9641851086493229,
+     "n": 29,
+     "k": 26
+    },
+    "stance_pass": {
+     "value": 0.9310344827586207,
+     "lo": 0.7803541984972431,
+     "hi": 0.9808787338305667,
+     "n": 29,
+     "k": 27
+    },
+    "fails": [
+     {
+      "pid": "E036",
+      "seed": "P126",
+      "why": "stance: got neutral_informative, expected support"
+     },
+     {
+      "pid": "E041",
+      "seed": "P099",
+      "why": "project: got other_cablecar, expected heilbronn_cablecar"
+     },
+     {
+      "pid": "E069",
+      "seed": "P154",
+      "why": "stance: got neutral_informative, expected support"
+     }
+    ]
+   },
+   "E5_sidebar": {
+    "n": 30,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "fails": []
+   },
+   "E6_numbers": {
+    "n": 20,
+    "pass": {
+     "value": 0.9,
+     "lo": 0.6989663547715128,
+     "hi": 0.9721335187862319,
+     "n": 20,
+     "k": 18
+    },
+    "stance_pass": {
+     "value": 0.9,
+     "lo": 0.6989663547715128,
+     "hi": 0.9721335187862319,
+     "n": 20,
+     "k": 18
+    },
+    "fails": [
+     {
+      "pid": "E047",
+      "seed": "P154",
+      "why": "stance: got neutral_informative, expected support"
+     },
+     {
+      "pid": "E150",
+      "seed": "P078",
+      "why": "stance: got mixed, expected support"
+     }
+    ]
+   },
+   "T1_flip_pair": {
+    "n": 14,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "fails": []
+   },
+   "T2_angry_support": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T3_calm_oppose": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T4_council_report": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T5_reported_opposition": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T6_neutral_question": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T7_mixed": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T8_irrelevant_lift": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "directional (must change)": {
+    "n": 81,
+    "pass": {
+     "value": 0.9876543209876543,
+     "lo": 0.9333311840195164,
+     "hi": 0.9978173499414611,
+     "n": 81,
+     "k": 80
+    }
+   },
+   "invariance (must not change)": {
+    "n": 98,
+    "pass": {
+     "value": 0.8877551020408163,
+     "lo": 0.8101006663032684,
+     "hi": 0.9361573005411425,
+     "n": 98,
+     "k": 87
+    }
+   },
+   "all": {
+    "n": 179,
+    "pass": {
+     "value": 0.9329608938547486,
+     "lo": 0.8864907122439717,
+     "hi": 0.9612382492275223,
+     "n": 179,
+     "k": 167
+    }
+   }
+  },
+  "sonnet_a": {
+   "E1_project_swap": {
+    "n": 19,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "fails": []
+   },
+   "E2_quoted_in_report": {
+    "n": 29,
+    "pass": {
+     "value": 0.1724137931034483,
+     "lo": 0.07597857252891227,
+     "hi": 0.34548439890195237,
+     "n": 29,
+     "k": 5
+    },
+    "stance_pass": {
+     "value": 0.1724137931034483,
+     "lo": 0.07597857252891227,
+     "hi": 0.34548439890195237,
+     "n": 29,
+     "k": 5
+    },
+    "fails": [
+     {
+      "pid": "E001",
+      "seed": "P229",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E008",
+      "seed": "P155",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E014",
+      "seed": "P207",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E016",
+      "seed": "P078",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E017",
+      "seed": "P112",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E028",
+      "seed": "P204",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E048",
+      "seed": "P012",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E055",
+      "seed": "P081",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E057",
+      "seed": "P086",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E068",
+      "seed": "P109",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E071",
+      "seed": "P234",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E079",
+      "seed": "P138",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E083",
+      "seed": "P227",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E085",
+      "seed": "P170",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E095",
+      "seed": "P151",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E097",
+      "seed": "P038",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E109",
+      "seed": "P199",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E133",
+      "seed": "P148",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E136",
+      "seed": "P066",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E153",
+      "seed": "P126",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E159",
+      "seed": "P185",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E161",
+      "seed": "P006",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E168",
+      "seed": "P099",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E170",
+      "seed": "P107",
+      "why": "stance: got oppose, expected neutral_informative"
+     }
+    ]
+   },
+   "E3_cost_but": {
+    "n": 17,
+    "pass": {
+     "value": 0.29411764705882354,
+     "lo": 0.1327998961029523,
+     "hi": 0.5313311006653985,
+     "n": 17,
+     "k": 5
+    },
+    "stance_pass": {
+     "value": 0.29411764705882354,
+     "lo": 0.1327998961029523,
+     "hi": 0.5313311006653985,
+     "n": 17,
+     "k": 5
+    },
+    "fails": [
+     {
+      "pid": "E096",
+      "seed": "P081",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E100",
+      "seed": "P154",
+      "why": "stance: got neutral_informative, expected mixed"
+     },
+     {
+      "pid": "E102",
+      "seed": "P078",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E107",
+      "seed": "P207",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E110",
+      "seed": "P016",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E111",
+      "seed": "P199",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E114",
+      "seed": "P229",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E130",
+      "seed": "P148",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E156",
+      "seed": "P204",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E158",
+      "seed": "P109",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E160",
+      "seed": "P012",
+      "why": "stance: got support, expected mixed"
+     },
+     {
+      "pid": "E164",
+      "seed": "P170",
+      "why": "stance: got support, expected mixed"
+     }
+    ]
+   },
+   "E4_tone_caps": {
+    "n": 29,
+    "pass": {
+     "value": 0.9655172413793104,
+     "lo": 0.8282447812067973,
+     "hi": 0.9938867857072374,
+     "n": 29,
+     "k": 28
+    },
+    "stance_pass": {
+     "value": 0.9655172413793104,
+     "lo": 0.8282447812067973,
+     "hi": 0.9938867857072374,
+     "n": 29,
+     "k": 28
+    },
+    "fails": [
+     {
+      "pid": "E041",
+      "seed": "P099",
+      "why": "project: got irrelevant, expected heilbronn_cablecar; stance: got unclear, expected oppose"
+     }
+    ]
+   },
+   "E5_sidebar": {
+    "n": 30,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "fails": []
+   },
+   "E6_numbers": {
+    "n": 20,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "fails": []
+   },
+   "T1_flip_pair": {
+    "n": 14,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "fails": []
+   },
+   "T2_angry_support": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T3_calm_oppose": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T4_council_report": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T5_reported_opposition": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T6_neutral_question": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T7_mixed": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T8_irrelevant_lift": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "directional (must change)": {
+    "n": 81,
+    "pass": {
+     "value": 0.5555555555555556,
+     "lo": 0.4472757377643103,
+     "hi": 0.6588044749654215,
+     "n": 81,
+     "k": 45
+    }
+   },
+   "invariance (must not change)": {
+    "n": 98,
+    "pass": {
+     "value": 0.9897959183673469,
+     "lo": 0.9444451900865797,
+     "hi": 0.9981964522432024,
+     "n": 98,
+     "k": 97
+    }
+   },
+   "all": {
+    "n": 179,
+    "pass": {
+     "value": 0.7932960893854749,
+     "lo": 0.7281162050344042,
+     "hi": 0.8461518011237047,
+     "n": 179,
+     "k": 142
+    }
+   }
+  },
+  "sonnet_b": {
+   "E1_project_swap": {
+    "n": 19,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "fails": []
+   },
+   "E2_quoted_in_report": {
+    "n": 29,
+    "pass": {
+     "value": 0.1724137931034483,
+     "lo": 0.07597857252891227,
+     "hi": 0.34548439890195237,
+     "n": 29,
+     "k": 5
+    },
+    "stance_pass": {
+     "value": 0.1724137931034483,
+     "lo": 0.07597857252891227,
+     "hi": 0.34548439890195237,
+     "n": 29,
+     "k": 5
+    },
+    "fails": [
+     {
+      "pid": "E001",
+      "seed": "P229",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E008",
+      "seed": "P155",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E014",
+      "seed": "P207",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E016",
+      "seed": "P078",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E017",
+      "seed": "P112",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E048",
+      "seed": "P012",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E055",
+      "seed": "P081",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E057",
+      "seed": "P086",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E068",
+      "seed": "P109",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E071",
+      "seed": "P234",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E079",
+      "seed": "P138",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E083",
+      "seed": "P227",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E085",
+      "seed": "P170",
+      "why": "project: got irrelevant, expected bonn_cablecar; stance: got unclear, expected neutral_informative"
+     },
+     {
+      "pid": "E095",
+      "seed": "P151",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E097",
+      "seed": "P038",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E101",
+      "seed": "P154",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E109",
+      "seed": "P199",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E133",
+      "seed": "P148",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E136",
+      "seed": "P066",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E153",
+      "seed": "P126",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E159",
+      "seed": "P185",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E161",
+      "seed": "P006",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E168",
+      "seed": "P099",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E170",
+      "seed": "P107",
+      "why": "stance: got oppose, expected neutral_informative"
+     }
+    ]
+   },
+   "E3_cost_but": {
+    "n": 17,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8156818649911483,
+     "hi": 1.0,
+     "n": 17,
+     "k": 17
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8156818649911483,
+     "hi": 1.0,
+     "n": 17,
+     "k": 17
+    },
+    "fails": []
+   },
+   "E4_tone_caps": {
+    "n": 29,
+    "pass": {
+     "value": 0.9655172413793104,
+     "lo": 0.8282447812067973,
+     "hi": 0.9938867857072374,
+     "n": 29,
+     "k": 28
+    },
+    "stance_pass": {
+     "value": 0.9655172413793104,
+     "lo": 0.8282447812067973,
+     "hi": 0.9938867857072374,
+     "n": 29,
+     "k": 28
+    },
+    "fails": [
+     {
+      "pid": "E065",
+      "seed": "P204",
+      "why": "stance: got neutral_informative, expected support"
+     }
+    ]
+   },
+   "E5_sidebar": {
+    "n": 30,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "fails": []
+   },
+   "E6_numbers": {
+    "n": 20,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "fails": []
+   },
+   "T1_flip_pair": {
+    "n": 14,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "fails": []
+   },
+   "T2_angry_support": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T3_calm_oppose": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T4_council_report": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T5_reported_opposition": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T6_neutral_question": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T7_mixed": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T8_irrelevant_lift": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "directional (must change)": {
+    "n": 81,
+    "pass": {
+     "value": 0.7037037037037037,
+     "lo": 0.5968803504924756,
+     "hi": 0.7920804295165405,
+     "n": 81,
+     "k": 57
+    }
+   },
+   "invariance (must not change)": {
+    "n": 98,
+    "pass": {
+     "value": 0.9897959183673469,
+     "lo": 0.9444451900865797,
+     "hi": 0.9981964522432024,
+     "n": 98,
+     "k": 97
+    }
+   },
+   "all": {
+    "n": 179,
+    "pass": {
+     "value": 0.8603351955307262,
+     "lo": 0.8019530386097109,
+     "hi": 0.9035762260988229,
+     "n": 179,
+     "k": 154
+    }
+   }
+  },
+  "majority_3": {
+   "E1_project_swap": {
+    "n": 19,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8318207759473837,
+     "hi": 1.0,
+     "n": 19,
+     "k": 19
+    },
+    "fails": []
+   },
+   "E2_quoted_in_report": {
+    "n": 29,
+    "pass": {
+     "value": 0.20689655172413793,
+     "lo": 0.09846070197841039,
+     "hi": 0.38390090403867905,
+     "n": 29,
+     "k": 6
+    },
+    "stance_pass": {
+     "value": 0.20689655172413793,
+     "lo": 0.09846070197841039,
+     "hi": 0.38390090403867905,
+     "n": 29,
+     "k": 6
+    },
+    "fails": [
+     {
+      "pid": "E001",
+      "seed": "P229",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E008",
+      "seed": "P155",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E014",
+      "seed": "P207",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E016",
+      "seed": "P078",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E017",
+      "seed": "P112",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E048",
+      "seed": "P012",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E055",
+      "seed": "P081",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E057",
+      "seed": "P086",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E068",
+      "seed": "P109",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E071",
+      "seed": "P234",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E079",
+      "seed": "P138",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E083",
+      "seed": "P227",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E085",
+      "seed": "P170",
+      "why": "stance: got None, expected neutral_informative"
+     },
+     {
+      "pid": "E095",
+      "seed": "P151",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E097",
+      "seed": "P038",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E109",
+      "seed": "P199",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E133",
+      "seed": "P148",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E136",
+      "seed": "P066",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E153",
+      "seed": "P126",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E159",
+      "seed": "P185",
+      "why": "stance: got support, expected neutral_informative"
+     },
+     {
+      "pid": "E161",
+      "seed": "P006",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E168",
+      "seed": "P099",
+      "why": "stance: got oppose, expected neutral_informative"
+     },
+     {
+      "pid": "E170",
+      "seed": "P107",
+      "why": "stance: got oppose, expected neutral_informative"
+     }
+    ]
+   },
+   "E3_cost_but": {
+    "n": 17,
+    "pass": {
+     "value": 0.9411764705882353,
+     "lo": 0.7301796936242461,
+     "hi": 0.9895395990150025,
+     "n": 17,
+     "k": 16
+    },
+    "stance_pass": {
+     "value": 0.9411764705882353,
+     "lo": 0.7301796936242461,
+     "hi": 0.9895395990150025,
+     "n": 17,
+     "k": 16
+    },
+    "fails": [
+     {
+      "pid": "E164",
+      "seed": "P170",
+      "why": "stance: got support, expected mixed"
+     }
+    ]
+   },
+   "E4_tone_caps": {
+    "n": 29,
+    "pass": {
+     "value": 0.9655172413793104,
+     "lo": 0.8282447812067973,
+     "hi": 0.9938867857072374,
+     "n": 29,
+     "k": 28
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8830302015002593,
+     "hi": 1.0,
+     "n": 29,
+     "k": 29
+    },
+    "fails": [
+     {
+      "pid": "E041",
+      "seed": "P099",
+      "why": "project: got None, expected heilbronn_cablecar"
+     }
+    ]
+   },
+   "E5_sidebar": {
+    "n": 30,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8864866068260312,
+     "hi": 0.9999999999999999,
+     "n": 30,
+     "k": 30
+    },
+    "fails": []
+   },
+   "E6_numbers": {
+    "n": 20,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.8388748419471806,
+     "hi": 1.0,
+     "n": 20,
+     "k": 20
+    },
+    "fails": []
+   },
+   "T1_flip_pair": {
+    "n": 14,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.7846891972623643,
+     "hi": 1.0,
+     "n": 14,
+     "k": 14
+    },
+    "fails": []
+   },
+   "T2_angry_support": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T3_calm_oppose": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T4_council_report": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T5_reported_opposition": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T6_neutral_question": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T7_mixed": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "T8_irrelevant_lift": {
+    "n": 3,
+    "pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "stance_pass": {
+     "value": 1.0,
+     "lo": 0.4385029682449546,
+     "hi": 1.0,
+     "n": 3,
+     "k": 3
+    },
+    "fails": []
+   },
+   "directional (must change)": {
+    "n": 81,
+    "pass": {
+     "value": 0.7037037037037037,
+     "lo": 0.5968803504924756,
+     "hi": 0.7920804295165405,
+     "n": 81,
+     "k": 57
+    }
+   },
+   "invariance (must not change)": {
+    "n": 98,
+    "pass": {
+     "value": 0.9897959183673469,
+     "lo": 0.9444451900865797,
+     "hi": 0.9981964522432024,
+     "n": 98,
+     "k": 97
+    }
+   },
+   "all": {
+    "n": 179,
+    "pass": {
+     "value": 0.8603351955307262,
+     "lo": 0.8019530386097109,
+     "hi": 0.9035762260988229,
+     "n": 179,
+     "k": 154
+    }
+   }
+  }
+ }
+}

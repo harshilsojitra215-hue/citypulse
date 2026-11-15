@@ -1,0 +1,60 @@
+Labelers: ['haiku', 'sonnet_a', 'sonnet_b']  | sample: 240 posts | gold: no
+  haiku: 240 labelled, 0 pids not in sample
+  sonnet_a: 240 labelled, 0 pids not in sample
+  sonnet_b: 240 labelled, 0 pids not in sample
+
+== 1. Pairwise agreement (per field) ==
+-- haiku vs sonnet_a (n=240)
+   project  agreement 0.92  kappa 0.90
+   stance   agreement 0.82  kappa 0.73
+   voice    agreement 0.82  kappa 0.72
+   relevant(4 projects) agreement 0.95  kappa 0.89
+   arguments mean Jaccard 0.77; per-code kappa: cost=0.81, climate_environment=0.73, traffic_mobility=0.66, noise_privacy_overflight=1.00, cityscape_design=-0.00, safety_technology=0.80, ipai_who_benefits=-0.01, process_participation=0.31, tourism_image=0.35, other=0.00
+-- haiku vs sonnet_b (n=240)
+   project  agreement 0.95  kappa 0.94
+   stance   agreement 0.85  kappa 0.77
+   voice    agreement 0.79  kappa 0.67
+   relevant(4 projects) agreement 0.97  kappa 0.93
+   arguments mean Jaccard 0.80; per-code kappa: cost=0.84, climate_environment=0.67, traffic_mobility=0.77, noise_privacy_overflight=-0.00, cityscape_design=0.66, safety_technology=0.71, ipai_who_benefits=0.29, process_participation=0.65, tourism_image=0.52, other=0.00
+-- sonnet_a vs sonnet_b (n=240)
+   project  agreement 0.93  kappa 0.92
+   stance   agreement 0.89  kappa 0.81
+   voice    agreement 0.89  kappa 0.82
+   relevant(4 projects) agreement 0.96  kappa 0.91
+   arguments mean Jaccard 0.78; per-code kappa: cost=0.79, climate_environment=0.55, traffic_mobility=0.66, noise_privacy_overflight=-0.00, cityscape_design=0.66, safety_technology=0.66, ipai_who_benefits=0.17, process_participation=0.59, tourism_image=0.61, other=1.00
+
+Krippendorff alpha (nominal, all labelers)
+   project  0.92
+   stance   0.77
+   voice    0.73
+
+Consensus = majority over 3 labelers; project/stance ties (excluded below): 6
+
+== 2. Keyword baseline vs label consensus (relevance to the 4 projects) ==
+n=239  TP=152 FP=40 FN=3 TN=44  precision 0.79  recall 0.98
+baseline picks the right project among truly relevant posts: 145/155
+
+== 3. Vendor sentiment vs consensus stance (relevant posts only) ==
+sentiment \ stance          support     oppose  neutral_i      mixed    unclear      total
+pos(1)                       16          7         62          0          0         85
+neu(0)                        3          3         30          0          1         37
+neg(-1)                       2          0          3          0          0          5
+unscored(-99)                 5          3         13          0          2         23
+negative sentiment with support stance: 2/5
+positive sentiment with oppose stance:  7/85
+unscored (-99) among relevant posts: 23/150
+vendor-as-stance (1=support, -1=oppose, 0=neutral) matches consensus: 46/127
+
+== 4. Per-stratum disagreement (share of posts where labelers are not unanimous) ==
+stratum                    n    project     stance      voice  arguments
+bonn                      50       0.12       0.34       0.18       0.42
+hardneg_job_ad             5       0.00       0.00       0.20       0.20
+hardneg_near_miss         10       0.00       0.30       0.10       0.40
+hardneg_other_city         9       0.00       0.22       0.22       0.56
+hardneg_ski_mountain      11       0.09       0.09       0.27       0.09
+hardneg_toy_playground     5       0.00       0.00       0.20       0.00
+heilbronn                 70       0.09       0.17       0.26       0.40
+ipai                      40       0.20       0.25       0.40       0.20
+paris                     40       0.05       0.12       0.15       0.45
+
+wrote C:\Users\Harshil\Desktop\win\scripts\pilot\disagreements.csv: 135 posts with at least one disagreement

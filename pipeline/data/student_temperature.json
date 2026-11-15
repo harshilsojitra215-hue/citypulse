@@ -1,0 +1,11 @@
+{
+ "temperature": 0.6511006574040492,
+ "classes": [
+  "bonn_cablecar",
+  "heilbronn_cablecar",
+  "ipai",
+  "irrelevant",
+  "other_cablecar",
+  "paris_c1"
+ ]
+}

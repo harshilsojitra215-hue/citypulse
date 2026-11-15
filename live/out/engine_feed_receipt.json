@@ -1,0 +1,5076 @@
+{
+ "at": "2026-11-15T08:43:05Z",
+ "counts": {
+  "total": 495,
+  "undated": 306,
+  "radar_none": 37,
+  "already_sent": 0,
+  "no_text": 0,
+  "bad_date": 0,
+  "kept": 152
+ },
+ "status": "done",
+ "run_id": "r20261115-1413-6581",
+ "run": {
+  "run_id": "r20261115-1413-6581",
+  "filename": "batch_for_engine.json",
+  "sha256": "7bb53f91afef2bf1b2522274826d9829bd2e0fa9e29d55db2956ba78a58f9bdd",
+  "created_at": "2026-11-15T08:43:05+00:00",
+  "finished_at": "2026-11-15T08:44:59+00:00",
+  "status": "done",
+  "message": "",
+  "steps": [
+   {
+    "name": "validate",
+    "status": "done",
+    "n_in": 152,
+    "n_out": 152,
+    "secs": 0.0,
+    "message": "152 of 152 records usable"
+   },
+   {
+    "name": "clean",
+    "status": "done",
+    "n_in": 152,
+    "n_out": 152,
+    "secs": 0.11,
+    "message": "HTML and whitespace removed (pipeline/01_build_base.py); 28 author names replaced by salted hashes and dropped"
+   },
+   {
+    "name": "dedupe",
+    "status": "done",
+    "n_in": 152,
+    "n_out": 150,
+    "secs": 0.06,
+    "message": "0 already known and skipped; 2 copies of the same text grouped with their first copy; 0 repeated ids collapsed"
+   },
+   {
+    "name": "relevance",
+    "status": "done",
+    "n_in": 152,
+    "n_out": 80,
+    "secs": 0.18,
+    "message": "keyword rules (pipeline/02_candidates.py): {'background': 70, 'ipai_cand': 27, 'paris_c1_cand': 22, 'other_urban_cand': 16, 'bonn_cand': 9, 'heilbronn_cand': 6}; background is not sent to the model; boilerplate filter applied over the 150 unique posts of this batch (286 characters removed)"
+   },
+   {
+    "name": "classify",
+    "status": "done",
+    "n_in": 80,
+    "n_out": 80,
+    "secs": 22.84,
+    "message": "openrouter:anthropic/claude-haiku-5.5 (codebook_v1), prompt 60398bec: {'paris_c1': 22, 'ipai': 22, 'other_urban_cablecar': 11, 'bonn_cablecar': 7, 'heilbronn_cablecar': 5, 'heilbronn_other': 5, 'leisure_cablecar': 5, 'unrelated': 3}"
+   },
+   {
+    "name": "extract",
+    "status": "done",
+    "n_in": 45,
+    "n_out": 48,
+    "secs": 0.02,
+    "message": "48 arguments from 35 posts (the codebook call returns them with the label; one row per argument as in pipeline/10_argument_map.py)"
+   },
+   {
+    "name": "match",
+    "status": "done",
+    "n_in": 48,
+    "n_out": 930,
+    "secs": 89.4,
+    "message": "embedded with ollama:bge-m3; 930 pairs with older claims (matcher: citypulse-matcher-v2 (local-model))"
+   },
+   {
+    "name": "novelty",
+    "status": "done",
+    "n_in": 48,
+    "n_out": 22,
+    "secs": 0.01,
+    "message": "familiar 26, ambiguous 18, new 4, unscored 0; 26 familiar claims joined a known argument family"
+   },
+   {
+    "name": "store",
+    "status": "done",
+    "n_in": 67,
+    "n_out": 67,
+    "secs": 1.03,
+    "message": "67 posts and 48 claims stored under run_id r20261115-1413-6581; the application shows them now"
+   }
+  ],
+  "counts": {
+   "records": 152,
+   "valid": 152,
+   "rejected": 0,
+   "duplicates_in_file": 2,
+   "already_known": 0,
+   "candidates": 80,
+   "relevant": 67,
+   "not_relevant": 85,
+   "unclassified": 0,
+   "claims": 48,
+   "familiar": 26,
+   "ambiguous": 18,
+   "new": 4,
+   "unscored": 0
+  },
+  "errors": [],
+  "findings": {
+   "concerns": [
+    {
+     "concern_id": "g:n:d94dfd6e730c",
+     "state": "ambiguous",
+     "label": "Cable car infrastructure makes Heilbronn attractive for investors",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": "2026-10-06",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "urban_development",
+     "uncertainty": {
+      "novelty_score": 0.5236,
+      "best_older_p_same": 0.4764,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:d94dfd6e730c",
+       "claim": "Cable car infrastructure makes Heilbronn attractive for investors",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-10-06",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/burim-sopaj-1876a3231",
+       "topic": "urban_development",
+       "polarity": "pro",
+       "doc_id": "live:a307e9265bd0",
+       "voice": "a37bc0",
+       "family_id": "solo:n:d94dfd6e730c",
+       "family_name": "Cable car infrastructure makes Heilbronn attractive for investors",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c2665",
+       "claim": "Even the vision of a cable car enriches Heilbronn",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-03-18",
+       "channel": "news",
+       "domain": "stimme.de",
+       "url": "https://www.stimme.de/heilbronn/stadt-heilbronn/schon-die-vision-einer-seilbahn-ist-eine-bereicherung-fuer-heilbronn-art-5153171",
+       "topic": "innovation_symbolism",
+       "polarity": "pro",
+       "doc_id": "29174404,216713",
+       "voice": "e0ec8d",
+       "family_id": "fam14",
+       "family_name": "Heilbronn could be first German city with urban cable car",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.4764,
+       "p_related": 0.9984,
+       "cos": 0.8276,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c1387",
+       "claim": "Industry association sees Heilbronn as model city for cable cars",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2025-09-08",
+       "channel": "news",
+       "domain": "stimme.de",
+       "url": "https://stimme.de/heilbronn/stadt-heilbronn/ipai-ki-park-seilbahn-gondeln-oepnv-verkehr-transport-vds-nahverkehr-art-5088235",
+       "topic": "innovation_symbolism",
+       "polarity": "pro",
+       "doc_id": "29174404,167729",
+       "voice": "5e5927",
+       "family_id": "fam14",
+       "family_name": "Heilbronn could be first German city with urban cable car",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.4217,
+       "p_related": 0.976,
+       "cos": 0.8093,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2942",
+        "claim": "Cable car reportedly boosts local economy and activity",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-06-11",
+        "channel": "other_web",
+        "domain": "wochenblatt.cc",
+        "url": "https://wochenblatt.cc/spektakulaere-idee-politiker-will-einwohner-per-seilbahn-durch-die-stadt-transportieren/",
+        "topic": "urban_development",
+        "polarity": "pro",
+        "doc_id": "23585686,8227",
+        "voice": "b50479"
+       },
+       "relation": "related",
+       "p_same": 0.432,
+       "p_related": 0.9973,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0051",
+        "claim": "Cable car boosts city attractiveness and connects river banks",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2024-10-30",
+        "channel": "news",
+        "domain": "simagazin.com",
+        "url": "https://www.simagazin.com/si-urban/themen-si-urban/stadt/brest-wie-frankreichs-erste-urbane-seilbahn-eine-ganze-stadt-belebt/",
+        "topic": "tourism_image",
+        "polarity": "pro",
+        "doc_id": "25258364,64",
+        "voice": "733d0a"
+       },
+       "relation": "related",
+       "p_same": 0.1954,
+       "p_related": 0.9985,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:d94dfd6e730c",
+       "doc_id": "live:a307e9265bd0",
+       "url": "https://linkedin.com/in/burim-sopaj-1876a3231",
+       "date": "2026-10-06"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:234e3aa887a0",
+     "state": "new_single",
+     "label": "Council decides on preliminary project phase for cable car",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": "2025-03-11",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "politics_process",
+     "uncertainty": {
+      "novelty_score": 1.0,
+      "best_older_p_same": 0.0,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "no equivalent among the nearest older claims of this project; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:234e3aa887a0",
+       "claim": "Council decides on preliminary project phase for cable car",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2025-03-11",
+       "channel": "other_web",
+       "domain": "heilbronn-sitzungsdienst.komm.one",
+       "url": "https://heilbronn-sitzungsdienst.komm.one/oparl/bodies/kidE/papers/vo/4074",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:cdb3fb599458",
+       "voice": "34882c",
+       "family_id": "solo:n:234e3aa887a0",
+       "family_name": "Council decides on preliminary project phase for cable car",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [
+      {
+       "cid": "n:94365d529632",
+       "claim": "Council decided on 27 July 2026 to build the cable car",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-10-06",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/burim-sopaj-1876a3231",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:a307e9265bd0",
+       "voice": "a37bc0",
+       "family_id": "fam87",
+       "family_name": "City council gives green light to advance cable car plans",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.6621,
+       "p_related": 0.9985,
+       "cos": 0.7407,
+       "score_source": "cached"
+      }
+     ],
+     "closest_older": [],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0285",
+        "claim": "Council unanimously extends building permit for cable car",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-02-07",
+        "channel": "news",
+        "domain": "news-koblenz.de",
+        "url": "https://news-koblenz.de/stadtrat-im-februar-jahresabschluss-fuer-den-haushalt-2022-aenderung-des-bebauungsplans-nr-120-seilbahnanlage-buga-2011_50009.html",
+        "topic": "politics_process",
+        "polarity": "neutral",
+        "doc_id": "11399968,3929",
+        "voice": "1a55ae"
+       },
+       "relation": "related",
+       "p_same": 0.5892,
+       "p_related": 0.9979,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0381",
+        "claim": "New urban cable car awaits building permit; opening 2027-2028",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-03-05",
+        "channel": "news",
+        "domain": "simagazin.com",
+        "url": "https://www.simagazin.com/si-urban/themen-si-urban/stadt/sydney-zoo-plant-neue-seilbahn/",
+        "topic": "politics_process",
+        "polarity": "neutral",
+        "doc_id": "25258358,52",
+        "voice": "cf3ca1"
+       },
+       "relation": "related",
+       "p_same": 0.418,
+       "p_related": 0.9873,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:234e3aa887a0",
+       "doc_id": "live:cdb3fb599458",
+       "url": "https://heilbronn-sitzungsdienst.komm.one/oparl/bodies/kidE/papers/vo/4074",
+       "date": "2025-03-11"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:heilbronn_cablecar:c0495",
+     "state": "recurring",
+     "label": "Cable car project sparks the city's imagination",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "innovation_symbolism",
+     "uncertainty": {
+      "per_month_now": 0.05,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:930842210dcd",
+       "claim": "Urban cable car is a step towards the city's future",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-08-19",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/gunther-weipert-941a7611a",
+       "topic": "innovation_symbolism",
+       "polarity": "pro",
+       "doc_id": "live:74eac9ca65c5",
+       "voice": "a37bc0",
+       "family_id": "solo:c0495",
+       "family_name": "Cable car project sparks the city's imagination",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.981,
+       "p_related": 0.9985,
+       "cos": 0.7942,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:930842210dcd",
+       "doc_id": "live:74eac9ca65c5",
+       "url": "https://linkedin.com/in/gunther-weipert-941a7611a",
+       "date": "2026-08-19"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:heilbronn_cablecar:c3261",
+     "state": "recurring",
+     "label": "Council approved urban cable car in July",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "politics_process",
+     "uncertainty": {
+      "per_month_now": 0.05,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:94365d529632",
+       "claim": "Council decided on 27 July 2026 to build the cable car",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-10-06",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/burim-sopaj-1876a3231",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:a307e9265bd0",
+       "voice": "a37bc0",
+       "family_id": "fam87",
+       "family_name": "City council gives green light to advance cable car plans",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9851,
+       "p_related": 0.9993,
+       "cos": 0.7759,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:94365d529632",
+       "doc_id": "live:a307e9265bd0",
+       "url": "https://linkedin.com/in/burim-sopaj-1876a3231",
+       "date": "2026-10-06"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:heilbronn_cablecar:ff114",
+     "state": "recurring",
+     "label": "Council approves preliminary planning after positive feasibility study",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "politics_process",
+     "uncertainty": {
+      "per_month_now": 0.05,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:1b942937e92a",
+       "claim": "Feasibility study results and planning agreement presented to council",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2026-06-29",
+       "channel": "other_web",
+       "domain": "heilbronn-sitzungsdienst.komm.one",
+       "url": "https://heilbronn-sitzungsdienst.komm.one/oparl/bodies/kidE/papers/vo/4935",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:f84e8aaf937c",
+       "voice": "34882c",
+       "family_id": "fam132",
+       "family_name": "Council approves preliminary planning after positive feasibility study",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9701,
+       "p_related": 0.9982,
+       "cos": 0.766,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:1b942937e92a",
+       "doc_id": "live:f84e8aaf937c",
+       "url": "https://heilbronn-sitzungsdienst.komm.one/oparl/bodies/kidE/papers/vo/4935",
+       "date": "2026-06-29"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:heilbronn_cablecar:ff124",
+     "state": "recurring",
+     "label": "Cable car could supplement local public transport",
+     "project": "heilbronn_cablecar",
+     "project_name": "Heilbronn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 0.05,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:076aea6bcc39",
+       "claim": "Cable car to supplement city's local public transport network",
+       "project": "heilbronn_cablecar",
+       "project_name": "Heilbronn",
+       "date": "2025-05-20",
+       "channel": "other_web",
+       "domain": "zukunftsnetzwerk-oepnv.de",
+       "url": "https://www.zukunftsnetzwerk-oepnv.de/aktuelles/news/mobilitaetswende",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "live:c5d4b40f35bd",
+       "voice": "6d1200",
+       "family_id": "fam123",
+       "family_name": "Cable car could supplement local public transport",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.993,
+       "p_related": 0.9994,
+       "cos": 0.9228,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:076aea6bcc39",
+       "doc_id": "live:c5d4b40f35bd",
+       "url": "https://www.zukunftsnetzwerk-oepnv.de/aktuelles/news/mobilitaetswende",
+       "date": "2025-05-20"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:8b89eed54a75",
+     "state": "ambiguous",
+     "label": "Citizen initiative calls the project extremely expensive",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": "2026-11-01",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 3,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 3
+     },
+     "topic": "cost_financing",
+     "uncertainty": {
+      "novelty_score": 0.4667,
+      "best_older_p_same": 0.5333,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:8b89eed54a75",
+       "claim": "Citizen initiative calls the project extremely expensive",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-01",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:78786d5e1a7c",
+       "voice": "87096b",
+       "family_id": "solo:n:8b89eed54a75",
+       "family_name": "Citizen initiative calls the project extremely expensive",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:3cd3d66aba51",
+       "claim": "Citizen initiative calls the project extremely expensive",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:27ea4a34b14d",
+       "voice": "87096b",
+       "family_id": "solo:n:8b89eed54a75",
+       "family_name": "Citizen initiative calls the project extremely expensive",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9966,
+       "p_related": 0.9991,
+       "cos": 1.0,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:b6471b9c7674",
+       "claim": "Citizen initiative calls the project extremely expensive",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:513907302b24",
+       "voice": "87096b",
+       "family_id": "solo:n:8b89eed54a75",
+       "family_name": "Citizen initiative calls the project extremely expensive",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9966,
+       "p_related": 0.9991,
+       "cos": 1.0,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c3436",
+       "claim": "Feasibility study alone costs millions, mocking the project",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-10-17",
+       "channel": "social",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=d_sIBKnXW1A&lc=Ugw3AZvIZUoFvimoB3B4AaABAg",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "11277542,795776247",
+       "voice": "6352de",
+       "family_id": "fam33",
+       "family_name": "Project reportedly cost about 110 million euros",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5333,
+       "p_related": 0.9982,
+       "cos": 0.6546,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c1304",
+       "claim": "Standardised assessment overestimates ridership; project uneconomical",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-09-01",
+       "channel": "social",
+       "domain": "instagram.com",
+       "url": "https://www.instagram.com/p/DOD_8WMCF2e/",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "11342743,809326",
+       "voice": "2ce379",
+       "family_id": "fam128",
+       "family_name": "Money should go to schools instead of this project",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.4656,
+       "p_related": 0.997,
+       "cos": 0.6048,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0183",
+        "claim": "Project judged unnecessarily complex and too costly",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-01-03",
+        "channel": "news",
+        "domain": "latribune.fr",
+        "url": "https://www.latribune.fr/entreprises-finance/industrie/lgv-tramway-grand-paris-express-ces-projets-encore-au-ralenti-en-2025-1014333.html",
+        "topic": "cost_financing",
+        "polarity": "contra",
+        "doc_id": "28469301,12482",
+        "voice": "d752f1"
+       },
+       "relation": "equivalent",
+       "p_same": 0.9542,
+       "p_related": 0.9994,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c1630",
+        "claim": "Opposition criticises the cable car's cost and route",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-10-18",
+        "channel": "news",
+        "domain": "france3-regions.franceinfo.fr",
+        "url": "https://france3-regions.franceinfo.fr/corse/corse-du-sud/grand-ajaccio/angelo-le-telepherique-d-ajaccio-entre-officiellement-en-service-3235505.html",
+        "topic": "cost_financing",
+        "polarity": "contra",
+        "doc_id": "29155761,34860",
+        "voice": "0e82c0"
+       },
+       "relation": "equivalent",
+       "p_same": 0.9142,
+       "p_related": 0.9983,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c3181",
+        "claim": "Project costs millions",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2026-07-30",
+        "channel": "news",
+        "domain": "stimme.de",
+        "url": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-ipai-gemeinderat-2026-baden-wuerttemberg-oepnv-foerderung-art-5198884",
+        "topic": "cost_financing",
+        "polarity": "neutral",
+        "doc_id": "29174404,253462",
+        "voice": "5d6c01"
+       },
+       "relation": "equivalent",
+       "p_same": 0.8545,
+       "p_related": 0.9981,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2026-07-29",
+        "title": "Rendering of new Kurt-Schumacher-Platz station",
+        "verified": "no",
+        "source": "https://www.heilbronn.de/aktuelles-aus-der-stadt-detail/artikel/urbane-seilbahn-vorplanung-kann-beginnen.html",
+        "event_type": "visualisation"
+       },
+       "after": [
+        {
+         "date": "2026-08-05",
+         "title": "Official city paper front page: 'The next step to the cable car'",
+         "verified": "no",
+         "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2026/Heilbronner-Stadtzeitung-1626.pdf",
+         "event_type": "media"
+        },
+        {
+         "date": "2026-08-06",
+         "title": "EU-wide tender for cable car engineering planning",
+         "verified": "no",
+         "source": "https://ted.europa.eu/fr/notice/545169-2026/pdf",
+         "event_type": "announcement"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c3160",
+        "claim": "Citizens' initiative calls council cable car decision irresponsible",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-07-27",
+        "channel": "news",
+        "domain": "waz.de",
+        "url": "https://www.waz.de/lokales/herne-wanne-eickel/article412681443/herner-ratsbeschluss-fuer-die-seilbahn-nicht-mutig-sondern-unverantwortlich.html",
+        "topic": "politics_process",
+        "polarity": "contra",
+        "doc_id": "26063163,198605",
+        "voice": "a2fe29"
+       },
+       "relation": "related",
+       "p_same": 0.1783,
+       "p_related": 0.997,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0153",
+        "claim": "Critics call the urban cable car project complex and unsuitable",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2024-12-18",
+        "channel": "news",
+        "domain": "region-aura.latribune.fr",
+        "url": "https://region-aura.latribune.fr/territoire/transports/2024-12-18/face-aux-critiques-le-projet-de-telepherique-urbain-grenoblois-subit-un-nouveau-report-1014082.html",
+        "topic": "other",
+        "polarity": "contra",
+        "doc_id": "12851619,147074",
+        "voice": "2e9e62"
+       },
+       "relation": "related",
+       "p_same": 0.1677,
+       "p_related": 0.9984,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:8b89eed54a75",
+       "doc_id": "live:78786d5e1a7c",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "date": "2026-11-01"
+      },
+      {
+       "cid": "n:3cd3d66aba51",
+       "doc_id": "live:27ea4a34b14d",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "date": "2026-11-02"
+      },
+      {
+       "cid": "n:b6471b9c7674",
+       "doc_id": "live:513907302b24",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "date": "2026-11-02"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:75f51d108507",
+     "state": "ambiguous",
+     "label": "Innovative transport mode seen as possible ÖPNV component",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": "2026-11-01",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.6557,
+      "best_older_p_same": 0.3443,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:75f51d108507",
+       "claim": "Innovative transport mode seen as possible ÖPNV component",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-01",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:78786d5e1a7c",
+       "voice": "87096b",
+       "family_id": "solo:n:75f51d108507",
+       "family_name": "Innovative transport mode seen as possible ÖPNV component",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0713",
+       "claim": "Cable car is part of planned public transport expansion in Bonn",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-05-08",
+       "channel": "social",
+       "domain": "instagram.com",
+       "url": "https://www.instagram.com/p/DJZIXazOS6z/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "27060891,7616",
+       "voice": "623f58",
+       "family_id": "fam17",
+       "family_name": "Cable car to relieve traffic congestion in Bonn",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.3443,
+       "p_related": 0.9984,
+       "cos": 0.5374,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c2621",
+       "claim": "Would be first cable car integrated in public transport",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-03-09",
+       "channel": "news",
+       "domain": "simagazin.com",
+       "url": "https://www.simagazin.com/si-urban/themen-si-urban/stadt/deutschland-wo-werden-urbane-seilbahnen-geplant/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "25258364,94",
+       "voice": "058da4",
+       "family_id": "fam89",
+       "family_name": "First German urban cable car integrated into public transport",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.3338,
+       "p_related": 0.9977,
+       "cos": 0.5309,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0747",
+        "claim": "Part of a modern public transport concept",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-05-12",
+        "channel": "news",
+        "domain": "tagesschau.de",
+        "url": "https://www.tagesschau.de/inland/regional/badenwuerttemberg/swr-land-bw-foerdert-seilbahn-projekt-in-heilbronn-mit-millionen-100.html",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "28900850,41606",
+        "voice": "4701bb"
+       },
+       "relation": "related",
+       "p_same": 0.7621,
+       "p_related": 0.9979,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-05-12",
+        "title": "State signs letter of intent and pays half of planning costs",
+        "verified": "no",
+        "source": "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/startschuss-fuer-urbane-seilbahn-in-heilbronn-1",
+        "event_type": "announcement"
+       },
+       "after": [
+        {
+         "date": "2025-07-01",
+         "title": "Public info evening on IPAI, transport and cable car",
+         "verified": "no",
+         "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2025/Heilbronner-Stadtzeitung-1425.pdf",
+         "event_type": "other"
+        },
+        {
+         "date": "2025-09-08",
+         "title": "VCD warns of risks; Stimme calls for transparency",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-plaene-stadt-ipai-nahverkehr-ki-campus-neckargartach-verkehr-gondeln-art-5088233",
+         "event_type": "criticism"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c0554",
+        "claim": "Framed as possible public transport of the future",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-04-04",
+        "channel": "news",
+        "domain": "tagesschau.de",
+        "url": "https://www.tagesschau.de/inland/regional/badenwuerttemberg/swr-oepnv-der-zukunft-heilbronn-plant-seilbahn-zum-ki-hotspot-100.html",
+        "topic": "innovation_symbolism",
+        "polarity": "pro",
+        "doc_id": "28900880,37843",
+        "voice": "32e40a"
+       },
+       "relation": "related",
+       "p_same": 0.7552,
+       "p_related": 0.9983,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-04-04",
+        "title": "Regional media: 'Heilbronn says yes to cable car'",
+        "verified": "no",
+        "source": "https://www.echo24.de/heilbronn/seilbahn-plaene-konkret-details-projekt-ipai-kuenstliche-intelligenz-kosten-gemeinderat-experimenta-93665819.html",
+        "event_type": "media"
+       },
+       "after": [
+        {
+         "date": "2025-04-25",
+         "title": "Residents split: 'phenomenal' vs 'hare-brained'",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/schwarz-bildungscampus-soleo-eisstadion-bauarbeiten-plaene-seilbahn-neckargartach-anwohner-art-5046933",
+         "event_type": "media"
+        },
+        {
+         "date": "2025-05-12",
+         "title": "State signs letter of intent and pays half of planning costs",
+         "verified": "no",
+         "source": "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/startschuss-fuer-urbane-seilbahn-in-heilbronn-1",
+         "event_type": "announcement"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:75f51d108507",
+       "doc_id": "live:78786d5e1a7c",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "date": "2026-11-01"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:8461517d58be",
+     "state": "ambiguous",
+     "label": "VCD headline endorses a cable car for Bonn",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": "2026-11-09",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.2778,
+      "best_older_p_same": 0.7222,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:8461517d58be",
+       "claim": "VCD headline endorses a cable car for Bonn",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-09",
+       "channel": "other_web",
+       "domain": "nrw.vcd.org",
+       "url": "https://nrw.vcd.org/der-vcd-in-nrw/bonn-rhein-sieg-ahr",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:ae033d05962c",
+       "voice": "8ad1f8",
+       "family_id": "solo:n:8461517d58be",
+       "family_name": "VCD headline endorses a cable car for Bonn",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [
+      {
+       "cid": "n:b4abd5ba7fc0",
+       "claim": "Update on current project status for Bonn cable car",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-08",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/katharina-kontny-10a108226",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:14c990c5f71d",
+       "voice": "a37bc0",
+       "family_id": "fam17",
+       "family_name": "Cable car to relieve traffic congestion in Bonn",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.259,
+       "p_related": 0.9944,
+       "cos": 0.7147,
+       "score_source": "cached"
+      }
+     ],
+     "closest_older": [
+      {
+       "cid": "c0713",
+       "claim": "Cable car is part of planned public transport expansion in Bonn",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-05-08",
+       "channel": "social",
+       "domain": "instagram.com",
+       "url": "https://www.instagram.com/p/DJZIXazOS6z/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "27060891,7616",
+       "voice": "623f58",
+       "family_id": "fam17",
+       "family_name": "Cable car to relieve traffic congestion in Bonn",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.7222,
+       "p_related": 0.9741,
+       "cos": 0.8017,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0910",
+       "claim": "Cable car should relieve traffic in Bonn",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-06-12",
+       "channel": "news",
+       "domain": "ksta.de",
+       "url": "https://www.ksta.de/region/rhein-sieg-bonn/bonn/bonner-seilbahnprojekt-tritt-in-entscheidende-planungsphase-1042047",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "28697418,9021",
+       "voice": "342a75",
+       "family_id": "fam17",
+       "family_name": "Cable car to relieve traffic congestion in Bonn",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.6919,
+       "p_related": 0.9487,
+       "cos": 0.7941,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2791",
+        "claim": "Candidate wants cable car for modern urban mobility in Freiburg",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-04-21",
+        "channel": "news",
+        "domain": "kontextwochenzeitung.de",
+        "url": "https://www.kontextwochenzeitung.de/politik/786/doch-nicht-in-unserem-freiburg-10849.html",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "12567494,331",
+        "voice": "0bb47b"
+       },
+       "relation": "related",
+       "p_same": 0.4412,
+       "p_related": 0.9888,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c2455",
+        "claim": "Proposal for integrated Bonn main station transport plan, cable car mentioned",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-01-31",
+        "channel": "social",
+        "domain": "linieplus.de",
+        "url": "https://linieplus.de/proposal/bonn-bf-suedliches-kreuz-ein-gesamtprojekt/#comment-108275",
+        "topic": "other",
+        "polarity": "neutral",
+        "doc_id": "24930177,26509",
+        "voice": "1d0800"
+       },
+       "relation": "related",
+       "p_same": 0.2438,
+       "p_related": 0.9962,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:8461517d58be",
+       "doc_id": "live:ae033d05962c",
+       "url": "https://nrw.vcd.org/der-vcd-in-nrw/bonn-rhein-sieg-ahr",
+       "date": "2026-11-09"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:62ee2206b52c",
+     "state": "ambiguous",
+     "label": "Submission demands cable car be deleted from planning",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": "2026-11-13",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 1
+     },
+     "topic": "politics_process",
+     "uncertainty": {
+      "novelty_score": 0.3543,
+      "best_older_p_same": 0.6457,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:62ee2206b52c",
+       "claim": "Submission demands cable car be deleted from planning",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-13",
+       "channel": "other_web",
+       "domain": "bonn.de",
+       "url": "https://www.bonn.de/medien-global/amt-13/amtsblatt/50_2026_Amtsblatt.pdf",
+       "topic": "politics_process",
+       "polarity": "contra",
+       "doc_id": "live:e354fb2a9f81",
+       "voice": "082d61",
+       "family_id": "solo:n:62ee2206b52c",
+       "family_name": "Submission demands cable car be deleted from planning",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c1256",
+       "claim": "Further setback for planned cable car route",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-08-28",
+       "channel": "news",
+       "domain": "www1.wdr.de",
+       "url": "https://www1.wdr.de/nachrichten/rheinland/dhl-kritisiert-seilbahn-bonn-100.html",
+       "topic": "politics_process",
+       "polarity": "contra",
+       "doc_id": "9776584,4976",
+       "voice": "381d71",
+       "family_id": "fam112",
+       "family_name": "Cable car is a wasteful project using public money",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.6457,
+       "p_related": 0.9981,
+       "cos": 0.648,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c1432",
+       "claim": "Four companies demand adjustments to cable car plans",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2025-09-13",
+       "channel": "social",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=22IRPZ5Cc-w",
+       "topic": "residents_privacy_noise",
+       "polarity": "contra",
+       "doc_id": "342505,59323",
+       "voice": "670f2b",
+       "family_id": "fam112",
+       "family_name": "Cable car is a wasteful project using public money",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.3085,
+       "p_related": 0.9974,
+       "cos": 0.7186,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2667",
+        "claim": "Opposition list promises study to dismantle the cable car",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-03-19",
+        "channel": "other_web",
+        "domain": "corsenetinfos.corsica",
+        "url": "https://www.corsenetinfos.corsica/Municipales-Aiacciu-Vivu-veut-faire-tomber-la-derniere-citadelle_a89772.html",
+        "topic": "politics_process",
+        "polarity": "contra",
+        "doc_id": "11428301,134847",
+        "voice": "281588"
+       },
+       "relation": "related",
+       "p_same": 0.4961,
+       "p_related": 0.9973,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c2648",
+        "claim": "Author plans to argue against cable car in city council",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2026-03-15",
+        "channel": "social",
+        "domain": "instagram.com",
+        "url": "https://www.instagram.com/p/DV6i9LLApHH/",
+        "topic": "politics_process",
+        "polarity": "contra",
+        "doc_id": "17712358,286826",
+        "voice": "50e146"
+       },
+       "relation": "related",
+       "p_same": 0.4563,
+       "p_related": 0.9986,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-12-29",
+        "title": "Stimme feature: Paris C1 as model for Heilbronn",
+        "verified": "no",
+        "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-c1-paris-vorbild-ipai-nahverkehr-stadt-gondel-art-5125739",
+        "event_type": "media"
+       },
+       "after": [
+        {
+         "date": "2026-03-17",
+         "title": "City delegation visits Paris C1; still no cost figure",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-paris-delegation-besichtigen-anbindung-ipai-stadtteile-art-5152754",
+         "event_type": "other"
+        },
+        {
+         "date": "2026-03-19",
+         "title": "Stimme opinion: 'Even the vision enriches Heilbronn'",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/meinung-seilbahn-paris-delegation-projekt-audi-a2-neckarsulm-medienbildung-aim-2025-art-5153171",
+         "event_type": "media"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:62ee2206b52c",
+       "doc_id": "live:e354fb2a9f81",
+       "url": "https://www.bonn.de/medien-global/amt-13/amtsblatt/50_2026_Amtsblatt.pdf",
+       "date": "2026-11-13"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:380cc1d27f39",
+     "state": "new_single",
+     "label": "Ground surveys along planned route cause temporary restrictions",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": "2024-02-09",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "other",
+     "uncertainty": {
+      "novelty_score": 1.0,
+      "best_older_p_same": 0.0,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "no equivalent among the nearest older claims of this project; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:380cc1d27f39",
+       "claim": "Ground surveys along planned route cause temporary restrictions",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2024-02-09",
+       "channel": "other_web",
+       "domain": "bonn.de",
+       "url": "https://www.bonn.de/pressemitteilungen/februar-2024/geplante-seilbahn-fuer-gutachten-wird-der-baugrund-erkundet.php?loc=de",
+       "topic": "other",
+       "polarity": "neutral",
+       "doc_id": "live:9a174979626c",
+       "voice": "082d61",
+       "family_id": "solo:n:380cc1d27f39",
+       "family_name": "Ground surveys along planned route cause temporary restrictions",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:380cc1d27f39",
+       "doc_id": "live:9a174979626c",
+       "url": "https://www.bonn.de/pressemitteilungen/februar-2024/geplante-seilbahn-fuer-gutachten-wird-der-baugrund-erkundet.php?loc=de",
+       "date": "2024-02-09"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:bonn_cablecar:c3109",
+     "state": "recurring",
+     "label": "City stops major projects with unclear financing, including cable car",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 3,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 3
+     },
+     "topic": "cost_financing",
+     "uncertainty": {
+      "per_month_now": 0.09,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": 0.51,
+      "note": "Poisson rate test against this argument's own past in this project; several arguments are tested, so treat p near 0.01 as weak"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:c1ee4f764c8d",
+       "claim": "City makes construction subject to financial reservation",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-01",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:78786d5e1a7c",
+       "voice": "87096b",
+       "family_id": "fam113",
+       "family_name": "Mayor says the planned cable car project is still not launched",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9447,
+       "p_related": 0.9991,
+       "cos": 0.5814,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:79d711c33094",
+       "claim": "Mayor puts actual construction under city financial reservation",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:27ea4a34b14d",
+       "voice": "87096b",
+       "family_id": "fam113",
+       "family_name": "Mayor says the planned cable car project is still not launched",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.992,
+       "p_related": 0.9992,
+       "cos": 0.8673,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:cdba09da0014",
+       "claim": "Mayor puts actual construction under city financial reservation",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "topic": "cost_financing",
+       "polarity": "contra",
+       "doc_id": "live:513907302b24",
+       "voice": "87096b",
+       "family_id": "fam113",
+       "family_name": "Mayor says the planned cable car project is still not launched",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.992,
+       "p_related": 0.9992,
+       "cos": 0.8673,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:c1ee4f764c8d",
+       "doc_id": "live:78786d5e1a7c",
+       "url": "https://bonnerumweltzeitung.de/die-urbane-seilbahn-sinnvolle-komponente-im-bonner-oepnv-netz-oder-teures-nutzloses-prestigeprojekt",
+       "date": "2026-11-01"
+      },
+      {
+       "cid": "n:79d711c33094",
+       "doc_id": "live:27ea4a34b14d",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "date": "2026-11-02"
+      },
+      {
+       "cid": "n:cdba09da0014",
+       "doc_id": "live:513907302b24",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "date": "2026-11-02"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:bonn_cablecar:ff84",
+     "state": "recurring",
+     "label": "Described as innovative transport project",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 2,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 2
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 0.06,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:bd569956e3f2",
+       "claim": "Described as an innovative public transport mode",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:27ea4a34b14d",
+       "voice": "87096b",
+       "family_id": "fam79",
+       "family_name": "Presented as showcase project for future urban mobility",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9728,
+       "p_related": 0.9991,
+       "cos": 0.7529,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:6138e6be062a",
+       "claim": "Described as an innovative public transport mode",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "bonnerumweltzeitung.de",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:513907302b24",
+       "voice": "87096b",
+       "family_id": "fam79",
+       "family_name": "Presented as showcase project for future urban mobility",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9728,
+       "p_related": 0.9991,
+       "cos": 0.7529,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:bd569956e3f2",
+       "doc_id": "live:27ea4a34b14d",
+       "url": "https://bonnerumweltzeitung.de/themen/autoren/",
+       "date": "2026-11-02"
+      },
+      {
+       "cid": "n:6138e6be062a",
+       "doc_id": "live:513907302b24",
+       "url": "https://bonnerumweltzeitung.de/themen/innovation/",
+       "date": "2026-11-02"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:bonn_cablecar:ff13",
+     "state": "recurring",
+     "label": "Bonn cable car project has come closer to realisation",
+     "project": "bonn_cablecar",
+     "project_name": "Bonn",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "politics_process",
+     "uncertainty": {
+      "per_month_now": 0.03,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:b4abd5ba7fc0",
+       "claim": "Update on current project status for Bonn cable car",
+       "project": "bonn_cablecar",
+       "project_name": "Bonn",
+       "date": "2026-11-08",
+       "channel": "other_web",
+       "domain": "linkedin.com",
+       "url": "https://linkedin.com/in/katharina-kontny-10a108226",
+       "topic": "politics_process",
+       "polarity": "neutral",
+       "doc_id": "live:14c990c5f71d",
+       "voice": "a37bc0",
+       "family_id": "fam17",
+       "family_name": "Cable car to relieve traffic congestion in Bonn",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9867,
+       "p_related": 0.9984,
+       "cos": 0.8678,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:b4abd5ba7fc0",
+       "doc_id": "live:14c990c5f71d",
+       "url": "https://linkedin.com/in/katharina-kontny-10a108226",
+       "date": "2026-11-08"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:b67cfdb65b1e",
+     "state": "ambiguous",
+     "label": "18-minute trip with frequent cabins during peak hours",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-08-04",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.5393,
+      "best_older_p_same": 0.4607,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:b67cfdb65b1e",
+       "claim": "18-minute trip with frequent cabins during peak hours",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-04",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:53eac39a1643",
+       "voice": "4b212e",
+       "family_id": "solo:n:b67cfdb65b1e",
+       "family_name": "18-minute trip with frequent cabins during peak hours",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [
+      {
+       "cid": "n:4ddf151a59c2",
+       "claim": "Connects towns with isolated transport, cutting trips to about twenty minutes",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-21",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/reference/cable-c1",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:210c002fa224",
+       "voice": "4b212e",
+       "family_id": "fam64",
+       "family_name": "Serves previously isolated communes in Val-de-Marne",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.3573,
+       "p_related": 0.9814,
+       "cos": 0.5574,
+       "score_source": "cached"
+      }
+     ],
+     "closest_older": [
+      {
+       "cid": "c0157",
+       "claim": "4.5 km route, five stations, ten seats per cabin",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2024-12-21",
+       "channel": "news",
+       "domain": "timeout.com",
+       "url": "https://timeout.com/paris/actualites/voici-tout-ce-qui-va-changer-dans-les-transports-parisiens-en-2025-122124",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "29471114,909",
+       "voice": "f0b970",
+       "family_id": "fam62",
+       "family_name": "4.5 km line with five stations, long operating hours",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.4607,
+       "p_related": 0.8849,
+       "cos": 0.6818,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0344",
+       "claim": "Créteil to Villeneuve-Saint-Georges trip takes 18 minutes",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-02-25",
+       "channel": "other_web",
+       "domain": "francebleu.fr",
+       "url": "https://www.francebleu.fr/infos/transports/video-decouvrez-l-interieur-du-futur-cable-1-le-premier-telepherique-francilien-3095942#xtor=RSS-147",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "19135019,114554",
+       "voice": "a9a557",
+       "family_id": "fam4",
+       "family_name": "Links Créteil to Villeneuve-Saint-Georges in 18 minutes",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.4302,
+       "p_related": 0.9964,
+       "cos": 0.5889,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0599",
+        "claim": "4.7 km route with five stations in 14 minutes",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-04-10",
+        "channel": "other_web",
+        "domain": "insidebw.de",
+        "url": "https://www.insidebw.de/spektakulaere-oepnv-idee-diese-stadt-in-baden-wuerttemberg-plant-eine-seilbahn-fuer-den-nahverkehr",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "29241097,1897",
+        "voice": "483420"
+       },
+       "relation": "related",
+       "p_same": 0.3489,
+       "p_related": 0.9884,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-04-04",
+        "title": "Regional media: 'Heilbronn says yes to cable car'",
+        "verified": "no",
+        "source": "https://www.echo24.de/heilbronn/seilbahn-plaene-konkret-details-projekt-ipai-kuenstliche-intelligenz-kosten-gemeinderat-experimenta-93665819.html",
+        "event_type": "media"
+       },
+       "after": [
+        {
+         "date": "2025-04-25",
+         "title": "Residents split: 'phenomenal' vs 'hare-brained'",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/schwarz-bildungscampus-soleo-eisstadion-bauarbeiten-plaene-seilbahn-neckargartach-anwohner-art-5046933",
+         "event_type": "media"
+        },
+        {
+         "date": "2025-05-12",
+         "title": "State signs letter of intent and pays half of planning costs",
+         "verified": "no",
+         "source": "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/startschuss-fuer-urbane-seilbahn-in-heilbronn-1",
+         "event_type": "announcement"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:b67cfdb65b1e",
+       "doc_id": "live:53eac39a1643",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "date": "2025-08-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:78108e158c16",
+     "state": "ambiguous",
+     "label": "Since December 2025 connects three towns directly to Métro 8",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-08-04",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.5913,
+      "best_older_p_same": 0.4087,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:78108e158c16",
+       "claim": "Since December 2025 connects three towns directly to Métro 8",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-04",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/nos-expertises/solutions-de-transport/cable",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:c7747cf012db",
+       "voice": "4b212e",
+       "family_id": "solo:n:78108e158c16",
+       "family_name": "Since December 2025 connects three towns directly to Métro 8",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0160",
+       "claim": "Over 10,000 daily passengers expected, connecting metro line 8",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2024-12-24",
+       "channel": "news",
+       "domain": "lerail.com",
+       "url": "https://www.lerail.com/news/89521-en-2025,-la-modernisation-des-transports-continue-en-%C3%AEle-de-france",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "23348104,1326",
+       "voice": "6e31d2",
+       "family_id": "fam61",
+       "family_name": "Expected to carry 11,000 passengers per day",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.4087,
+       "p_related": 0.996,
+       "cos": 0.5824,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0354",
+       "claim": "Cable installation completed, service due late 2025",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-02-26",
+       "channel": "other_web",
+       "domain": "lejournaltoulousain.fr",
+       "url": "https://www.lejournaltoulousain.fr/ile-de-france/val-de-marne/avancee-majeure-cable-c1-futur-telepherique-val-de-marne-305391/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "27569796,5213",
+       "voice": "849155",
+       "family_id": "fam126",
+       "family_name": "Opening planned for 2025 if all goes well",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.3711,
+       "p_related": 0.9985,
+       "cos": 0.5394,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0642",
+        "claim": "Cable car will link four communes in the metropolitan region",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-04-22",
+        "channel": "news",
+        "domain": "condor.cl",
+        "url": "https://www.condor.cl/2025/04/22/teleferico-bicentenario/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "2135670,2042",
+        "voice": "53f2e6"
+       },
+       "relation": "related",
+       "p_same": 0.2611,
+       "p_related": 0.9981,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0631",
+        "claim": "Cable car reopens after eight years, aiding daily urban mobility",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-04-19",
+        "channel": "news",
+        "domain": "dnalgerie.com",
+        "url": "https://dnalgerie.com/voyage-en-algerie-une-bonne-nouvelle-officiellement-actee/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "29110188,5143",
+        "voice": "1b7a1b"
+       },
+       "relation": "related",
+       "p_same": 0.2425,
+       "p_related": 0.9931,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:78108e158c16",
+       "doc_id": "live:c7747cf012db",
+       "url": "https://www.transdev.com/nos-expertises/solutions-de-transport/cable",
+       "date": "2025-08-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:718c2b87e926",
+     "state": "ambiguous",
+     "label": "Relieves urban divides and cramped public transport networks",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-08-21",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "urban_development",
+     "uncertainty": {
+      "novelty_score": 0.7015,
+      "best_older_p_same": 0.2985,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:718c2b87e926",
+       "claim": "Relieves urban divides and cramped public transport networks",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-21",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/reference/cable-c1",
+       "topic": "urban_development",
+       "polarity": "pro",
+       "doc_id": "live:210c002fa224",
+       "voice": "4b212e",
+       "family_id": "solo:n:718c2b87e926",
+       "family_name": "Relieves urban divides and cramped public transport networks",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0199",
+       "claim": "Significant step toward modern urban transport solutions",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-01-08",
+       "channel": "news",
+       "domain": "simagazin.com",
+       "url": "https://www.simagazin.com/si-urban/erste-seilbahn-fuer-paris-cable-c1-nimmt-fahrt-auf/",
+       "topic": "innovation_symbolism",
+       "polarity": "pro",
+       "doc_id": "25258358,47",
+       "voice": "f741b8",
+       "family_id": "fam76",
+       "family_name": "Marks a new chapter in the city's public transport",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.2985,
+       "p_related": 0.994,
+       "cos": 0.7147,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0197",
+       "claim": "Fast, barrier-free alternative to road traffic connecting four municipalities",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-01-08",
+       "channel": "news",
+       "domain": "simagazin.com",
+       "url": "https://www.simagazin.com/si-urban/erste-seilbahn-fuer-paris-cable-c1-nimmt-fahrt-auf/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "25258358,47",
+       "voice": "f741b8",
+       "family_id": "fam48",
+       "family_name": "Four-line network shortens travel times and offers barrier-free transport",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.2293,
+       "p_related": 0.9957,
+       "cos": 0.6576,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c1050",
+        "claim": "Creates jobs and improves access for underserved communities",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-07-11",
+        "channel": "news",
+        "domain": "fr.africanews.com",
+        "url": "https://fr.africanews.com/2025/07/11/combler-le-fosse-juridique-dans-le-boom-numerique-de-lafrique-business-africa/",
+        "topic": "urban_development",
+        "polarity": "pro",
+        "doc_id": "29340024,16491",
+        "voice": "0050b3"
+       },
+       "relation": "related",
+       "p_same": 0.4511,
+       "p_related": 0.9958,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0938",
+        "claim": "Cable cars bridge gaps and optimise public transport travel times",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-06-16",
+        "channel": "other_web",
+        "domain": "nahverkehrspraxis.de",
+        "url": "https://www.nahverkehrspraxis.de/seilbahnen-als-teil-einer-neuen-mobilitaet/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "22367083,2148",
+        "voice": "417140"
+       },
+       "relation": "related",
+       "p_same": 0.2539,
+       "p_related": 0.9983,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:718c2b87e926",
+       "doc_id": "live:210c002fa224",
+       "url": "https://www.transdev.com/reference/cable-c1",
+       "date": "2025-08-21"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:74b1b226d167",
+     "state": "ambiguous",
+     "label": "C1 used for daily commuting, not only tourism",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-05",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.3158,
+      "best_older_p_same": 0.6842,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:74b1b226d167",
+       "claim": "C1 used for daily commuting, not only tourism",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-05",
+       "channel": "other_web",
+       "domain": "ville-rail-transports.com",
+       "url": "https://www.ville-rail-transports.com/expertise/comment-les-transports-publics-changent-la-vie-des-12-millions-de-franciliens",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:5a2e9f1eaf1f",
+       "voice": "2689b9",
+       "family_id": "solo:n:74b1b226d167",
+       "family_name": "C1 used for daily commuting, not only tourism",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c3319",
+       "claim": "C1 offers quick alternative to traditional transport",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-09-14",
+       "channel": "other_web",
+       "domain": "sudouest.fr",
+       "url": "https://www.sudouest.fr/economie/transports/transports-a-paris-le-ticket-de-metro-c-est-bientot-fini-30619355.php",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "29667638,21471",
+       "voice": "711d43",
+       "family_id": "fam55",
+       "family_name": "Câble C1 passes one million passengers after few months",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.6842,
+       "p_related": 0.9759,
+       "cos": 0.7721,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c1930",
+       "claim": "Câble C1 connects suburban towns for commuters",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-12-12",
+       "channel": "news",
+       "domain": "cannstatter-zeitung.de",
+       "url": "https://www.cannstatter-zeitung.de/inhalt.neueroeffnung-in-paris-pendler-in-paris-freuen-sich-auf-europas-laengste-seilbahn.bf342398-2e9c-43bb-acd8-09e6cc7e8eda.html",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "26151641,256143",
+       "voice": "3a1c5c",
+       "family_id": "solo:c1930",
+       "family_name": "Câble C1 connects suburban towns for commuters",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5623,
+       "p_related": 0.9967,
+       "cos": 0.6783,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c1808",
+        "claim": "Historic urban cable car still serves daily transport",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-11-19",
+        "channel": "social",
+        "domain": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=AsFoEfd2pvE",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "11659787,472",
+        "voice": "93a6f9"
+       },
+       "relation": "related",
+       "p_same": 0.2853,
+       "p_related": 0.9977,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c1602",
+        "claim": "Cable car to castle serves transport and tourist functions",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-10-15",
+        "channel": "news",
+        "domain": "simagazin.com",
+        "url": "https://www.simagazin.com/si-urban/themen-si-urban/stadt/kosovo-plant-seilbahn-machbarkeitsstudie-abgeschlossen/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "25258349,428",
+        "voice": "acaa2a"
+       },
+       "relation": "related",
+       "p_same": 0.2847,
+       "p_related": 0.9984,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:74b1b226d167",
+       "doc_id": "live:5a2e9f1eaf1f",
+       "url": "https://www.ville-rail-transports.com/expertise/comment-les-transports-publics-changent-la-vie-des-12-millions-de-franciliens",
+       "date": "2026-11-05"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:2d46eff9213a",
+     "state": "ambiguous",
+     "label": "Route links Metro line 8 with Villa Nova; useful tip",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-06",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.468,
+      "best_older_p_same": 0.532,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:2d46eff9213a",
+       "claim": "Route links Metro line 8 with Villa Nova; useful tip",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-06",
+       "channel": "other_web",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=ANZ86h36GSI",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:152c2985bffc",
+       "voice": "3dad3a",
+       "family_id": "solo:n:2d46eff9213a",
+       "family_name": "Route links Metro line 8 with Villa Nova; useful tip",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c1875",
+       "claim": "Cable car relieves traffic, connects to Metro line 8",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-12-01",
+       "channel": "news",
+       "domain": "derstandard.de",
+       "url": "https://www.derstandard.de/story/3000000298374/verkehrsentlastung-pariser-gondeln-bald-ueber-ihre-stadt-mit-oesterreichs-hilfe?ref=rss",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "9162614,245149",
+       "voice": "32f6c3",
+       "family_id": "fam116",
+       "family_name": "Cable car aims to relieve city traffic congestion",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.532,
+       "p_related": 0.9987,
+       "cos": 0.6561,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c2315",
+       "claim": "Connection with Metro line 8 at Pointe du Lac",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-01-12",
+       "channel": "social",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=9HibfgXDgpE",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "5135016,9616",
+       "voice": "138b2a",
+       "family_id": "fam66",
+       "family_name": "Connects poorly served suburbs directly to Métro line 8",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5296,
+       "p_related": 0.9965,
+       "cos": 0.6571,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2436",
+        "claim": "Paris line links housing and shopping to metro line 8",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-01-29",
+        "channel": "other_web",
+        "domain": "nd-aktuell.de",
+        "url": "https://www.nd-aktuell.de/artikel/1197233.nahverkehr-berlin-mit-seil-und-magnetschwebebahn-den-problemen-entfliehen.html",
+        "topic": "transport_benefit",
+        "polarity": "neutral",
+        "doc_id": "22342854,4161",
+        "voice": "cd594c"
+       },
+       "relation": "related",
+       "p_same": 0.2884,
+       "p_related": 0.9882,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c1147",
+        "claim": "Connects to metro, Metrobús, trolleybus and tram",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-08-06",
+        "channel": "news",
+        "domain": "simagazin.com",
+        "url": "https://www.simagazin.com/si-urban/themen-si-urban/stadt/cablebus-linie-4-in-mexico-city-potenziell-laengste-staedtische-seilbahn-der-welt/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "25258349,409",
+        "voice": "acaa2a"
+       },
+       "relation": "related",
+       "p_same": 0.2144,
+       "p_related": 0.9863,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:2d46eff9213a",
+       "doc_id": "live:152c2985bffc",
+       "url": "https://www.youtube.com/watch?v=ANZ86h36GSI",
+       "date": "2026-11-06"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:55d12fe5dcab",
+     "state": "ambiguous",
+     "label": "C1 presented as a metro-like urban transport marvel",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-06",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.3778,
+      "best_older_p_same": 0.6222,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:55d12fe5dcab",
+       "claim": "C1 presented as a metro-like urban transport marvel",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-06",
+       "channel": "other_web",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=iTdSs6-_cPE",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:b61dd5ef85ed",
+       "voice": "52791d",
+       "family_id": "solo:n:55d12fe5dcab",
+       "family_name": "C1 presented as a metro-like urban transport marvel",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c3319",
+       "claim": "C1 offers quick alternative to traditional transport",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-09-14",
+       "channel": "other_web",
+       "domain": "sudouest.fr",
+       "url": "https://www.sudouest.fr/economie/transports/transports-a-paris-le-ticket-de-metro-c-est-bientot-fini-30619355.php",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "29667638,21471",
+       "voice": "711d43",
+       "family_id": "fam55",
+       "family_name": "Câble C1 passes one million passengers after few months",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.6222,
+       "p_related": 0.9935,
+       "cos": 0.7179,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c1930",
+       "claim": "Câble C1 connects suburban towns for commuters",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-12-12",
+       "channel": "news",
+       "domain": "cannstatter-zeitung.de",
+       "url": "https://www.cannstatter-zeitung.de/inhalt.neueroeffnung-in-paris-pendler-in-paris-freuen-sich-auf-europas-laengste-seilbahn.bf342398-2e9c-43bb-acd8-09e6cc7e8eda.html",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "26151641,256143",
+       "voice": "3a1c5c",
+       "family_id": "solo:c1930",
+       "family_name": "Câble C1 connects suburban towns for commuters",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5529,
+       "p_related": 0.9876,
+       "cos": 0.678,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2202",
+        "claim": "Paris C1 shows urban cable cars can succeed",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-12-28",
+        "channel": "news",
+        "domain": "stimme.de",
+        "url": "https://stimme.de/heilbronn/stadt-heilbronn/seilbahn-c1-paris-vorbild-ipai-nahverkehr-stadt-gondel-art-5125739",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "29174404,195534",
+        "voice": "b1e1bd"
+       },
+       "relation": "related",
+       "p_same": 0.6339,
+       "p_related": 0.9981,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-12-01",
+        "title": "Regional transit plan makes cable car a top priority",
+        "verified": "no",
+        "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2025/Heilbronner-Stadtzeitung-2625.pdf",
+        "event_type": "decision"
+       },
+       "after": [
+        {
+         "date": "2025-12-29",
+         "title": "Stimme feature: Paris C1 as model for Heilbronn",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-c1-paris-vorbild-ipai-nahverkehr-stadt-gondel-art-5125739",
+         "event_type": "media"
+        },
+        {
+         "date": "2026-03-17",
+         "title": "City delegation visits Paris C1; still no cost figure",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-paris-delegation-besichtigen-anbindung-ipai-stadtteile-art-5152754",
+         "event_type": "other"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c2595",
+        "claim": "Cable car described as essential to complete Metro C",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-03-04",
+        "channel": "social",
+        "domain": "roma-antiqua.de",
+        "url": "https://www.roma-antiqua.de/forum/threads/seilbahn-monte-mario.59535/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "11401108,8114",
+        "voice": "aca838"
+       },
+       "relation": "related",
+       "p_same": 0.3985,
+       "p_related": 0.9951,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:55d12fe5dcab",
+       "doc_id": "live:b61dd5ef85ed",
+       "url": "https://www.youtube.com/watch?v=iTdSs6-_cPE",
+       "date": "2026-11-06"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:2281333ba6ac",
+     "state": "ambiguous",
+     "label": "Interruption follows infrastructure check after Thursday incident",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-07",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "safety_operations",
+     "uncertainty": {
+      "novelty_score": 0.425,
+      "best_older_p_same": 0.575,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:2281333ba6ac",
+       "claim": "Interruption follows infrastructure check after Thursday incident",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-07",
+       "channel": "other_web",
+       "domain": "actu.fr",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/transport-apres-un-incident-jeudi-soir-le-cable-c1-interrompu-entre-brevannes-plage-bleue-et-villa-nova-ce-vendredi_65024646.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:01b465c0f98d",
+       "voice": "800775",
+       "family_id": "solo:n:2281333ba6ac",
+       "family_name": "Interruption follows infrastructure check after Thursday incident",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [
+      {
+       "cid": "n:4ecd10292aeb",
+       "claim": "C1 interrupted after incident at neighbouring construction site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-06",
+       "channel": "social",
+       "domain": "bsky.app",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzn3scv5rq2c",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:dbf7c994f09b",
+       "voice": "7be237",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.575,
+       "p_related": 0.9959,
+       "cos": 0.6622,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:bf99658a0b7c",
+       "claim": "C1 halted Friday due to incident at neighbouring site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-07",
+       "channel": "other_web",
+       "domain": "leparisien.fr",
+       "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/val-de-marne-le-cable-c1-interrompu-apres-un-incident-sur-un-chantier-voisin-06-11-2026-UAXGHHWP6ZHH5B7Q4MOQS5MIEY.php",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:d6ff7915116b",
+       "voice": "aa1ea5",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.471,
+       "p_related": 0.9893,
+       "cos": 0.6243,
+       "score_source": "cached"
+      }
+     ],
+     "closest_older": [
+      {
+       "cid": "n:4ecd10292aeb",
+       "claim": "C1 interrupted after incident at neighbouring construction site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-06",
+       "channel": "social",
+       "domain": "bsky.app",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzn3scv5rq2c",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:dbf7c994f09b",
+       "voice": "7be237",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.575,
+       "p_related": 0.9959,
+       "cos": 0.6622,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c3112",
+       "claim": "Service interrupted on most of line for maintenance",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-07-18",
+       "channel": "news",
+       "domain": "actu.fr",
+       "url": "https://actu.fr/societe/le-trafic-interrompu-sur-le-telepherique-c1-dans-le-val-de-marne-en-lien-avec-une-operation-de-maintenance_64557424.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "9672814,1224613",
+       "voice": "4618f5",
+       "family_id": "fam46",
+       "family_name": "Cable car closed for maintenance, cable replacement and electrical checks",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5511,
+       "p_related": 0.9961,
+       "cos": 0.6717,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:2281333ba6ac",
+       "doc_id": "live:01b465c0f98d",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/transport-apres-un-incident-jeudi-soir-le-cable-c1-interrompu-entre-brevannes-plage-bleue-et-villa-nova-ce-vendredi_65024646.html",
+       "date": "2026-11-07"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:13692976e021",
+     "state": "ambiguous",
+     "label": "C1 partly closed for four days; reason asked",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-09",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "safety_operations",
+     "uncertainty": {
+      "novelty_score": 0.2577,
+      "best_older_p_same": 0.7423,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:13692976e021",
+       "claim": "C1 partly closed for four days; reason asked",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-09",
+       "channel": "social",
+       "domain": "bsky.app",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzuysldjod2d",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:f77d033f1754",
+       "voice": "7be237",
+       "family_id": "solo:n:13692976e021",
+       "family_name": "C1 partly closed for four days; reason asked",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [
+      {
+       "cid": "n:b4c0daf24d92",
+       "claim": "Partial service interruption on C1 since 5 November",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-10",
+       "channel": "other_web",
+       "domain": "actu.fr",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:1d743d7b2a5b",
+       "voice": "800775",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.788,
+       "p_related": 0.9981,
+       "cos": 0.7256,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:bf99658a0b7c",
+       "claim": "C1 halted Friday due to incident at neighbouring site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-07",
+       "channel": "other_web",
+       "domain": "leparisien.fr",
+       "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/val-de-marne-le-cable-c1-interrompu-apres-un-incident-sur-un-chantier-voisin-06-11-2026-UAXGHHWP6ZHH5B7Q4MOQS5MIEY.php",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:d6ff7915116b",
+       "voice": "aa1ea5",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "related",
+       "p_same": 0.6599,
+       "p_related": 0.9895,
+       "cos": 0.7463,
+       "score_source": "cached"
+      }
+     ],
+     "closest_older": [
+      {
+       "cid": "c2339",
+       "claim": "Traffic on part of C1 interrupted for several hours",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-01-15",
+       "channel": "news",
+       "domain": "leparisien.fr",
+       "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/telepherique-le-trafic-interrompu-pendant-plusieurs-heures-sur-une-partie-du-cable-c1-15-01-2026-5NTH5CJPEZAXTOUYKIK4HAA33Y.php",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "28878857,163234",
+       "voice": "aa1ea5",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.7423,
+       "p_related": 0.9897,
+       "cos": 0.8081,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c2299",
+       "claim": "C1 closed Thursday evening, restarted Friday at reduced speed",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-01-09",
+       "channel": "news",
+       "domain": "brut.media",
+       "url": "https://brut.media/fr/articles/france/societe/transports-coupures-delectricite-le-point-sur-les-perturbations-liees-a-la-tempete-goretti",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "22659130,33449",
+       "voice": "91cd1e",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.6982,
+       "p_related": 0.9933,
+       "cos": 0.7709,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c1718",
+        "claim": "Cable car closed one week for mandatory annual maintenance",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-11-03",
+        "channel": "news",
+        "domain": "actu.fr",
+        "url": "https://actu.fr/bretagne/brest_29019/brest-pourquoi-le-telepherique-est-a-larret_63385158.html",
+        "topic": "safety_operations",
+        "polarity": "neutral",
+        "doc_id": "9672814,1093518",
+        "voice": "4c3613"
+       },
+       "relation": "related",
+       "p_same": 0.3409,
+       "p_related": 0.9803,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c3286",
+        "claim": "Cable car closed for maintenance, cable replacement and electrical checks",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2026-08-25",
+        "channel": "news",
+        "domain": "actu.fr",
+        "url": "https://actu.fr/bretagne/brest_29019/transport-en-commun-de-brest-metropole-des-changements-sur-le-reseau-voici-les-nouveautes-de-la-rentree_64705269.html",
+        "topic": "safety_operations",
+        "polarity": "neutral",
+        "doc_id": "9672814,1241705",
+        "voice": "4c3613"
+       },
+       "relation": "related",
+       "p_same": 0.2677,
+       "p_related": 0.984,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:13692976e021",
+       "doc_id": "live:f77d033f1754",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzuysldjod2d",
+       "date": "2026-11-09"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:4ccadb99e8bf",
+     "state": "ambiguous",
+     "label": "Replacement buses and shuttle needed; trip disrupted for users",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-10",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.3689,
+      "best_older_p_same": 0.6311,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:4ccadb99e8bf",
+       "claim": "Replacement buses and shuttle needed; trip disrupted for users",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-10",
+       "channel": "other_web",
+       "domain": "actu.fr",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+       "topic": "transport_benefit",
+       "polarity": "contra",
+       "doc_id": "live:1d743d7b2a5b",
+       "voice": "800775",
+       "family_id": "solo:n:4ccadb99e8bf",
+       "family_name": "Replacement buses and shuttle needed; trip disrupted for users",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c3209",
+       "claim": "12,500 daily riders must use replacement shuttle and buses",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-08-03",
+       "channel": "other_web",
+       "domain": "lejournaltoulousain.fr",
+       "url": "https://www.lejournaltoulousain.fr/ile-de-france/val-de-marne/cable-c1-ferme-jusquau-13-aout-navette-bus-voici-comment-continuer-deplacer-393859/",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "8216498,15652",
+       "voice": "f65000",
+       "family_id": "fam61",
+       "family_name": "Expected to carry 11,000 passengers per day",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.6311,
+       "p_related": 0.9985,
+       "cos": 0.7428,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c3259",
+       "claim": "Replacement bus runs every 12 to 15 minutes during closure",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-08-14",
+       "channel": "social",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=Z3zWeLdL4jo",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "23952420,20776",
+       "voice": "351e3c",
+       "family_id": "solo:c3259",
+       "family_name": "Replacement bus runs every 12 to 15 minutes during closure",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.3701,
+       "p_related": 0.8759,
+       "cos": 0.6584,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0514",
+        "claim": "Cable car halted by strong winds; replacement buses set up",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-04-02",
+        "channel": "news",
+        "domain": "ladepeche.fr",
+        "url": "https://www.ladepeche.fr/2025/04/02/a-cause-des-rafales-de-vent-le-telepherique-est-arrete-a-toulouse-12607907.php",
+        "topic": "safety_operations",
+        "polarity": "neutral",
+        "doc_id": "12851598,1021384",
+        "voice": "5678b2"
+       },
+       "relation": "related",
+       "p_same": 0.1647,
+       "p_related": 0.9945,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c2210",
+        "claim": "Buses often stuck in traffic; cable car could bypass jams",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-12-30",
+        "channel": "news",
+        "domain": "stuttgarter-nachrichten.de",
+        "url": "https://www.stuttgarter-nachrichten.de/inhalt.luftseilbahn-in-stuttgart-experten-empfehlen-seilbahntrasse-zum-bosch-krankenhaus.37ab7d79-ecb8-428a-bf7b-fff0b4b61e1f.html",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "26449075,78346",
+        "voice": "443a30"
+       },
+       "relation": "related",
+       "p_same": 0.1515,
+       "p_related": 0.9927,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:4ccadb99e8bf",
+       "doc_id": "live:1d743d7b2a5b",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+       "date": "2026-11-10"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:e6fa42edfdb9",
+     "state": "ambiguous",
+     "label": "Partial service kept running between Créteil and Limeil",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2026-11-11",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.4884,
+      "best_older_p_same": 0.5116,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:e6fa42edfdb9",
+       "claim": "Partial service kept running between Créteil and Limeil",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-11",
+       "channel": "other_web",
+       "domain": "laclepublique.fr",
+       "url": "https://laclepublique.fr/val-de-marne/articles/2026/2026-11-11-cable-c1-interruption-prolongee",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "live:8ee2128c0f93",
+       "voice": "152b1e",
+       "family_id": "solo:n:e6fa42edfdb9",
+       "family_name": "Partial service kept running between Créteil and Limeil",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0186",
+       "claim": "Five stations over Créteil, Limeil-Brévannes, Valenton and Villeneuve",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-01-04",
+       "channel": "news",
+       "domain": "sortiraparis.com",
+       "url": "https://sortiraparis.com/actualites/a-paris/articles/270402-cable-c1-arrivee-du-premier-telepherique-d-ile-de-france-en-2025-ou-en-est-le-projet",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "28294725,695639",
+       "voice": "5061bd",
+       "family_id": "fam4",
+       "family_name": "Links Créteil to Villeneuve-Saint-Georges in 18 minutes",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.5116,
+       "p_related": 0.9971,
+       "cos": 0.646,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0133",
+       "claim": "Cable car crosses urban divides linking Créteil and Villeneuve-Saint-Georges",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2024-12-04",
+       "channel": "other_web",
+       "domain": "lejournaldugrandparis.fr",
+       "url": "https://www.lejournaldugrandparis.fr/le-cable-c1-bientot-en-fonctionnement/",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "17351355,353",
+       "voice": "2f8d82",
+       "family_id": "fam4",
+       "family_name": "Links Créteil to Villeneuve-Saint-Georges in 18 minutes",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.473,
+       "p_related": 0.9943,
+       "cos": 0.6239,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c1165",
+        "claim": "Urban cable car opens partially with restricted operating hours",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-08-11",
+        "channel": "other_web",
+        "domain": "madagascar-tribune.com",
+        "url": "https://www.madagascar-tribune.com/Le-telepherique-Anosy-Ambatobe.html",
+        "topic": "transport_benefit",
+        "polarity": "neutral",
+        "doc_id": "12471214,1590",
+        "voice": "90db7c"
+       },
+       "relation": "related",
+       "p_same": 0.227,
+       "p_related": 0.9981,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c1204",
+        "claim": "Over 5,000 passengers carried on first partial opening day",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-08-18",
+        "channel": "news",
+        "domain": "newsmada.com",
+        "url": "https://newsmada.com/2025/08/18/transport-urbain-le-telepherique-a-la-cote/",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "29311398,7843",
+        "voice": "89ded8"
+       },
+       "relation": "related",
+       "p_same": 0.1768,
+       "p_related": 0.9933,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:e6fa42edfdb9",
+       "doc_id": "live:8ee2128c0f93",
+       "url": "https://laclepublique.fr/val-de-marne/articles/2026/2026-11-11-cable-c1-interruption-prolongee",
+       "date": "2026-11-11"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:b0acbc194b0f",
+     "state": "new_single",
+     "label": "Cable car was part of an urban regeneration programme",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-08-04",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "urban_development",
+     "uncertainty": {
+      "novelty_score": 0.7795,
+      "best_older_p_same": 0.2205,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "no equivalent among the nearest older claims of this project; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:b0acbc194b0f",
+       "claim": "Cable car was part of an urban regeneration programme",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-04",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "topic": "urban_development",
+       "polarity": "pro",
+       "doc_id": "live:53eac39a1643",
+       "voice": "4b212e",
+       "family_id": "solo:n:b0acbc194b0f",
+       "family_name": "Cable car was part of an urban regeneration programme",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0774",
+       "claim": "Design aims to integrate cable car pylons into urban environment",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-05-13",
+       "channel": "other_web",
+       "domain": "lejournaltoulousain.fr",
+       "url": "https://www.lejournaltoulousain.fr/ile-de-france/val-de-marne/oeuvres-art-cable-c1-319451/",
+       "topic": "cityscape_landscape",
+       "polarity": "pro",
+       "doc_id": "8216498,13374",
+       "voice": "849155",
+       "family_id": "solo:c0774",
+       "family_name": "Design aims to integrate cable car pylons into urban environment",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.2205,
+       "p_related": 0.9916,
+       "cos": 0.6527,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0358",
+       "claim": "Presented as ecological mobility option",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-02-27",
+       "channel": "other_web",
+       "domain": "mobiwisy.fr",
+       "url": "https://mobiwisy.fr/transports-collectifs/le-telepherique-francilien-deroule-son-cable",
+       "topic": "environment_climate",
+       "polarity": "pro",
+       "doc_id": "25453279,2370",
+       "voice": "e974dc",
+       "family_id": "fam80",
+       "family_name": "Presented as ecological mobility option",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.1143,
+       "p_related": 0.9184,
+       "cos": 0.5744,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0196",
+        "claim": "Cable cars act as remedy for urban development",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-01-08",
+        "channel": "news",
+        "domain": "simagazin.com",
+        "url": "https://www.simagazin.com/si-urban/mexico-city-seilbahn-als-heilmittel-der-stadtentwicklung/",
+        "topic": "urban_development",
+        "polarity": "pro",
+        "doc_id": "25258358,46",
+        "voice": "c00ecc"
+       },
+       "relation": "related",
+       "p_same": 0.6625,
+       "p_related": 0.9986,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      },
+      {
+       "claim": {
+        "cid": "c0595",
+        "claim": "Cable car is one of many city-centre redesign ideas",
+        "project": "other_urban_cablecar",
+        "project_name": "Other cities",
+        "date": "2025-04-09",
+        "channel": "news",
+        "domain": "actu.fr",
+        "url": "https://actu.fr/normandie/avranches_50025/avranches-les-habitants-veulent-un-centre-ville-plus-convivial_62484378.html",
+        "topic": "other",
+        "polarity": "neutral",
+        "doc_id": "9672814,994165",
+        "voice": "26a1cd"
+       },
+       "relation": "related",
+       "p_same": 0.2697,
+       "p_related": 0.9964,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": null,
+       "after": [],
+       "timeline_available": false
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:b0acbc194b0f",
+       "doc_id": "live:53eac39a1643",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "date": "2025-08-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:13365783dcc4",
+     "state": "new_single",
+     "label": "Infrastructure financed by Region, Department and State",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-08-04",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "cost_financing",
+     "uncertainty": {
+      "novelty_score": 0.9966,
+      "best_older_p_same": 0.0034,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "no equivalent among the nearest older claims of this project; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:13365783dcc4",
+       "claim": "Infrastructure financed by Region, Department and State",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-04",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "topic": "cost_financing",
+       "polarity": "neutral",
+       "doc_id": "live:53eac39a1643",
+       "voice": "4b212e",
+       "family_id": "solo:n:13365783dcc4",
+       "family_name": "Infrastructure financed by Region, Department and State",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c0151",
+       "claim": "New footbridge will link metro and cable car stations",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2024-12-17",
+       "channel": "other_web",
+       "domain": "94.citoyens.com",
+       "url": "https://94.citoyens.com/2024/transitions-urbaines-en-val-de-marne-38-pas-de-surf-a-creteil-une-passerelle-pour-relier-le-metro-au-telepherique,17-12-2024.html",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "7089630,13584",
+       "voice": "14e062",
+       "family_id": "fam98",
+       "family_name": "Cable car would link several districts with city centre",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.0034,
+       "p_related": 0.2121,
+       "cos": 0.4299,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0197",
+       "claim": "Fast, barrier-free alternative to road traffic connecting four municipalities",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-01-08",
+       "channel": "news",
+       "domain": "simagazin.com",
+       "url": "https://www.simagazin.com/si-urban/erste-seilbahn-fuer-paris-cable-c1-nimmt-fahrt-auf/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "25258358,47",
+       "voice": "f741b8",
+       "family_id": "fam48",
+       "family_name": "Four-line network shortens travel times and offers barrier-free transport",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.0031,
+       "p_related": 0.1407,
+       "cos": 0.4886,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c0741",
+        "claim": "State covers half of the planning costs",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-05-12",
+        "channel": "news",
+        "domain": "stuttgarter-zeitung.de",
+        "url": "https://www.stuttgarter-zeitung.de/inhalt.heilbronn-land-sagt-millionen-fuer-geplante-seilbahn-zu.fdb208e2-a074-4835-b8e7-4e300a0c1846.html",
+        "topic": "cost_financing",
+        "polarity": "pro",
+        "doc_id": "275423,19895",
+        "voice": "1fefd2"
+       },
+       "relation": "related",
+       "p_same": 0.2576,
+       "p_related": 0.9937,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-05-12",
+        "title": "State signs letter of intent and pays half of planning costs",
+        "verified": "no",
+        "source": "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/startschuss-fuer-urbane-seilbahn-in-heilbronn-1",
+        "event_type": "announcement"
+       },
+       "after": [
+        {
+         "date": "2025-07-01",
+         "title": "Public info evening on IPAI, transport and cable car",
+         "verified": "no",
+         "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2025/Heilbronner-Stadtzeitung-1425.pdf",
+         "event_type": "other"
+        },
+        {
+         "date": "2025-09-08",
+         "title": "VCD warns of risks; Stimme calls for transparency",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-plaene-stadt-ipai-nahverkehr-ki-campus-neckargartach-verkehr-gondeln-art-5088233",
+         "event_type": "criticism"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c0748",
+        "claim": "State supports plans with millions of euros",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-05-12",
+        "channel": "news",
+        "domain": "stimme.de",
+        "url": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-gondeln-finanzierung-land-baden-wuerttemberg-kosten-ki-park-ipai-art-5052205",
+        "topic": "cost_financing",
+        "polarity": "pro",
+        "doc_id": "29174404,138527",
+        "voice": "b1e1bd"
+       },
+       "relation": "related",
+       "p_same": 0.2172,
+       "p_related": 0.9986,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-05-12",
+        "title": "State signs letter of intent and pays half of planning costs",
+        "verified": "no",
+        "source": "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/startschuss-fuer-urbane-seilbahn-in-heilbronn-1",
+        "event_type": "announcement"
+       },
+       "after": [
+        {
+         "date": "2025-07-01",
+         "title": "Public info evening on IPAI, transport and cable car",
+         "verified": "no",
+         "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2025/Heilbronner-Stadtzeitung-1425.pdf",
+         "event_type": "other"
+        },
+        {
+         "date": "2025-09-08",
+         "title": "VCD warns of risks; Stimme calls for transparency",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-plaene-stadt-ipai-nahverkehr-ki-campus-neckargartach-verkehr-gondeln-art-5088233",
+         "event_type": "criticism"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:13365783dcc4",
+       "doc_id": "live:53eac39a1643",
+       "url": "https://www.transdev.com/en/our-expertise/transportation-solutions/cablecar",
+       "date": "2025-08-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:paris_c1:ff53",
+     "state": "recurring",
+     "label": "C1 service interrupted due to power outage",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 4,
+     "n_voices": 4,
+     "polarity": {
+      "neutral": 4
+     },
+     "topic": "safety_operations",
+     "uncertainty": {
+      "per_month_now": 0.26,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": 0.0579,
+      "note": "Poisson rate test against this argument's own past in this project; several arguments are tested, so treat p near 0.01 as weak"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:4ecd10292aeb",
+       "claim": "C1 interrupted after incident at neighbouring construction site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-06",
+       "channel": "social",
+       "domain": "bsky.app",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzn3scv5rq2c",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:dbf7c994f09b",
+       "voice": "7be237",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.962,
+       "p_related": 0.9985,
+       "cos": 0.7248,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:bf99658a0b7c",
+       "claim": "C1 halted Friday due to incident at neighbouring site",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-07",
+       "channel": "other_web",
+       "domain": "leparisien.fr",
+       "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/val-de-marne-le-cable-c1-interrompu-apres-un-incident-sur-un-chantier-voisin-06-11-2026-UAXGHHWP6ZHH5B7Q4MOQS5MIEY.php",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:d6ff7915116b",
+       "voice": "aa1ea5",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9928,
+       "p_related": 0.9993,
+       "cos": 0.8852,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:b4c0daf24d92",
+       "claim": "Partial service interruption on C1 since 5 November",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-10",
+       "channel": "other_web",
+       "domain": "actu.fr",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:1d743d7b2a5b",
+       "voice": "800775",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9837,
+       "p_related": 0.9991,
+       "cos": 0.7794,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:f876c1e0588a",
+       "claim": "Cavity near pylon stopped three stations on C1",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-11",
+       "channel": "other_web",
+       "domain": "laclepublique.fr",
+       "url": "https://laclepublique.fr/val-de-marne/articles/2026/2026-11-11-cable-c1-interruption-prolongee",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:8ee2128c0f93",
+       "voice": "152b1e",
+       "family_id": "fam56",
+       "family_name": "C1 closed until 13 August for first maintenance",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.8803,
+       "p_related": 0.9982,
+       "cos": 0.7125,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:4ecd10292aeb",
+       "doc_id": "live:dbf7c994f09b",
+       "url": "https://bsky.app/profile/did:plc:kzmukwaf72iwepygposicgt3/post/3mzn3scv5rq2c",
+       "date": "2026-11-06"
+      },
+      {
+       "cid": "n:bf99658a0b7c",
+       "doc_id": "live:d6ff7915116b",
+       "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/val-de-marne-le-cable-c1-interrompu-apres-un-incident-sur-un-chantier-voisin-06-11-2026-UAXGHHWP6ZHH5B7Q4MOQS5MIEY.php",
+       "date": "2026-11-07"
+      },
+      {
+       "cid": "n:b4c0daf24d92",
+       "doc_id": "live:1d743d7b2a5b",
+       "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+       "date": "2026-11-10"
+      },
+      {
+       "cid": "n:f876c1e0588a",
+       "doc_id": "live:8ee2128c0f93",
+       "url": "https://laclepublique.fr/val-de-marne/articles/2026/2026-11-11-cable-c1-interruption-prolongee",
+       "date": "2026-11-11"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:paris_c1:ff70",
+     "state": "recurring",
+     "label": "Fast mobility for Val-de-Marne areas cut off by barriers",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-02-27",
+     "flagged_at": null,
+     "n_claims": 2,
+     "n_voices": 2,
+     "polarity": {
+      "pro": 2
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 0.13,
+      "per_month_before": 0.23,
+      "n_before": 2,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:4ddf151a59c2",
+       "claim": "Connects towns with isolated transport, cutting trips to about twenty minutes",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2025-08-21",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/reference/cable-c1",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:210c002fa224",
+       "voice": "4b212e",
+       "family_id": "fam64",
+       "family_name": "Serves previously isolated communes in Val-de-Marne",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9337,
+       "p_related": 0.9987,
+       "cos": 0.601,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:673147848acc",
+       "claim": "Cable car inspires new views of the Val-de-Marne",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-03-17",
+       "channel": "other_web",
+       "domain": "pariszigzag.fr",
+       "url": "https://www.pariszigzag.fr/paris-au-quotidien/actualites-paris/cable-c1-concours-photo",
+       "topic": "tourism_image",
+       "polarity": "pro",
+       "doc_id": "live:a3639c5d87a9",
+       "voice": "30677b",
+       "family_id": "fam94",
+       "family_name": "Offers panoramic views over the city and valley",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9871,
+       "p_related": 0.9991,
+       "cos": 0.7914,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:4ddf151a59c2",
+       "doc_id": "live:210c002fa224",
+       "url": "https://www.transdev.com/reference/cable-c1",
+       "date": "2025-08-21"
+      },
+      {
+       "cid": "n:673147848acc",
+       "doc_id": "live:a3639c5d87a9",
+       "url": "https://www.pariszigzag.fr/paris-au-quotidien/actualites-paris/cable-c1-concours-photo",
+       "date": "2026-03-17"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:paris_c1:ff34",
+     "state": "recurring",
+     "label": "Full-scale tests ran with cabins at reduced speed",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2025-01-02",
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "safety_operations",
+     "uncertainty": {
+      "per_month_now": 0.07,
+      "per_month_before": 0.34,
+      "n_before": 3,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:952fb30627dd",
+       "claim": "Multi-layer security with CCTV, emergency buttons, intercom",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=kHqI0Evl79A&lc=UgzBSf4RT0JYp_3PlHJ4AaABAg.AcYRY2rSUAUAchRnRmaR6f",
+       "topic": "safety_operations",
+       "polarity": "pro",
+       "doc_id": "live:5d5cbc343154",
+       "voice": "3926aa",
+       "family_id": "fam54",
+       "family_name": "Residents welcome the quiet and comfortable cabins",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.8479,
+       "p_related": 0.998,
+       "cos": 0.5741,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:952fb30627dd",
+       "doc_id": "live:5d5cbc343154",
+       "url": "https://www.youtube.com/watch?v=kHqI0Evl79A&lc=UgzBSf4RT0JYp_3PlHJ4AaABAg.AcYRY2rSUAUAchRnRmaR6f",
+       "date": "2026-11-02"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:paris_c1:ff63",
+     "state": "recurring",
+     "label": "Route 4.5 km, travel time 17 minutes",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": null,
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 0.07,
+      "per_month_before": 0.0,
+      "n_before": 0,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:40fd0deedd43",
+       "claim": "Technical data: 4.5 km line, 18-minute journey",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-04",
+       "channel": "other_web",
+       "domain": "fr.wikipedia.org",
+       "url": "https://fr.wikipedia.org/wiki/Ligne_1_du_t%C3%A9l%C3%A9ph%C3%A9rique_d%27%C3%8Ele-de-France",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "live:352986456bf0",
+       "voice": "665033",
+       "family_id": "fam63",
+       "family_name": "Trip shortened from 40 minutes by bus to 18",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9824,
+       "p_related": 0.9993,
+       "cos": 0.7546,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:40fd0deedd43",
+       "doc_id": "live:352986456bf0",
+       "url": "https://fr.wikipedia.org/wiki/Ligne_1_du_t%C3%A9l%C3%A9ph%C3%A9rique_d%27%C3%8Ele-de-France",
+       "date": "2026-11-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:paris_c1:ff73",
+     "state": "recurring",
+     "label": "Over 10,000 daily passengers expected, connecting metro line 8",
+     "project": "paris_c1",
+     "project_name": "Paris Câble C1",
+     "first_seen": "2024-12-24",
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 0.07,
+      "per_month_before": 0.11,
+      "n_before": 1,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:dd918afb4755",
+       "claim": "Up to 11,000 passengers per day reported",
+       "project": "paris_c1",
+       "project_name": "Paris Câble C1",
+       "date": "2026-11-02",
+       "channel": "other_web",
+       "domain": "transdev.com",
+       "url": "https://www.transdev.com/actualite/ile-de-france/communique-de-presse/transdev-ile-de-france-lance-aux-cotes-dile-de-france-mobilites-son-premier-podcast-un-moment-suspendu-pour-decouvrir-des-personnalites-inspirantes-du-val-de-marne-a-bord-du-cable-c1",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:9d70d9b94254",
+       "voice": "4b212e",
+       "family_id": "fam61",
+       "family_name": "Expected to carry 11,000 passengers per day",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9919,
+       "p_related": 0.9994,
+       "cos": 0.8653,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:dd918afb4755",
+       "doc_id": "live:9d70d9b94254",
+       "url": "https://www.transdev.com/actualite/ile-de-france/communique-de-presse/transdev-ile-de-france-lance-aux-cotes-dile-de-france-mobilites-son-premier-podcast-un-moment-suspendu-pour-decouvrir-des-personnalites-inspirantes-du-val-de-marne-a-bord-du-cable-c1",
+       "date": "2026-11-02"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:191abd0470ef",
+     "state": "ambiguous",
+     "label": "Cable car discussed as route for steep, hilly city",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-11-03",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.2366,
+      "best_older_p_same": 0.7634,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:191abd0470ef",
+       "claim": "Cable car discussed as route for steep, hilly city",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-03",
+       "channel": "other_web",
+       "domain": "kessel.tv",
+       "url": "https://kessel.tv/tag/nahverkehr/",
+       "topic": "transport_benefit",
+       "polarity": "neutral",
+       "doc_id": "live:703888d9e5b4",
+       "voice": "6e6117",
+       "family_id": "solo:n:191abd0470ef",
+       "family_name": "Cable car discussed as route for steep, hilly city",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c2264",
+       "claim": "Cable car suits hilly terrain with narrow streets",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-01-08",
+       "channel": "social",
+       "domain": "krone.at",
+       "url": "https://www.krone.at/4008424?commentId=42aa0871-7b9f-4853-8dc7-8493601f40ac",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "10380004,8709878",
+       "voice": "4d34a2",
+       "family_id": "solo:c2264",
+       "family_name": "Cable car suits hilly terrain with narrow streets",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.7634,
+       "p_related": 0.998,
+       "cos": 0.7756,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c3026",
+       "claim": "Cable car a logical addition to local transit on steep terrain",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-06-30",
+       "channel": "news",
+       "domain": "kessel.tv",
+       "url": "https://kessel.tv/seilbahn-stuttgart-trasse-vom-pragsattel-zum-krankenhaus-im-fokus/",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "7027581,3743",
+       "voice": "7e9a67",
+       "family_id": "fam115",
+       "family_name": "Cable cars pass over obstacles, suited to urban areas",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.755,
+       "p_related": 0.9983,
+       "cos": 0.7822,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c2564",
+        "claim": "Cable car presented as solution to traffic jams",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2026-02-25",
+        "channel": "news",
+        "domain": "remszeitung.de",
+        "url": "https://www.remszeitung.de/lokales/ostalbkreis/schwaebisch-gmuend/seilbahn-als-stau-loesung-innovatives-projekt-in-heilbronn-nimmt-fahrt-auf-T7N7F5TM3FA4FB5LKU4OJBHCPU.html",
+        "topic": "transport_benefit",
+        "polarity": "pro",
+        "doc_id": "22475133,786",
+        "voice": "5cbbae"
+       },
+       "relation": "related",
+       "p_same": 0.4356,
+       "p_related": 0.9806,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-12-29",
+        "title": "Stimme feature: Paris C1 as model for Heilbronn",
+        "verified": "no",
+        "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-c1-paris-vorbild-ipai-nahverkehr-stadt-gondel-art-5125739",
+        "event_type": "media"
+       },
+       "after": [
+        {
+         "date": "2026-03-17",
+         "title": "City delegation visits Paris C1; still no cost figure",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-paris-delegation-besichtigen-anbindung-ipai-stadtteile-art-5152754",
+         "event_type": "other"
+        },
+        {
+         "date": "2026-03-19",
+         "title": "Stimme opinion: 'Even the vision enriches Heilbronn'",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/meinung-seilbahn-paris-delegation-projekt-audi-a2-neckarsulm-medienbildung-aim-2025-art-5153171",
+         "event_type": "media"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c1661",
+        "claim": "Cable car mocked as way to avoid a run-down city centre",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2025-10-22",
+        "channel": "social",
+        "domain": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=0acqkaI_uEU&lc=Ugxjhz2iMiKRPIIcna54AaABAg.AO_sn1TxEiDAOaACZzyTR4",
+        "topic": "other",
+        "polarity": "contra",
+        "doc_id": "11277552,925026322",
+        "voice": "86d926"
+       },
+       "relation": "related",
+       "p_same": 0.1618,
+       "p_related": 0.9871,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-09-08",
+        "title": "VCD warns of risks; Stimme calls for transparency",
+        "verified": "no",
+        "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-plaene-stadt-ipai-nahverkehr-ki-campus-neckargartach-verkehr-gondeln-art-5088233",
+        "event_type": "criticism"
+       },
+       "after": [
+        {
+         "date": "2025-12-01",
+         "title": "Regional transit plan makes cable car a top priority",
+         "verified": "no",
+         "source": "https://www.heilbronn.de/fileadmin/daten/stadtheilbronn/formulare/rathaus/aktuelles/stadtzeitung/2025/Heilbronner-Stadtzeitung-2625.pdf",
+         "event_type": "decision"
+        },
+        {
+         "date": "2025-12-29",
+         "title": "Stimme feature: Paris C1 as model for Heilbronn",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-c1-paris-vorbild-ipai-nahverkehr-stadt-gondel-art-5125739",
+         "event_type": "media"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:191abd0470ef",
+       "doc_id": "live:703888d9e5b4",
+       "url": "https://kessel.tv/tag/nahverkehr/",
+       "date": "2026-11-03"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:f22c933cd9b7",
+     "state": "ambiguous",
+     "label": "Funicular bridge needs replacement; long shutdown possible",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-11-13",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "safety_operations",
+     "uncertainty": {
+      "novelty_score": 0.54,
+      "best_older_p_same": 0.46,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:f22c933cd9b7",
+       "claim": "Funicular bridge needs replacement; long shutdown possible",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-13",
+       "channel": "other_web",
+       "domain": "stuttgarter-zeitung.de",
+       "url": "https://www.stuttgarter-zeitung.de/lokales/stuttgart/nahverkehr-in-stuttgart-droht-der-seilbahn-in-stuttgart-ein-laengerer-stillstand-79636139.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "live:adcf71aa3098",
+       "voice": "3f69ef",
+       "family_id": "solo:n:f22c933cd9b7",
+       "family_name": "Funicular bridge needs replacement; long shutdown possible",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c1167",
+       "claim": "Cable car cannot run in foehn wind, so replacement buses needed",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2025-08-12",
+       "channel": "news",
+       "domain": "nau.ch",
+       "url": "https://nau.ch/ort/altdorf-ur/ersatztransporte-fur-eggberger-schuler-weiterhin-gesichert-67029647",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "26063126,471502",
+       "voice": "c8aee0",
+       "family_id": "solo:c1167",
+       "family_name": "Cable car cannot run in foehn wind, so replacement buses needed",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.46,
+       "p_related": 0.988,
+       "cos": 0.6198,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c0798",
+       "claim": "Tunnel accident causes replacement service for cable car",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2025-05-20",
+       "channel": "news",
+       "domain": "stuttgarter-nachrichten.de",
+       "url": "https://www.stuttgarter-nachrichten.de/inhalt.stuttgart-sued-heslacher-tunnel-nach-schwerem-unfall-gesperrt.89abf561-6762-46ae-992b-a6532993f8ac.html",
+       "topic": "safety_operations",
+       "polarity": "neutral",
+       "doc_id": "7711767,148321",
+       "voice": "443a30",
+       "family_id": "fam46",
+       "family_name": "Cable car closed for maintenance, cable replacement and electrical checks",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.4247,
+       "p_related": 0.9924,
+       "cos": 0.5949,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c3112",
+        "claim": "Service interrupted on most of line for maintenance",
+        "project": "paris_c1",
+        "project_name": "Paris Câble C1",
+        "date": "2026-07-18",
+        "channel": "news",
+        "domain": "actu.fr",
+        "url": "https://actu.fr/societe/le-trafic-interrompu-sur-le-telepherique-c1-dans-le-val-de-marne-en-lien-avec-une-operation-de-maintenance_64557424.html",
+        "topic": "safety_operations",
+        "polarity": "neutral",
+        "doc_id": "9672814,1224613",
+        "voice": "4618f5"
+       },
+       "relation": "related",
+       "p_same": 0.2732,
+       "p_related": 0.9971,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2026-06-09",
+        "title": "Service cut 10:00-15:00 for evacuation drill",
+        "verified": "no",
+        "source": "https://www.sortiraparis.com/en/news/in-paris/articles/346760-cable-c1-funicular-service-disrupted-on-tuesday-june-9",
+        "event_type": "operation"
+       },
+       "after": [
+        {
+         "date": "2026-08-03",
+         "title": "11-day closure for first annual maintenance",
+         "verified": "no",
+         "source": "https://www.boursorama.com/actualite-economique/actualites/transports-le-premier-telepherique-d-ile-de-france-ferme-pour-maintenance-0f981fbdf6b77e6cd99250813d612d80",
+         "event_type": "operation"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "n:4ccadb99e8bf",
+        "claim": "Replacement buses and shuttle needed; trip disrupted for users",
+        "project": "paris_c1",
+        "project_name": "Paris Câble C1",
+        "date": "2026-11-10",
+        "channel": "other_web",
+        "domain": "actu.fr",
+        "url": "https://actu.fr/ile-de-france/limeil-brevannes_94044/l-interruption-de-circulation-sur-le-cable-c1-entre-limeil-brevannes-plage-bleue-et-villa-nova-se-prolonge_65039101.html",
+        "topic": "transport_benefit",
+        "polarity": "contra",
+        "doc_id": "live:1d743d7b2a5b",
+        "voice": "800775"
+       },
+       "relation": "related",
+       "p_same": 0.1278,
+       "p_related": 0.9982,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2026-08-03",
+        "title": "11-day closure for first annual maintenance",
+        "verified": "no",
+        "source": "https://www.boursorama.com/actualite-economique/actualites/transports-le-premier-telepherique-d-ile-de-france-ferme-pour-maintenance-0f981fbdf6b77e6cd99250813d612d80",
+        "event_type": "operation"
+       },
+       "after": [],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:f22c933cd9b7",
+       "doc_id": "live:adcf71aa3098",
+       "url": "https://www.stuttgarter-zeitung.de/lokales/stuttgart/nahverkehr-in-stuttgart-droht-der-seilbahn-in-stuttgart-ein-laengerer-stillstand-79636139.html",
+       "date": "2026-11-13"
+      }
+     ]
+    },
+    {
+     "concern_id": "g:n:78ffeefc34aa",
+     "state": "ambiguous",
+     "label": "Hour-long cable car ride into city is impractical",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-11-13",
+     "flagged_at": null,
+     "flagged_at_step": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "novelty_score": 0.333,
+      "best_older_p_same": 0.667,
+      "cutoffs": {
+       "new": 0.2860175294182962,
+       "familiar": 0.802895969704785
+      },
+      "note": "score lies between the two cut-offs: may be a variant of a known argument; one voice only so far"
+     },
+     "new_anywhere": true,
+     "claims": [
+      {
+       "cid": "n:78ffeefc34aa",
+       "claim": "Hour-long cable car ride into city is impractical",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-13",
+       "channel": "other_web",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=d_sIBKnXW1A&lc=UgxUZbLGcUhOP4DHpiZ4AaABAg",
+       "topic": "transport_benefit",
+       "polarity": "contra",
+       "doc_id": "live:459dc66243dd",
+       "voice": "0f19fe",
+       "family_id": "solo:n:78ffeefc34aa",
+       "family_name": "Hour-long cable car ride into city is impractical",
+       "run_id": "r20261115-1413-6581",
+       "relation": "unscored",
+       "p_same": null,
+       "p_related": null,
+       "cos": null,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [
+      {
+       "cid": "c1717",
+       "claim": "Author finds the cable car impractical for marathon spectators",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2025-11-03",
+       "channel": "social",
+       "domain": "pyrros.fr",
+       "url": "https://pyrros.fr/sport/photos-marathon-de-toulouse-2025/",
+       "topic": "transport_benefit",
+       "polarity": "contra",
+       "doc_id": "8219962,551",
+       "voice": "dca1d5",
+       "family_id": "fam95",
+       "family_name": "Doubts whether such a cable car makes sense",
+       "run_id": "base",
+       "relation": "related",
+       "p_same": 0.667,
+       "p_related": 0.9885,
+       "cos": 0.7523,
+       "score_source": "cached"
+      },
+      {
+       "cid": "c2755",
+       "claim": "Cable cars cannot carry the traffic volume of urban public transport",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-04-05",
+       "channel": "social",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=eIOjd78BlqY&lc=Ugz_rvG7XhLjEIAnxLJ4AaABAg",
+       "topic": "transport_benefit",
+       "polarity": "contra",
+       "doc_id": "11277542,718842674",
+       "voice": "8da0ea",
+       "family_id": "fam112",
+       "family_name": "Cable car is a wasteful project using public money",
+       "run_id": "base",
+       "relation": "unrelated",
+       "p_same": 0.6666,
+       "p_related": 0.9633,
+       "cos": 0.7672,
+       "score_source": "cached"
+      }
+     ],
+     "elsewhere": [
+      {
+       "claim": {
+        "cid": "c1187",
+        "claim": "Benefit limited to peak hours, making cable car uneconomical",
+        "project": "bonn_cablecar",
+        "project_name": "Bonn",
+        "date": "2025-08-16",
+        "channel": "social",
+        "domain": "instagram.com",
+        "url": "https://www.instagram.com/p/DNaPtWjIGfX/",
+        "topic": "transport_benefit",
+        "polarity": "contra",
+        "doc_id": "11342743,808488",
+        "voice": "891126"
+       },
+       "relation": "related",
+       "p_same": 0.5524,
+       "p_related": 0.9971,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2025-08-01",
+        "title": "City makes DHL and BSI issues public",
+        "verified": "yes",
+        "source": "https://www.bonn.de/pressemitteilungen/august/planung-fuer-das-projekt-seilbahn-schreitet-voran.php",
+        "event_type": "announcement"
+       },
+       "after": [
+        {
+         "date": "2025-09-03",
+         "title": "Trade press: 'Criticism of planned cable car towers'",
+         "verified": "yes",
+         "source": "https://www.simagazin.com/en/?p=91153",
+         "event_type": "media"
+        },
+        {
+         "date": "2025-09-28",
+         "title": "Mayoral runoff: Guido Déus (CDU) beats Katja Dörner (Greens)",
+         "verified": "no",
+         "source": "https://www.bonn.de/pressemitteilungen/oktober/amtliches-endergebnis-der-ob-stichwahl-steht-fest.php?loc=en",
+         "event_type": "other"
+        }
+       ],
+       "timeline_available": true
+      },
+      {
+       "claim": {
+        "cid": "c3151",
+        "claim": "Doubts whether such a cable car makes sense",
+        "project": "heilbronn_cablecar",
+        "project_name": "Heilbronn",
+        "date": "2026-07-26",
+        "channel": "social",
+        "domain": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=HAYugJL5WUE&lc=UgwPEp3vAQA4yzJqpEB4AaABAg",
+        "topic": "transport_benefit",
+        "polarity": "contra",
+        "doc_id": "11277533,720351448",
+        "voice": "95efe2"
+       },
+       "relation": "related",
+       "p_same": 0.498,
+       "p_related": 0.9858,
+       "score_source": "cached",
+       "note": "historical case, not a forecast",
+       "stage": {
+        "date": "2026-07-24",
+        "title": "Stimme commentary: EUR 157M 'no pipe dream'",
+        "verified": "no",
+        "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/stadtbahn-fuer-157-millionen-euro-das-ist-keine-traumtaenzerei-art-5196914",
+        "event_type": "media"
+       },
+       "after": [
+        {
+         "date": "2026-07-27",
+         "title": "Council approves preliminary planning (Vorplanung)",
+         "verified": "yes",
+         "source": "https://www.heilbronn.de/kommunikation/pressemitteilungen/details/artikel/gemeinderat-beschliesst-vorplanung-fuer-urbane-seilbahn.html",
+         "event_type": "decision"
+        },
+        {
+         "date": "2026-07-28",
+         "title": "Stimme: five arguments for, five against",
+         "verified": "no",
+         "source": "https://www.stimme.de/heilbronn/stadt-heilbronn/seilbahn-projekt-ipai-bildungscampus-anbindung-verkehr-art-5198001",
+         "event_type": "media"
+        }
+       ],
+       "timeline_available": true
+      }
+     ],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:78ffeefc34aa",
+       "doc_id": "live:459dc66243dd",
+       "url": "https://www.youtube.com/watch?v=d_sIBKnXW1A&lc=UgxUZbLGcUhOP4DHpiZ4AaABAg",
+       "date": "2026-11-13"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:other_urban_cablecar:c3361",
+     "state": "recurring",
+     "label": "Historic cable car is a popular scenic ride",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-09-29",
+     "flagged_at": null,
+     "n_claims": 2,
+     "n_voices": 2,
+     "polarity": {
+      "pro": 2
+     },
+     "topic": "tourism_image",
+     "uncertainty": {
+      "per_month_now": 2.0,
+      "per_month_before": 0.04,
+      "n_before": 1,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:c398c76415b2",
+       "claim": "Popular Cologne sightseeing attraction for sixty years",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-03",
+       "channel": "other_web",
+       "domain": "maritim.de",
+       "url": "https://www.maritim.de/de/blog/kurzurlaub-in-koeln",
+       "topic": "tourism_image",
+       "polarity": "pro",
+       "doc_id": "live:b54e38f6274a",
+       "voice": "0348a0",
+       "family_id": "fam96",
+       "family_name": "Cable car is a tourist attraction with great photo opportunities",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9136,
+       "p_related": 0.9985,
+       "cos": 0.5831,
+       "score_source": "cached"
+      },
+      {
+       "cid": "n:94e45dc29210",
+       "claim": "Historic funicular called one of the city's most charming transports",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-07",
+       "channel": "other_web",
+       "domain": "kessel.tv",
+       "url": "https://kessel.tv/tag/ssb/",
+       "topic": "tourism_image",
+       "polarity": "pro",
+       "doc_id": "live:3c69e4dffbec",
+       "voice": "6e6117",
+       "family_id": "fam96",
+       "family_name": "Cable car is a tourist attraction with great photo opportunities",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9169,
+       "p_related": 0.9978,
+       "cos": 0.7001,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:c398c76415b2",
+       "doc_id": "live:b54e38f6274a",
+       "url": "https://www.maritim.de/de/blog/kurzurlaub-in-koeln",
+       "date": "2026-11-03"
+      },
+      {
+       "cid": "n:94e45dc29210",
+       "doc_id": "live:3c69e4dffbec",
+       "url": "https://kessel.tv/tag/ssb/",
+       "date": "2026-11-07"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:other_urban_cablecar:c1115",
+     "state": "recurring",
+     "label": "Festung Ehrenbreitstein reachable by cable car for visitors",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2025-07-24",
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "neutral": 1
+     },
+     "topic": "tourism_image",
+     "uncertainty": {
+      "per_month_now": 1.0,
+      "per_month_before": 0.04,
+      "n_before": 1,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:74dc0241a412",
+       "claim": "Cable car offers quick access to Ehrenbreitstein fortress views",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-04",
+       "channel": "other_web",
+       "domain": "urlaubspunkt.de",
+       "url": "https://urlaubspunkt.de/staedte-am-rhein",
+       "topic": "tourism_image",
+       "polarity": "neutral",
+       "doc_id": "live:1b95fa8277ea",
+       "voice": "21e296",
+       "family_id": "solo:c1115",
+       "family_name": "Festung Ehrenbreitstein reachable by cable car for visitors",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9887,
+       "p_related": 0.9994,
+       "cos": 0.8448,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:74dc0241a412",
+       "doc_id": "live:1b95fa8277ea",
+       "url": "https://urlaubspunkt.de/staedte-am-rhein",
+       "date": "2026-11-04"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:other_urban_cablecar:c3271",
+     "state": "recurring",
+     "label": "Tram preferred over prestige cable car project",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-08-20",
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "contra": 1
+     },
+     "topic": "alternatives",
+     "uncertainty": {
+      "per_month_now": 1.0,
+      "per_month_before": 0.04,
+      "n_before": 1,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:ce12661c09f9",
+       "claim": "Tram line would be more realistic than cable car",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-13",
+       "channel": "other_web",
+       "domain": "youtube.com",
+       "url": "https://www.youtube.com/watch?v=d_sIBKnXW1A&lc=UgxUZbLGcUhOP4DHpiZ4AaABAg",
+       "topic": "alternatives",
+       "polarity": "contra",
+       "doc_id": "live:459dc66243dd",
+       "voice": "0f19fe",
+       "family_id": "fam121",
+       "family_name": "Existing bus, tram and rail services are the better priority",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9834,
+       "p_related": 0.9977,
+       "cos": 0.7531,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:ce12661c09f9",
+       "doc_id": "live:459dc66243dd",
+       "url": "https://www.youtube.com/watch?v=d_sIBKnXW1A&lc=UgxUZbLGcUhOP4DHpiZ4AaABAg",
+       "date": "2026-11-13"
+      }
+     ]
+    },
+    {
+     "concern_id": "f:other_urban_cablecar:c3301",
+     "state": "recurring",
+     "label": "Cable car to relieve city street traffic",
+     "project": "other_urban_cablecar",
+     "project_name": "Other cities",
+     "first_seen": "2026-09-03",
+     "flagged_at": null,
+     "n_claims": 1,
+     "n_voices": 1,
+     "polarity": {
+      "pro": 1
+     },
+     "topic": "transport_benefit",
+     "uncertainty": {
+      "per_month_now": 1.0,
+      "per_month_before": 0.04,
+      "n_before": 1,
+      "p_value": null,
+      "note": "fewer than 3 claims in the window: no test"
+     },
+     "new_anywhere": false,
+     "claims": [
+      {
+       "cid": "n:101cc6bc43ef",
+       "claim": "Cable car over Frankfurter Ring studied to ease traffic",
+       "project": "other_urban_cablecar",
+       "project_name": "Other cities",
+       "date": "2026-11-14",
+       "channel": "other_web",
+       "domain": "laim-online.de",
+       "url": "https://www.laim-online.de/news.php?newsid=5914",
+       "topic": "transport_benefit",
+       "polarity": "pro",
+       "doc_id": "live:1cec5c6dc5b7",
+       "voice": "9d6347",
+       "family_id": "fam116",
+       "family_name": "Cable car aims to relieve city traffic congestion",
+       "run_id": "r20261115-1413-6581",
+       "relation": "equivalent",
+       "p_same": 0.9455,
+       "p_related": 0.9983,
+       "cos": 0.7526,
+       "score_source": "cached"
+      }
+     ],
+     "related_new_claims": [],
+     "closest_older": [],
+     "elsewhere": [],
+     "events_nearby": [],
+     "evidence": [
+      {
+       "cid": "n:101cc6bc43ef",
+       "doc_id": "live:1cec5c6dc5b7",
+       "url": "https://www.laim-online.de/news.php?newsid=5914",
+       "date": "2026-11-14"
+      }
+     ]
+    }
+   ],
+   "note": ""
+  },
+  "models": {
+   "classifier": "openrouter:anthropic/claude-haiku-5.5 (codebook_v1)",
+   "matcher": "citypulse-matcher-v2 (local-model)",
+   "embedder": "ollama:bge-m3",
+   "llm_backend": "openrouter",
+   "llm_model": "anthropic/claude-haiku-5.5",
+   "prompt": "codebook_v1",
+   "prompt_hash": "60398bec",
+   "matcher_available": true
+  }
+ }
+}

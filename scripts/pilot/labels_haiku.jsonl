@@ -1,0 +1,240 @@
+{"pid": "P161", "project": "other_cablecar", "stance": "oppose", "arguments": ["climate_environment", "process_participation"], "voice": "politician_official", "evidence": "Früher wäre vor einem derart massiven Eingriff eine Umweltverträglichkeitsprüfung notwendig gewesen."}
+{"pid": "P151", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility", "climate_environment"], "voice": "politician_official", "evidence": "Mit der Seilbahn über den Rhein auf den Venusberg"}
+{"pid": "P155", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "Heilbronner Luftnummer: Künftig über Dächer schweben statt Bahnfahren?"}
+{"pid": "P148", "project": "ipai", "stance": "support", "arguments": ["ipai_who_benefits"], "voice": "citizen", "evidence": "Alles hauptsächlich finanziert durch private Mittel."}
+{"pid": "P138", "project": "heilbronn_cablecar", "stance": "support", "arguments": [], "voice": "citizen", "evidence": "Eine Seilbahn bietet soviele Vorteile, vom schnellen Auf- und Abbau"}
+{"pid": "P032", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "Ende des Jahres sollen die Hochbauarbeiten in dem ehrgeizigen Projekt starten."}
+{"pid": "P115", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "relie Créteil à Villeneuve-Saint-Georges en 18 minutes"}
+{"pid": "P132", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Ab wann dann Gondeln über den Rhein schweben können, ist noch nicht klar."}
+{"pid": "P164", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P117", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Größte Hürden in Deutschland: Baurecht und Akzeptanz, nicht Technik."}
+{"pid": "P134", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Die Seilbahn als innovatives, Verkehrsmittel, das im ÖPNV unabhängig von der Straße ist"}
+{"pid": "P124", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P156", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "Was spricht für das Projekt, was dagegen?"}
+{"pid": "P194", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Die Seilbahn ist 3,8 Kilometer lang und umfasst fünf Haltepunkte"}
+{"pid": "P014", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P131", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Eine Absichtserklärung zum Bau der Seilbahn wurde ebenfalls bereits unterzeichnet."}
+{"pid": "P056", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Das Land und die Stadt haben eine Absichtserklärung zur Umsetzung unterzeichnet."}
+{"pid": "P017", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Bonn, Herne und Heilbronn planen Deutschlands erste ÖPNV-Seilbahn."}
+{"pid": "P006", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["cost"], "voice": "citizen", "evidence": "157 Millionen Euro für eine Seilbahn aber ein Krankenhaus soll sterben?"}
+{"pid": "P150", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Die Landesregierung wird das Vorhaben finanziell unterstützen."}
+{"pid": "P093", "project": "ipai", "stance": "neutral_informative", "arguments": ["ipai_who_benefits"], "voice": "news_institutional", "evidence": "Die Community zeigt sich in der Diskussion gespalten."}
+{"pid": "P191", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P232", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Seilbahn in Heilbronn: Land fördert Projekt mit Millionen"}
+{"pid": "P136", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P035", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Die Kölner Seilbahn verkehrt von März bis November."}
+{"pid": "P143", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P007", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "sera mis en service le 13 décembre prochain"}
+{"pid": "P123", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Zukunftsmusik - aber wohl grundsätzlich möglich."}
+{"pid": "P236", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "politician_official", "evidence": "Das Projekt Seilbahn schreitet voran."}
+{"pid": "P016", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Cette réalisation marque un tournant dans l’approche des transports collectifs en milieu dense"}
+{"pid": "P238", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "politician_official", "evidence": "Die Stadt Heilbronn will eine urbane Seilbahn in ihr öffentliches"}
+{"pid": "P026", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "La correspondance est immédiate et sans aucun supplément de coût."}
+{"pid": "P099", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "Stadtbahn statt Seilbahn!"}
+{"pid": "P074", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P208", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Le Câble 1 ou C1 permet de relier en 18 minutes Créteil à Villeneuve-Saint-Georges"}
+{"pid": "P182", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P211", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Historiquement utilisés pour franchir des reliefs accidentés en montagne"}
+{"pid": "P137", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "City-Seilbahnen in Heilbronn und Stuttgart – wer baut schneller?"}
+{"pid": "P109", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility", "climate_environment"], "voice": "politician_official", "evidence": "Vom Rhein auf den Venusberg, schnell, barrierefrei und ganz ohne Stau"}
+{"pid": "P112", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["cost", "traffic_mobility", "tourism_image"], "voice": "unclear", "evidence": "Für Prestigeprojekt Heilbronner Seilbahn fließt das Geld"}
+{"pid": "P075", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "öffnet am Samstag seine Baustelle erstmals der Öffentlichkeit"}
+{"pid": "P169", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Das wird wieder nichts. Das ist wieder so ein Sinnlosprojekt"}
+{"pid": "P168", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Seilbahn für Heilbronn: Die Chancen steigen"}
+{"pid": "P057", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Karte zeigt Standorte der Heilbronner Seilbahn-Haltestellen – zwei Überraschungen"}
+{"pid": "P142", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P178", "project": "bonn_cablecar", "stance": "support", "arguments": ["process_participation"], "voice": "company_vendor", "evidence": "Damit tritt das innovative Verkehrsprojekt in die nächste Phase ein."}
+{"pid": "P186", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P011", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Das Projekt in Vaihingen soll aus wirtschaftlichen Gründen nicht verfolgt werden."}
+{"pid": "P145", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P170", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Entlastung Venusberg mit der Seilbahn"}
+{"pid": "P166", "project": "bonn_cablecar", "stance": "support", "arguments": ["cost"], "voice": "citizen", "evidence": "billiger als eine U-bahn"}
+{"pid": "P009", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Land sagt Millionen für geplante Seilbahn in Heilbronn zu"}
+{"pid": "P025", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Heilbronn plant, den KI-Innovationspark Ipai mit einer Seilbahn ans Zentrum anzubinden."}
+{"pid": "P085", "project": "bonn_cablecar", "stance": "support", "arguments": ["process_participation"], "voice": "company_vendor", "evidence": "Damit tritt das innovative Verkehrsprojekt in die nächste Phase ein."}
+{"pid": "P045", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P140", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["climate_environment"], "voice": "politician_official", "evidence": "Sie ist energieeffizient, leise und barrierefrei"}
+{"pid": "P221", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "La date d’ouverture du Câble C1 a tout récemment été annoncée"}
+{"pid": "P172", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Le Câble C1 est le plus long téléphérique urbain d'Europe"}
+{"pid": "P154", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "rencontre un vrai succès"}
+{"pid": "P205", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P084", "project": "ipai", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Rad, Busse, Auto und vielleicht Seilbahn? So erreicht man den Ipai-Campus Heilbronn"}
+{"pid": "P216", "project": "other_cablecar", "stance": "support", "arguments": ["climate_environment", "traffic_mobility"], "voice": "news_institutional", "evidence": "Seilbahnen könnten einen wichtigen Beitrag zur Mobilitätswende leisten."}
+{"pid": "P227", "project": "bonn_cablecar", "stance": "support", "arguments": ["process_participation"], "voice": "citizen", "evidence": "Alles voller Nimbys hier."}
+{"pid": "P202", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P195", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "news_institutional", "evidence": "Le Câble C1 est interrompu plusieurs heures ce jeudi 15 janvier 2026."}
+{"pid": "P165", "project": "heilbronn_cablecar", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P237", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "eine Seilbahn als Teil des öffentlichen Nahverkehrs"}
+{"pid": "P049", "project": "ipai", "stance": "support", "arguments": [], "voice": "news_institutional", "evidence": "Brückenschlag zwischen der Innenstadt und dem Ipai muss gelingen"}
+{"pid": "P118", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "In Heilbronn wird der erste Spatenstich für den IPAI Campus gesetzt."}
+{"pid": "P233", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P004", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Rathaus nennt nach Paris-Exkursion noch keine Kosten"}
+{"pid": "P033", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["cityscape_design"], "voice": "citizen", "evidence": "Egal welcher Bahntyp, grüne Portalstützen müssen es aber schon sein!"}
+{"pid": "P104", "project": "bonn_cablecar", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P234", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["tourism_image"], "voice": "citizen", "evidence": "muss sich halt noch ein Denkmal setzen"}
+{"pid": "P240", "project": "bonn_cablecar", "stance": "mixed", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Seilbahnen sind jedoch kleine Kabinen und sind in der Rush hour schnell ausgeschöpft."}
+{"pid": "P173", "project": "ipai", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Anschub-Gelder gibt es von der Landesregierung und der Stiftung"}
+{"pid": "P053", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "Heilbronn bringt eine urbane Seilbahn in die Detailplanung"}
+{"pid": "P215", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "L'Île-de-France entre dans une nouvelle ère de mobilité"}
+{"pid": "P199", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "Ein Projekt, das nicht zerredet werden soll."}
+{"pid": "P064", "project": "ipai", "stance": "support", "arguments": [], "voice": "company_vendor", "evidence": "sorgt dafür, dass Information und Inspiration zusammenkommen"}
+{"pid": "P235", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P047", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P079", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "wenn der Grundstein für den KI-Park Ipai in Heilbronn gelegt wird"}
+{"pid": "P037", "project": "heilbronn_cablecar", "stance": "mixed", "arguments": ["traffic_mobility", "tourism_image"], "voice": "citizen", "evidence": "Ob von all den Umbauten auch die Innenstadt selbst profitiert, wird die Zeit zeigen"}
+{"pid": "P081", "project": "paris_c1", "stance": "support", "arguments": ["cost", "traffic_mobility"], "voice": "citizen", "evidence": "un voyage de 4,5km assez féerique, avec des vues splendides"}
+{"pid": "P036", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "gibt Einblicke in die Bauarbeiten am KI-Park Ipai"}
+{"pid": "P005", "project": "paris_c1", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P010", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Verschiedene Verknüpfungspunkte wurden geprüft"}
+{"pid": "P078", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Ich schlage hiermit vor, die Strecke bis Bad Friedrichshall Hbf zu verlängern."}
+{"pid": "P206", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P203", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "Warum Heilbronn einen Stadtteil für KI baut"}
+{"pid": "P001", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P144", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Sie wurde als Attraktion und umweltfreundliche Verkehrsverbindung zur Bundesgartenschau 2011 gebaut."}
+{"pid": "P003", "project": "heilbronn_cablecar", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P222", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P080", "project": "bonn_cablecar", "stance": "support", "arguments": ["climate_environment", "traffic_mobility"], "voice": "news_institutional", "evidence": "Hier können Seilbahnen eine umweltfreundliche Ergänzung im urbanen Nahverkehr sein."}
+{"pid": "P197", "project": "ipai", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P231", "project": "heilbronn_cablecar", "stance": "support", "arguments": [], "voice": "citizen", "evidence": "Diese Stadt ist am ehesten eine ÖPNV Seilbahn zu errichten"}
+{"pid": "P149", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Heilbronn sagt Ja zur Seilbahn-Idee"}
+{"pid": "P130", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P028", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "Stadt Heilbronn: Planung und Bau einer urbanen Seilbahn"}
+{"pid": "P163", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P098", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Quiz zum Ipai Heilbronn: Wie viel wissen Sie über den KI-Park?"}
+{"pid": "P141", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "politician_official", "evidence": ""}
+{"pid": "P048", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "360 Grad | Seilbahnfahrt und IPAI-Baustart"}
+{"pid": "P135", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "relie désormais en 18 minutes Créteil et Villeneuve-Saint-Georges"}
+{"pid": "P002", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Die neue 360-Grad-Folge wurde auf der Baustelle des KI-Parks (Ipai) in Heilbronn gedreht."}
+{"pid": "P046", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P219", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P121", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["process_participation"], "voice": "news_institutional", "evidence": "Das Stuttgarter Rathaus lässt eine vom Gemeinderat gesetzte Frist verstreichen"}
+{"pid": "P119", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Le ticket coûtera 2 euros et l’infrastructure vise 11 000 voyageurs par jour."}
+{"pid": "P175", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P077", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Seilbahn Monte Mario?"}
+{"pid": "P091", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Hier soll die City-Haltestelle entstehen"}
+{"pid": "P110", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Bonn, Herne und Heilbronn planen Deutschlands erste ÖPNV-Seilbahn."}
+{"pid": "P095", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Stadt informiert über neuen Planungsstand zur Bonner Seilbahn"}
+{"pid": "P060", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "news_institutional", "evidence": "les pompiers de Paris s’entrainent à évacuer des passagers"}
+{"pid": "P160", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["cost"], "voice": "politician_official", "evidence": "Das Land unterstützt das Projekt und übernimmt die Hälfte der Planungskosten."}
+{"pid": "P146", "project": "bonn_cablecar", "stance": "mixed", "arguments": ["traffic_mobility", "cost"], "voice": "news_institutional", "evidence": "doch neben Hoffnung gibt es auch Kritik"}
+{"pid": "P008", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "company_vendor", "evidence": "Un million de voyageurs en 3 mois !"}
+{"pid": "P158", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P189", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P063", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P114", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["climate_environment", "process_participation"], "voice": "news_institutional", "evidence": "Der Förderverein der BUGA 2031 widerspricht."}
+{"pid": "P174", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "news_institutional", "evidence": "des cabines en non-mixité soient mises en place"}
+{"pid": "P229", "project": "heilbronn_cablecar", "stance": "support", "arguments": [], "voice": "news_institutional", "evidence": "Schon die Vision einer Seilbahn ist eine Bereicherung für Heilbronn"}
+{"pid": "P128", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Première visite à Créteil, premier trajet en téléphérique"}
+{"pid": "P052", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Grâce à ce mode transport attractif et innovant"}
+{"pid": "P120", "project": "other_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Die SPD-Fraktion will am Donnerstag in der Bezirksversammlung Bergedorf eine Machbarkeitsstudie beantragen"}
+{"pid": "P067", "project": "ipai", "stance": "support", "arguments": ["climate_environment", "traffic_mobility"], "voice": "politician_official", "evidence": "eines der bedeutendsten Innovations- und Entwicklungsprojekte für Künstliche Intelligenz in Europa"}
+{"pid": "P226", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Le Câble C1 est le plus long téléphérique urbain d'Europe"}
+{"pid": "P185", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["climate_environment"], "voice": "citizen", "evidence": "In Heilbronn geht man nun den richtigen Schritt in Richtung Zukunft."}
+{"pid": "P097", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Pionierprojekt Seilbahn: Bonn plant deutschlandweite Premiere im ÖPNV"}
+{"pid": "P181", "project": "bonn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "haben absolut NICHTS von der Seilbahnidee"}
+{"pid": "P107", "project": "bonn_cablecar", "stance": "oppose", "arguments": ["cost"], "voice": "politician_official", "evidence": "Darum sehen wir die geplante Seilbahn in Bonn kritisch"}
+{"pid": "P042", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Maschinen- und Anlagenbauer baut KI-Know-how weiter aus."}
+{"pid": "P050", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "C’est officiel, le premier téléphérique urbain d’Île-de-France ouvrira ses cabines au public"}
+{"pid": "P204", "project": "heilbronn_cablecar", "stance": "support", "arguments": [], "voice": "news_institutional", "evidence": "Das Projekt beflügelt die Phantasie"}
+{"pid": "P108", "project": "ipai", "stance": "support", "arguments": ["ipai_who_benefits"], "voice": "politician_official", "evidence": "Der IPAI ist ein bedeutender Motor für die Zukunft der Stadt."}
+{"pid": "P139", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Doch der Verkehrsclub VCD kritisiert das Konzept erneut als „Solitär“"}
+{"pid": "P125", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["noise_privacy_overflight"], "voice": "unclear", "evidence": "Der Gemeinderat hat die Vorplanungen beauftragt"}
+{"pid": "P082", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Mit der geplanten Seilbahn wollen wir neue Wege in der Mobilität gehen."}
+{"pid": "P225", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Le premier téléphérique d'Île-de-France ravit les habitants"}
+{"pid": "P212", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P030", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P066", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "Stadtbahn statt Seilbahn: VCD fordert Ausbau des Tram-Netzes"}
+{"pid": "P089", "project": "bonn_cablecar", "stance": "oppose", "arguments": ["cost", "traffic_mobility"], "voice": "citizen", "evidence": "Damit wird die Seilbahn unwirtschaftlich."}
+{"pid": "P020", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Verkehr: Realisierung der Seilbahn und der vierten Rheinbrücke für Radfahrer und Fußgänger"}
+{"pid": "P102", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "dass das Land rund vier Millionen Euro der Planungskosten übernehmen wird"}
+{"pid": "P193", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P086", "project": "bonn_cablecar", "stance": "oppose", "arguments": ["cost", "traffic_mobility"], "voice": "politician_official", "evidence": "Wir sagen \"NEIN\" zur Seilbahn!"}
+{"pid": "P072", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Bonner Seilbahn: Eine Frage des Geldes"}
+{"pid": "P177", "project": "ipai", "stance": "support", "arguments": [], "voice": "citizen", "evidence": "Eine beeindruckende Vorstellung der IPAI SPACES erlebten die Besucher der TG Böckingen"}
+{"pid": "P034", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Verband sieht Heilbronn als Modellstadt für Seilbahnprojekt"}
+{"pid": "P043", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Il doit relier Créteil à Villeneuve-Saint-Georges en moins de 20 minutes."}
+{"pid": "P184", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P220", "project": "other_cablecar", "stance": "support", "arguments": ["climate_environment", "traffic_mobility"], "voice": "company_vendor", "evidence": "trägt dabei wesentlich zur nachhaltigen Qualitätssteigerung des öffentlichen Verkehrs"}
+{"pid": "P106", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P015", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Eine Absichtserklärung zum Bau der Seilbahn wurde ebenfalls bereits unterzeichnet."}
+{"pid": "P223", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P022", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P198", "project": "ipai", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "company_vendor", "evidence": "Mit Schnellbus, Rad, Stadt- oder Seilbahn zum KI-Innovationspark IPAI"}
+{"pid": "P069", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Damit wäre Heilbronn die erste Stadt in BW"}
+{"pid": "P196", "project": "heilbronn_cablecar", "stance": "unclear", "arguments": [], "voice": "politician_official", "evidence": ""}
+{"pid": "P103", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Heilbronn baut die Seilbahn, die Stuttgart niemals haben wird"}
+{"pid": "P113", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P044", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Zudem im Fokus: der Innovationspark IPAI in Heilbronn."}
+{"pid": "P180", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Bonn wird mit einer Seilbahn ausgestattet"}
+{"pid": "P230", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "Gesamtprojektleitung (m/w/d) für das Projekt Urbane Seilbahn Heilbronn"}
+{"pid": "P012", "project": "heilbronn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "unclear", "evidence": "könnte wichtige Impulse für den Nahverkehr setzen."}
+{"pid": "P111", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P188", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P213", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P051", "project": "bonn_cablecar", "stance": "support", "arguments": ["process_participation"], "voice": "company_vendor", "evidence": "Damit tritt das innovative Verkehrsprojekt in die nächste Phase ein."}
+{"pid": "P062", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P116", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Die Landesregierung wird das Vorhaben finanziell unterstützen."}
+{"pid": "P027", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Zudem besteht Aussicht auf eine Förderung in Millionenhöhe."}
+{"pid": "P218", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "verzögert sich um mehrere Jahre"}
+{"pid": "P094", "project": "bonn_cablecar", "stance": "support", "arguments": ["process_participation"], "voice": "politician_official", "evidence": "Das Seilbahn-Projekt bleibt auf Kurs!"}
+{"pid": "P187", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "sera mis en service le 13 décembre"}
+{"pid": "P127", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "à quand l'inauguration du premier téléphérique d'Île-de-France ?"}
+{"pid": "P201", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Foundation will mehr Vertrauen in KI schaffen"}
+{"pid": "P192", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P190", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "en 18 minutes contre près de 40 minutes en voiture ou en bus"}
+{"pid": "P039", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Capacité de 11 000 voyageurs/jour."}
+{"pid": "P076", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P209", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "news_institutional", "evidence": "nid à agressions sexuelles"}
+{"pid": "P021", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P101", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "news_institutional", "evidence": "est-il en mesure de fonctionner"}
+{"pid": "P038", "project": "ipai", "stance": "oppose", "arguments": ["traffic_mobility", "climate_environment"], "voice": "citizen", "evidence": "wird aber mal wieder mitten auf der grünen Wiese gebaut"}
+{"pid": "P183", "project": "heilbronn_cablecar", "stance": "support", "arguments": [], "voice": "news_institutional", "evidence": "Die Chancen für eine Seilbahn in Heilbronn stehen sehr gut"}
+{"pid": "P224", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P122", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P071", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Die Kölner Seilbahn verkehrt von März bis November."}
+{"pid": "P065", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P129", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "company_vendor", "evidence": ""}
+{"pid": "P087", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Zukunftsmusik - aber wohl grundsätzlich möglich."}
+{"pid": "P200", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "Doch es gibt ein Problem: All diese Menschen brauchen Wohnraum"}
+{"pid": "P018", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Heilbronn plant Seilbahn zum KI-Park"}
+{"pid": "P096", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Die Landesregierung wird das Vorhaben finanziell unterstützen."}
+{"pid": "P041", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P171", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P061", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P147", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P092", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "passe la barre du million de voyageurs"}
+{"pid": "P031", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P024", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P126", "project": "paris_c1", "stance": "support", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Plus agréable que le bus et la voiture"}
+{"pid": "P070", "project": "ipai", "stance": "neutral_informative", "arguments": ["ipai_who_benefits"], "voice": "news_institutional", "evidence": "Das ist eine enorme Chance."}
+{"pid": "P090", "project": "other_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "a su montrer son utilité dans le sud de Toulouse"}
+{"pid": "P217", "project": "paris_c1", "stance": "neutral_informative", "arguments": ["safety_technology"], "voice": "citizen", "evidence": "était interrompu en raison de sa première grande opération de révision annuelle"}
+{"pid": "P083", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P058", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P210", "project": "heilbronn_cablecar", "stance": "oppose", "arguments": ["traffic_mobility"], "voice": "citizen", "evidence": "Das wird wieder nichts. Das ist wieder so ein Sinnlosprojekt"}
+{"pid": "P157", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "unclear", "evidence": ""}
+{"pid": "P100", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "se transforment peu à peu en véritables attractions touristiques"}
+{"pid": "P059", "project": "other_cablecar", "stance": "support", "arguments": ["tourism_image"], "voice": "news_institutional", "evidence": "Doppelmayr wird mit der Cablebús Línea 5 weltweit neue Standards setzen."}
+{"pid": "P167", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Entscheidung über Seilbahn soll am Donnerstag fallen"}
+{"pid": "P133", "project": "paris_c1", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "l’inauguration du câble C1 le 13 décembre 2025"}
+{"pid": "P073", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "wird das zylinderförmige Gebäude mit der Medienfassade 65 m hoch"}
+{"pid": "P214", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Die Inhalte setzen sich fort"}
+{"pid": "P152", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "politician_official", "evidence": ""}
+{"pid": "P040", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "citizen", "evidence": "Sie wurde zur Bundesgartenschau 1957 errichtet"}
+{"pid": "P179", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "sieht Heilbronns Pläne, eine Seilbahn zu bauen, kritisch"}
+{"pid": "P055", "project": "paris_c1", "stance": "support", "arguments": ["tourism_image"], "voice": "news_institutional", "evidence": "du Costco au téléphérique C1"}
+{"pid": "P239", "project": "bonn_cablecar", "stance": "support", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "könnte Teil einer nachhaltigen und zukunftsorientierten Mobilitätswende sein"}
+{"pid": "P207", "project": "ipai", "stance": "support", "arguments": [], "voice": "citizen", "evidence": "Das wird absolut mega. Kanns kaum erwarten."}
+{"pid": "P159", "project": "ipai", "stance": "support", "arguments": [], "voice": "politician_official", "evidence": "Ein echtes Leuchtturmprojekt für die Region"}
+{"pid": "P088", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P068", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "unclear", "evidence": "doch wie realistisch ist das?"}
+{"pid": "P019", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "news_institutional", "evidence": "Heilbronn sagt Ja zur Seilbahn-Idee"}
+{"pid": "P162", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["cost"], "voice": "news_institutional", "evidence": "Gemeinderat treibt Millionenprojekt voran"}
+{"pid": "P176", "project": "other_cablecar", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "Herbstferien-Beginn: Kölner Seilbahn bietet Nachtfahrt an"}
+{"pid": "P023", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "news_institutional", "evidence": ""}
+{"pid": "P029", "project": "ipai", "stance": "neutral_informative", "arguments": [], "voice": "company_vendor", "evidence": "die schlüsselfertige Realisierung des ersten Bauabschnitts des IPAI Campus in Heilbronn"}
+{"pid": "P105", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["climate_environment"], "voice": "news_institutional", "evidence": "die Pläne dafür werden in Heilbronn nun konkreter"}
+{"pid": "P013", "project": "heilbronn_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "politician_official", "evidence": "Urbane Seilbahn im Stadtgebiet"}
+{"pid": "P153", "project": "bonn_cablecar", "stance": "neutral_informative", "arguments": ["traffic_mobility"], "voice": "news_institutional", "evidence": "Die Stadtwerke Bonn melden nun die nächste Etappe."}
+{"pid": "P228", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}
+{"pid": "P054", "project": "irrelevant", "stance": "unclear", "arguments": [], "voice": "citizen", "evidence": ""}

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "demo-01",
+    "synthetic": true,
+    "text": "Die Seilbahn in Heilbronn ist viel zu teuer. 157 Millionen Euro für ein paar Gondeln zum Bildungscampus, und am Ende zahlen wir Bürger die Mehrkosten. Das Geld fehlt dann bei Schulen und Straßen.",
+    "url": "https://kommentare.synthetic-demo.example/heilbronn/seilbahn#k1",
+    "published_at": "2026-11-02T08:15:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Comments",
+    "language": "de",
+    "author": "demo_nutzer_a"
+  },
+  {
+    "id": "demo-02",
+    "synthetic": true,
+    "text": "Statt der Seilbahn sollte Heilbronn lieber die Stadtbahn ausbauen. Eine neue Stadtbahnlinie zum Bildungscampus hätte mehr Kapazität und passt in das bestehende Netz. Die Seilbahn ist eine Insellösung.",
+    "url": "https://forum.synthetic-demo.example/t/seilbahn-oder-stadtbahn/2",
+    "published_at": "2026-11-03T17:42:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Forums",
+    "language": "de",
+    "author": "demo_nutzer_b"
+  },
+  {
+    "id": "demo-03",
+    "synthetic": true,
+    "title": "Seilbahn soll IPAI-Campus anbinden",
+    "text": "Die geplante Seilbahn in Heilbronn soll den neuen IPAI-Campus in wenigen Minuten mit dem Hauptbahnhof verbinden. Befürworter sehen darin eine schnelle Anbindung für Tausende Beschäftigte und Studierende, ohne zusätzliche Autos in der Innenstadt.",
+    "url": "https://nachrichten.synthetic-demo.example/heilbronn/seilbahn-ipai-anbindung",
+    "published_at": "2026-11-04T06:30:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "News",
+    "language": "de",
+    "author": "Demo-Redaktion"
+  },
+  {
+    "id": "demo-04",
+    "synthetic": true,
+    "text": "Was passiert eigentlich bei Sturm? Wenn die Seilbahn in Heilbronn wegen Wind abgeschaltet wird, kommen die Leute aus der Spätschicht am IPAI-Campus abends nicht mehr nach Hause. Nach 22 Uhr fährt dort oben kein Bus mehr.",
+    "url": "https://forum.synthetic-demo.example/t/seilbahn-bei-sturm/4",
+    "published_at": "2026-11-06T19:05:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Forums",
+    "language": "de",
+    "author": "demo_nutzer_c"
+  },
+  {
+    "id": "demo-05",
+    "synthetic": true,
+    "text": "Ich arbeite im Schichtdienst. Bei einer Windabschaltung der Heilbronner Seilbahn stehen wir Spätschichtler nachts am Campus fest, weil es keinen Ersatzverkehr gibt. Daran hat im Gemeinderat offenbar niemand gedacht.",
+    "url": "https://kommentare.synthetic-demo.example/heilbronn/seilbahn#k5",
+    "published_at": "2026-11-08T21:20:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Comments",
+    "language": "de",
+    "author": "demo_nutzer_d"
+  },
+  {
+    "id": "demo-06",
+    "synthetic": true,
+    "title": "Leserbrief: Wer holt die Spätschicht ab?",
+    "text": "Die Seilbahn Heilbronn muss bei starkem Wind den Betrieb einstellen. Für Beschäftigte der Spätschicht bedeutet das: Sie stranden am Abend ohne Rückfahrt. Die Stadt braucht einen Notfallplan mit Ersatzbussen, bevor sie über die Seilbahn entscheidet.",
+    "url": "https://leserbriefe.synthetic-demo.example/2026/11/spaetschicht-seilbahn",
+    "published_at": "2026-11-10T09:00:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "News",
+    "language": "de",
+    "author": "Demo-Leserin"
+  },
+  {
+    "id": "demo-07",
+    "synthetic": true,
+    "title": "Neue Seilbahn im Skigebiet",
+    "text": "Im Skigebiet am Feldberg geht zur Wintersaison eine neue Seilbahn in Betrieb. Der Sessellift ersetzt den alten Schlepplift. Die Talstation ist mit dem Nahverkehr erreichbar, der Skipass gilt auch im Bus.",
+    "url": "https://reise.synthetic-demo.example/feldberg/neue-seilbahn",
+    "published_at": "2026-11-05T11:00:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "News",
+    "language": "de",
+    "author": "Demo-Reiseredaktion"
+  },
+  {
+    "id": "demo-08",
+    "synthetic": true,
+    "title": "Wanderbericht: Hüttenabend im Allgäu",
+    "text": "Die Almhütte oberhalb von Oberstdorf hat bis Ende November geöffnet. Der Kaiserschmarrn war großartig, die Aussicht auch. Für den Abstieg unbedingt eine Stirnlampe mitnehmen.",
+    "url": "https://blog.synthetic-demo.example/huettenabend-allgaeu",
+    "published_at": "2026-11-07T15:30:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Blog",
+    "language": "de",
+    "author": "demo_wanderer"
+  },
+  {
+    "id": "demo-09",
+    "synthetic": true,
+    "text": "Die Seilbahn in Heilbronn ist viel zu teuer. 157 Millionen Euro für ein paar Gondeln zum Bildungscampus, und am Ende zahlen wir Bürger die Mehrkosten. Das Geld fehlt dann bei Schulen und Straßen.",
+    "url": "https://netzwerk.synthetic-demo.example/posts/9",
+    "published_at": "2026-11-02T10:40:00Z",
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Social Network",
+    "language": "de",
+    "author": "demo_nutzer_a"
+  },
+  {
+    "id": "demo-10",
+    "synthetic": true,
+    "text": "Die Seilbahn in Heilbronn wäre ein Wahrzeichen für die Stadt. Dieser Beitrag hat absichtlich kein Datum und wird deshalb abgelehnt.",
+    "url": "https://kommentare.synthetic-demo.example/heilbronn/seilbahn#k10",
+    "published_at": null,
+    "source_name": "SYNTHETIC DEMO",
+    "media_type": "Comments",
+    "language": "de",
+    "author": "demo_nutzer_e"
+  }
+]

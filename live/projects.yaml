@@ -1,0 +1,314 @@
+# Project registry. Add a project = add a block here. No code change.
+# keywords   : generic words. A hit only counts together with a place word.
+# specific   : phrases that count on their own.
+# place_words: words that tie a generic keyword to this project.
+# queries    : what the search-style sources (GDELT, Google News, Bluesky) ask for, per language.
+# hashtags   : Mastodon tag timelines to read (without #).
+# comparison_group: planned_cablecar | operating_cablecar | other_project (for the Compare view).
+# start_date : first public milestone we know of (context only, not a filter).
+defaults:
+  since: 2026-10-27          # dataset end; override with --since
+  user_agent: "city-debate-monitor/0.1 (research prototype; hackathon, contact via project team)"
+  http_timeout_s: 30
+  dataset_edge: "2026-10-27T12:29:00+0000"   # end of the city's historical export; older items first seen later are flagged late_discovered
+  http_retries: 2
+  # Printed in every run receipt as coverage gaps (what this collector cannot see, whatever the run result).
+  known_not_covered:
+    - "Instagram, Facebook, TikTok, LinkedIn, X: no legal open access (needs a vendor or research contract)"
+    - "Reddit: official API needs approval, not set up. Reddit and the other social platforms appear only as search-result links (title, snippet), never opened"
+    - "YouTube: only videos and comments the YouTube search returns for our queries (daily quota); texts older than 30 days are removed (API terms)"
+    - "Heilbronner Stimme and echo24: paywall or no feed; only what Exa and Tavily index (Google News is off)"
+    - "Citizen participation platforms (comments): no export, not collected"
+    - "Local radio, TV, podcasts: not collected"
+    - "GDELT (news index): switched off, rate limited (HTTP 429) from our network on 14 Nov, retest needed"
+    - "Google News RSS: switched off, robots.txt disallows /rss. Without it and GDELT, news comes only from Exa and Tavily (what they index) and five outlet RSS feeds (a few days each), so news coverage is thinner than the city's monitoring tool"
+
+projects:
+  heilbronn_cablecar:
+    name: Urban cable car Heilbronn
+    city: Heilbronn
+    country: DE
+    start_date: 2025-04-03
+    comparison_group: planned_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Heilbronner Seilbahn, Seilbahn Heilbronn, Seilbahn in Heilbronn, Heilbronn Seilbahn]
+    place_words: [Heilbronn, Heilbronner, Neckarturm, Kurt-Schumacher-Platz, Bildungscampus, Zukunftspark Wohlgelegen, Neckargartach]
+    queries:
+      de: ['"Seilbahn" Heilbronn', '"Seilbahn" "Heilbronn" Gemeinderat', 'Seilbahn Bildungscampus IPAI']
+      en: ['Heilbronn cable car']
+    hashtags: [seilbahn, heilbronn]
+    oparl_terms: [Seilbahn, Stadtseilbahn, Gondelbahn]
+
+  bonn_cablecar:
+    name: Urban cable car Bonn
+    city: Bonn
+    country: DE
+    start_date: null
+    comparison_group: planned_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Bonner Seilbahn, Seilbahn Bonn, Seilbahn in Bonn, Venusbergseilbahn]
+    place_words: [Bonn, Venusberg, Bonner]
+    queries:
+      de: ['"Seilbahn" Bonn Venusberg', '"Bonner Seilbahn"', 'Seilbahn Bonn Rat Stadt']
+      en: ['Bonn cable car']
+    hashtags: [seilbahn, bonn]
+    oparl_terms: [Seilbahn, Stadtseilbahn, Gondelbahn]
+
+  paris_c1:
+    name: Cable C1 Paris region (operating since Dec 2025)
+    city: Creteil
+    country: FR
+    start_date: 2025-12-13
+    comparison_group: operating_cablecar
+    keywords:
+      fr: [téléphérique, câble, telepherique]
+      en: [cable car, gondola]
+    specific: [Câble C1, Cable C1, "Câble 1", "du C1", téléphérique Créteil, téléphérique du Val-de-Marne]
+    place_words: [Créteil, Île-de-France, Ile-de-France, Limeil-Brévannes, Villeneuve-Saint-Georges, Valenton, Pointe du Lac, Val-de-Marne, Île-de-France Mobilités, Ile-de-France Mobilites]
+    queries:
+      fr: ['"Câble C1"', 'téléphérique Créteil Limeil-Brévannes', 'Câble C1 Île-de-France Mobilités']
+      en: ['Paris cable car C1 Créteil']
+    hashtags: [cablec1, telepherique]
+    oparl_terms: []
+    negative_words: [Emplois, Indeed, "offres d'emploi"]   # job boards; exp9: removes 1 junk hit, loses 0 of 30 on-topic (15 Nov)
+
+  ipai:
+    name: IPAI campus Heilbronn
+    city: Heilbronn
+    country: DE
+    start_date: null
+    comparison_group: other_project
+    keywords:
+      de: [IPAI]
+      en: [IPAI]
+    specific: [IPAI, Innovation Park Artificial Intelligence, Innovationspark Künstliche Intelligenz, IPAI Heilbronn]
+    place_words: [Heilbronn, Heilbronner, KI, Künstliche Intelligenz, AI, Schwarz, Innovationspark, Bildungscampus, Neckarpark]
+    queries:
+      de: ['IPAI Heilbronn', '"Innovationspark Künstliche Intelligenz"']
+      en: ['IPAI Heilbronn "Innovation Park Artificial Intelligence"']
+    hashtags: [ipai]
+    oparl_terms: [IPAI, Innovationspark, Innovation Park]
+
+  # ---- German comparator projects (added 14 Nov 2026, status checked on the web that day; one line each)
+
+  # Project ended 2019 after citizen opposition (exact vote or council step not confirmed by me); a 2016 Buergergutachten had recommended continuing. Source: https://www.spektrum.de/news/seilbahn-staedte-planen-seilbahnen-fuer-den-oeffentlichen-nahverkehr/2306627 and https://www.zfk.de/mobilitaet/oepnv/wuppertaler-seilbahn-dem-streit-folgt-die-einigkeit
+  wuppertal_cablecar:
+    name: Urban cable car Wuppertal (project ended 2019)
+    city: Wuppertal
+    country: DE
+    start_date: null
+    comparison_group: rejected_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Wuppertaler Seilbahn, Seilbahn Wuppertal, Seilbahn in Wuppertal, Seilbahnfreies Wuppertal]
+    place_words: [Wuppertal, Wuppertaler, Schwebebahn, Küllenhahn, Döppersberg]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['"Seilbahn Wuppertal"', 'Wuppertaler Seilbahn Bürgerbeteiligung']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Operating, built for the 2011 Bundesgartenschau, part of public transport. Source: https://publikationen.bibliothek.kit.edu/1000150232/149228564 and https://ecomento.de/?p=120165
+  koblenz_cablecar:
+    name: Cable car Koblenz (operating since 2010)
+    city: Koblenz
+    country: DE
+    start_date: 2010-01-01
+    comparison_group: operating_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Koblenzer Seilbahn, Seilbahn Koblenz, Seilbahn in Koblenz, Rheinseilbahn Koblenz]
+    place_words: [Koblenz, Koblenzer, Festung Ehrenbreitstein, Deutsches Eck, Buga]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['"Seilbahn Koblenz"', 'Koblenzer Seilbahn Welterbe Rhein']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Operating late March to November. The 2017 incident is from the brief and not re-checked. A separate Rheinpendel line is at planning stage, plan approval application planned for 2026. Source: https://rhein-ruhr-westfalen.dvwg.de/fileadmin/user_upload/BV_Rhein-Ruhr-Westfalen/Downloads/Vortraege/180828_Gartenschau-Infrastruktur.pdf and https://kommunal.de/trend-urbane-seilbahn
+  koeln_cablecar:
+    name: Rheinseilbahn Cologne (operating, seasonal)
+    city: Köln
+    country: DE
+    start_date: null
+    comparison_group: operating_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Kölner Seilbahn, Rheinseilbahn, Seilbahn Köln, Kölner Rheinseilbahn]
+    place_words: [Köln, Kölner, Rheinseilbahn, Zoo Köln, Rheinpark]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['Rheinseilbahn Köln', '"Seilbahn Köln"']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Operating; contract with the operator extended to 31 Dec 2033; no VBB tickets accepted (older reports). Source: https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2022/pressemitteilung.1269450.php
+  berlin_cablecar:
+    name: Cable car Berlin Gärten der Welt (IGA, operating)
+    city: Berlin
+    country: DE
+    start_date: 2017-04-13
+    comparison_group: operating_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Berliner Seilbahn, Seilbahn Berlin, IGA-Seilbahn, Seilbahn Gärten der Welt, Seilbahn Marzahn]
+    place_words: [Berlin, Berliner, Marzahn, Gärten der Welt, IGA, Kienbergpark, Hellersdorf, Kaulsdorf]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['"Seilbahn Marzahn"', 'IGA Seilbahn Gärten der Welt BVG VBB']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Rejected in a district referendum in Hamburg-Mitte (one source dates it 2014; exact date not confirmed); planned by Doppelmayr and Stage Entertainment. Source: https://taz.de/Buergerentscheid-ueber-Seilbahn-Bau-in-Hamburg/!5034524
+  hamburg_cablecar:
+    name: Elbe cable car Hamburg (rejected 2014)
+    city: Hamburg
+    country: DE
+    start_date: null
+    comparison_group: rejected_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Hamburger Seilbahn, Seilbahn Hamburg, Elbseilbahn, Hafenseilbahn, Seilbahn über die Elbe]
+    place_words: [Hamburg, Hamburger, Elbe, Hafen, Steinwerder, St. Pauli, Stage Entertainment]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['Hamburg Seilbahn Elbe Stage', '"Seilbahn Hamburg"']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Study finished May 2026: Vaihingen pilot route not pursued (negative cost-benefit); Pragsattel to Robert-Bosch-Krankenhaus route still examined. Source: https://www.stuttgart.de/service/aktuelle-meldungen/2026/mai/seilbahnen-in-stuttgart-wichtige-erkenntnisse-aus-studie-stadt-schlaegt-vor-chancen-zu-pruefen
+  stuttgart_cablecar:
+    name: Urban cable car Stuttgart (study stage)
+    city: Stuttgart
+    country: DE
+    start_date: 2026-05-01
+    comparison_group: planned_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Stuttgarter Seilbahn, Seilbahn Stuttgart, Seilbahn Vaihingen, Seilbahn Robert-Bosch-Krankenhaus]
+    place_words: [Stuttgart, Stuttgarter, Vaihingen, Pragsattel, Robert-Bosch-Krankenhaus, Burgholzhof, Rosenstein]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['"Seilbahn Stuttgart"', 'Stuttgart Seilbahn Pragsattel Robert-Bosch-Krankenhaus']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Feasibility study for a route at Frankfurter Ring; Bavaria published a guide for urban cable cars; VCD Bayern is critical. No 2026 council decision found. Source: https://verkehrsministerium.bayern.de/assets/stmi/med/aktuell/leitfaden_urbane_seilbahnen_in_bayern.pdf
+  muenchen_cablecar:
+    name: Urban cable car Munich (feasibility stage)
+    city: München
+    country: DE
+    start_date: null
+    comparison_group: planned_cablecar
+    keywords:
+      de: [Seilbahn, Stadtseilbahn, Gondelbahn, Seilbahnprojekt]
+      en: [cable car, gondola]
+    specific: [Münchner Seilbahn, Seilbahn München, Seilbahn Frankfurter Ring, Seilbahn in München]
+    place_words: [München, Münchner, Frankfurter Ring, Stadtrat München]
+    negative_words: [Ski, Skigebiet, Skilift, Alpen, Zugspitze, Gletscher, Wanderung, Bergbahn, Bergbahnen, Gipfel, Skiresort]
+    queries:
+      de: ['"Seilbahn München"', 'Seilbahn Frankfurter Ring München Machbarkeitsstudie']
+    hashtags: [seilbahn]
+    oparl_terms: []
+
+  # Herne, Bochum, Ludwigshafen: no urban cable car project with public debate found on the web on 14 Nov 2026, so not added (add a block when one appears).
+
+# Sources. enabled=false is allowed; a source that is gated or needs a key is listed with the reason.
+sources:
+  gdelt:
+    enabled: false           # OFF since 14 Nov 2026: HTTP 429 on 11 of 12 requests from our network even at 6 to 20 s spacing (experiments/logs/exp2_gdelt_probe.log). Retest, then set true.
+    min_interval_s: 6        # GDELT asks for 1 request per 5 s
+    max_records: 250
+  gnews:
+    enabled: false           # OFF by default (decision 14 Nov 2026): news.google.com/robots.txt has "Disallow: /" and no allowance for /rss.
+                             # The adapter stays for tests and for a later licence or permission. See STADT_LIVE_SOURCES.md and STADT_LIVE_EXPERIMENTS.md.
+    min_interval_s: 2
+  rss:
+    enabled: true
+    min_interval_s: 1.5
+    feeds:
+      - {id: heilbronn_de,   url: "https://www.heilbronn.de/startseite.xml",       outlet: heilbronn.de,  language: de, country: DE, kind: official}
+      - {id: swr_bw,         url: "https://www.swr.de/~rss/swraktuell-bw-100.xml", outlet: swr.de,        language: de, country: DE, kind: news}
+      - {id: ga_bonn,        url: "https://ga.de/feed.rss",                        outlet: ga.de,         language: de, country: DE, kind: news}
+      - {id: franceinfo,     url: "https://www.francetvinfo.fr/titres.rss",        outlet: francetvinfo.fr, language: fr, country: FR, kind: news}
+      - {id: 20minutes,      url: "https://www.20minutes.fr/feeds/rss-une.xml",    outlet: 20minutes.fr,  language: fr, country: FR, kind: news}
+  bluesky:
+    enabled: true
+    min_interval_s: 1.5
+    max_pages: 3
+  mastodon:
+    enabled: true
+    min_interval_s: 1.5
+    max_pages: 3
+    # troet.cafe answered HTTP 422 for every hashtag timeline on 14 Nov 2026 (tested), so it is left out until it works again.
+    instances: [mastodon.social]
+  oparl:
+    enabled: true
+    min_interval_s: 1.0
+    max_pages: 80
+    endpoints:
+      - {id: heilbronn, project_city: Heilbronn, system: "https://heilbronn-sitzungsdienst.komm.one/oparl/system", licence: "dl-de/zero-2-0"}
+      # Bonn's official endpoint sits behind a proof-of-work gate (ALTCHA) since Feb 2026. We do NOT solve it.
+      # The adapter requests it once per run; if it is still gated the run log says "gated" and moves on.
+      - {id: bonn, project_city: Bonn, system: "https://www.bonn.sitzung-online.de/public/oparl/system", licence: "CC0 (city open-data page)"}
+  pagewatch:
+    enabled: true
+    min_interval_s: 2.0
+    # Official pages. One request per page per run. Changes are reported with a short text diff.
+    pages:
+      - {id: hn_seilbahn,   project: heilbronn_cablecar, url: "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html", title: "Heilbronn Seilbahn (project page with FAQ)", outlet: heilbronn.de, language: de, country: DE}
+      - {id: bonn_seilbahn, project: bonn_cablecar,      url: "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/Seilbahn.php", title: "Bonn Seilbahn project page", outlet: bonn.de, language: de, country: DE}
+      - {id: bonn_downloads, project: bonn_cablecar,     url: "https://www.bonn.de/themen-entdecken/verkehr-mobilitaet/seilbahn/inhaltsseiten/downloads-zum-thema-seilbahn.php", title: "Bonn Seilbahn documents list", outlet: bonn.de, language: de, country: DE}
+      - {id: idfm_c1,       project: paris_c1,           url: "https://www.iledefrance-mobilites.fr/le-reseau/projets/cablec1", title: "IDFM Cable C1 project page", outlet: iledefrance-mobilites.fr, language: fr, country: FR}
+      - {id: idfm_c1_news,  project: paris_c1,           url: "https://www.iledefrance-mobilites.fr/le-reseau/projets/cablec1/actualites", title: "IDFM Cable C1 news list", outlet: iledefrance-mobilites.fr, language: fr, country: FR}
+  # ---- key-based discovery sources (live/RADAR_SETUP.md). No key = skipped with a line in the receipt. Keys come from the
+  # environment variable named in key_env or from live/.env (gitignored). Site-scoped queries find links on Reddit, Facebook,
+  # Instagram, X, TikTok, YouTube and German forums: link, title, snippet, date only. Those pages are never opened.
+  exa:
+    enabled: true
+    key_env: EXA_API_KEY
+    min_interval_s: 1
+    max_queries_per_project: 2
+    max_site_queries_per_project: 5
+    num_results: 5
+    fulltext: true             # read the page only where robots.txt allows; else snippet only
+    max_fulltext_per_run: 60
+  tavily:
+    enabled: true
+    key_env: TAVILY_API_KEY
+    min_interval_s: 1
+    max_queries_per_project: 3
+    max_site_queries_per_project: 7
+    max_results: 10
+    topics: [general, news]
+    fulltext: true
+    max_fulltext_per_run: 60
+  youtube:
+    enabled: true
+    key_env: YOUTUBE_API_KEY
+    min_interval_s: 0.5
+    max_queries_per_project: 2
+    max_videos: 8
+    max_comment_pages: 2
+    max_search_calls: 30        # the API allows 100 search calls a day (coordinator cap for the stage run)
+    include_older_videos: true  # also look at older relevant videos; only comments newer than --since are kept
+  apify:
+    enabled: false              # discovery only (Google results for site-scoped queries). Off until APIFY_TOKEN exists and the owner agrees, see apify.py
+    key_env: APIFY_TOKEN
+    actor: apify/google-search-scraper
+    min_interval_s: 1
+    max_queries_per_project: 3
+    max_site_queries_per_project: 7
+    max_results_per_query: 10
+    max_total_usd: 4.0
+    fulltext: false

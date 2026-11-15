@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "what": "Documented events used to link peaks. Dates and descriptions come from the event ledger in knowledge/KNOWLEDGE_STADT_HEILBRONN.md (built from the dataset) and from heilbronn.de (27 Jul 2026, fetched 14 Nov 2026).",
+    "source_rule": "source_url is filled by the events stage from the matching post in the dataset (evidence_title_regex). If no post matches, source_url stays null and the event is shown as 'document not linked'. We never type a URL by hand unless we opened it.",
+    "after_dataset": "Events after 27 Oct 2026 are marked after_dataset=true and can only be shown in the live strip."
+  },
+  "events": [
+    {"event_id": "hn_2025_03_27_plans", "date": "2025-03-27", "project": "heilbronn_cablecar", "type": "other", "title": "First public wave: Heilbronn plans a cable car to the AI park", "evidence_title_regex": "(?i)seilbahn.*(ki-park|ki park)|statt bus und stadtbahn"},
+    {"event_id": "hn_2025_04_03_council", "date": "2025-04-03", "project": "heilbronn_cablecar", "type": "decision", "title": "City council votes to pursue planning", "evidence_title_regex": "(?i)grünes licht.*vorplanung|sagt ja zur seilbahn"},
+    {"event_id": "hn_2025_05_12_state", "date": "2025-05-12", "project": "heilbronn_cablecar", "type": "money", "title": "Letter of intent with the state, 4 million EUR planning money", "evidence_title_regex": "(?i)(land|absichtserklärung|letter of intent|millionen).*(seilbahn)|seilbahn.*(land|millionen|absichtserklärung)"},
+    {"event_id": "hn_2025_07_17_critics", "date": "2025-07-17", "project": "heilbronn_cablecar", "type": "other", "title": "Transport club: 'tram instead of cable car'; mayor quiet on cost", "evidence_title_regex": "(?i)stadtbahn statt seilbahn"},
+    {"event_id": "paris_2025_09_22_announce", "date": "2025-09-22", "project": "paris_c1", "type": "other", "title": "Opening date of Câble C1 announced", "evidence_title_regex": "(?i)c(â|a)ble c?1.*(13 décembre|date|ouverture|mise en service)"},
+    {"event_id": "paris_2025_12_13_opening", "date": "2025-12-13", "project": "paris_c1", "type": "opening", "title": "Câble C1 opens in the Paris region", "evidence_title_regex": "(?i)c(â|a)ble (c)?1.*(inaugur|ouvert|ouverture|mise en service|premiers voyageurs)"},
+    {"event_id": "hn_2026_07_22_cost", "date": "2026-07-22", "project": "heilbronn_cablecar", "type": "money", "title": "157 million EUR cost estimate becomes public", "evidence_title_regex": "(?i)157 millionen"},
+    {"event_id": "hn_2026_07_27_council", "date": "2026-07-27", "project": "heilbronn_cablecar", "type": "decision", "title": "City council decides preliminary planning and hiring planners", "source_url_checked": "https://www.heilbronn.de/umwelt-mobilitaet/mobilitaet/seilbahn.html", "evidence_title_regex": "(?i)(argumente dafür|vorplanung|gemeinderat).*(seilbahn)|seilbahn.*(gemeinderat|vorplanung|beschl)"},
+    {"event_id": "paris_2026_11_06_outage", "date": "2026-11-06", "project": "paris_c1", "type": "incident", "title": "Câble C1 out of service (press headlines 6 to 11 Nov 2026, details not verified)", "after_dataset": true, "evidence_title_regex": null}
+  ]
+}

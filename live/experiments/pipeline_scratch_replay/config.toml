@@ -1,0 +1,47 @@
+# Pipeline settings. Paths are relative to this file's folder (pipeline/).
+
+[paths]
+raw_json  = "C:/Users/Harshil/Desktop/win/live/experiments/pipeline_scratch_replay/inputs/replay_raw.json"
+data_dir  = "data"
+codebook  = "C:/Users/Harshil/Desktop/win/scripts/pilot/codebook.md"
+pilot_dir = "C:/Users/Harshil/Desktop/win/scripts/pilot"
+gold_dir  = "C:/Users/Harshil/Desktop/win/eval/gold"
+eval_lib  = "C:/Users/Harshil/Desktop/win/eval"
+faq       = "reference/faq_heilbronn.json"
+events    = "reference/events_seed.json"
+
+[dataset]
+end_utc = "2026-10-27T12:29:00Z"        # last record in the export
+
+[dedup]
+shingle_words = 5
+num_perm      = 128
+bands         = 16                       # 16 bands x 8 rows: candidate pairs from about Jaccard 0.7
+threshold     = 0.8                      # estimated Jaccard needed to merge
+min_words     = 15                       # shorter texts (comments) are never merged unless identical and same source
+max_chars     = 3000                     # shingle only the first part of long articles
+
+[candidates]
+window_chars  = 400                      # cable word and place word must sit within this distance
+snippet_chars = 600
+
+[embeddings]
+enabled = false                          # optional second net, slow on CPU (about 160 s per 1,000 texts)
+model   = "intfloat/multilingual-e5-base"
+max_texts = 3000
+min_score = 0.86                         # cosine to the nearest relevant seed post
+
+[labels]
+min_runs_for_vote = 2
+
+[events]
+window_before_days = 3
+window_after_days  = 7
+placebo_draws      = 1000
+peak_q             = 0.05
+peak_min_stories   = 3
+weak_below         = 10
+
+[live]
+queries = ["Seilbahn Heilbronn", "IPAI Heilbronn", "Seilbahn Bonn Venusberg", "Câble C1 téléphérique"]
+days    = 30

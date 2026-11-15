@@ -1,0 +1,45 @@
+{
+ "generated_at": "2026-11-14T20:06:32Z",
+ "provisional": true,
+ "labeller_filter": null,
+ "pairs": {
+  "status": "no human labels yet",
+  "n_items": 120,
+  "n_labelled": 0,
+  "complete": false,
+  "labellers": []
+ },
+ "stance": {
+  "status": "no human labels yet",
+  "n_items": 167,
+  "n_labelled": 0,
+  "complete": false,
+  "labellers": [],
+  "model_stance_counts": {
+   "neutral": 121,
+   "support": 20,
+   "oppose": 20,
+   "unclear": 6
+  }
+ },
+ "events": {
+  "status": "no human labels yet",
+  "n_items": 55,
+  "n_labelled": 0,
+  "complete": false,
+  "labellers": []
+ },
+ "disputes": {
+  "status": "no human labels yet",
+  "n_items": 48,
+  "n_labelled": 0,
+  "complete": false,
+  "labellers": []
+ },
+ "n_labelled_total": 0,
+ "n_annotations": 0,
+ "labellers": [],
+ "complete": false,
+ "message": "no human labels yet",
+ "provisional_note": "Every accuracy number elsewhere in CityPulse is agreement with AI labels. Only the numbers in this file compare against human labels, and only for the items labelled so far."
+}
