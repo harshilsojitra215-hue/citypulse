@@ -20,7 +20,7 @@ from pathlib import Path
 APP = Path(__file__).resolve().parent
 OUT = APP.parent / "_run" / "citypulse"          # _run/ is gitignored; the folder name becomes the Vercel project name
 FILES = ["index.html", "style.css", "app.js", "adapter.js", "ask.js", "ask.css", "demo.js", "scenephoto.js"]
-DIRS = ["data", "photo"]
+DIRS = ["data", "photo", "film"]
 
 VERCEL_JSON = {
     "cleanUrls": True,
