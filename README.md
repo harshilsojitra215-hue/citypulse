@@ -7,7 +7,7 @@ CityPulse reads the public debate on Heilbronn's planned urban cable car, compar
 It is built on the city's export of 39,361 posts (Oct 2024 to 27 Oct 2026) plus our own live collector for newer public items.
 
 - **Live website:** https://citypulse-bay.vercel.app (the online copy; the live check runs on the presentation laptop, Replay works online)
-- **Pitch deck:** [`deck/CityPulse_deck.pptx`](deck/CityPulse_deck.pptx) and [`deck/CityPulse_deck.pdf`](deck/CityPulse_deck.pdf), speaker notes in [`deck/SPEAKER_NOTES.md`](deck/SPEAKER_NOTES.md)
+- **Pitch deck:** [`deck/CityPulse_deck.pptx`](deck/CityPulse_deck.pptx) and [`deck/CityPulse_deck.pdf`](deck/CityPulse_deck.pdf)
 
 ## How it works
 
@@ -31,7 +31,7 @@ One real item followed through every box: [`knowledge/HOW_IT_ALL_CONNECTS.md`](k
 | Change over time, events and peaks | History attention chart with documented moments |
 | Cities and projects compared | History project switch (Heilbronn, Bonn, Paris C1, IPAI); So far lists other cities |
 | Interactive dashboard | `app/` (the live website above) |
-| Key insights | The pitch deck and its speaker notes |
+| Key insights | The pitch deck |
 
 ## Run it
 
@@ -83,5 +83,5 @@ The live collector uses only legal routes: search APIs (Exa, Tavily), public RSS
 | `pipeline/` | History pipeline over the city export (`CONTRACT.md`) |
 | `eval/` | Independent referee |
 | `scripts/pilot/` | Codebook and the 240-post reliability pilot |
-| `deck/` | Pitch deck (PPTX, PDF, source), speaker notes |
+| `deck/` | Pitch deck (PPTX, PDF, source) |
 | `knowledge/` | How it connects, evidence ledger, workflow, sources, evaluation plan |
